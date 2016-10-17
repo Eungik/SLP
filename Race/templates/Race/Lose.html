@@ -1,0 +1,76 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    You lose
+{% endblock %}
+
+{% block content %}
+<h3> You lose. Your earning in this round is $10.</h3>
+
+<div id="test"><p>Computer player choose 15.</p></div>
+<div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p></div>
+
+<div id="test"><p>
+
+
+    <img src = "{% static "Race/1_a.png" %}"/><img src = "{% static "Race/2_a.png" %}"/><img src = "{% static "Race/3_a.png" %}"/><img src = "{% static "Race/4_a.png" %}"/><img src = "{% static "Race/5_a.png" %}"/>
+<img src = "{% static "Race/6_a.png" %}"/><img src = "{% static "Race/7_a.png" %}"/><img src = "{% static "Race/8_a.png" %}"/><img src = "{% static "Race/9_a.png" %}"/><img src = "{% static "Race/10_a.png" %}"/>
+<img src = "{% static "Race/11_a.png" %}"/><img src = "{% static "Race/12_a.png" %}"/><img src = "{% static "Race/13_a.png" %}"/><img src = "{% static "Race/14_a.png" %}"/><img src = "{% static "Race/15_a.png" %}"/>
+
+
+</p></div>
+
+
+<style type="text/css">
+
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+</style>
+
+
+{% endblock %}
+
+
+
