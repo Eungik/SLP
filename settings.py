@@ -112,9 +112,16 @@ SESSION_CONFIGS = [
     {
          'name': 'Race',
          'display_name': 'Race',
-        'num_demo_participants': 1,
+        'num_demo_participants': 3,
         'app_sequence': ['Race'],
-     }
+     },
+
+    {
+        'name': 'Reading_the_eyes',
+        'display_name': 'Readingtheeyes',
+        'num_demo_participants': 3,
+        'app_sequence': ['Readingtheeyes'],
+    }
 ]
 
 # anything you put after the below line will override
