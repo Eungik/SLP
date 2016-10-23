@@ -121,6 +121,13 @@ SESSION_CONFIGS = [
         'display_name': 'Readingtheeyes',
         'num_demo_participants': 3,
         'app_sequence': ['Readingtheeyes'],
+    },
+
+    {
+        'name': 'Rubinstein',
+        'display_name': 'Rubinstein',
+        'num_demo_participants': 3,
+        'app_sequence': ['Rubinstein'],
     }
 ]
 
