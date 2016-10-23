@@ -70,7 +70,8 @@ class Computer(BasePage):
     def vars_for_template(self):
             return{
                 'Choice': self.player.Choice,
-                'round_number': self.round_number
+                'round_number': self.round_number,
+                'game_finished' : self.player.game_finished
              }
 
     def is_displayed(self):

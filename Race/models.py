@@ -26,7 +26,7 @@ class Constants(BaseConstants):
     Winning_reward=20
     ##losing reward##
     Losing_reward=10
-    timeout_sec = 10
+    timeout_sec = 6
 
     winning_set = [p for p in range(1, Winning_number + 1) if (p % (4)) == 3]
 
