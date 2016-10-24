@@ -9,7 +9,8 @@ from .models import Constants
 def vars_for_all_templates(self):
     return {
         'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num'],
-        'current' : self.player.participant.vars[Constants.name_in_url]['rand_num'][self.round_number -1]
+        'current' : self.player.participant.vars[Constants.name_in_url]['rand_num'][self.round_number -1],
+        'round_number' : self.round_number
     }
 
 
