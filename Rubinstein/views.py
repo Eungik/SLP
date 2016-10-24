@@ -4,32 +4,34 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
+
+
+def vars_for_all_templates(self):
+    return {
+        'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num'],
+        'current' : self.player.participant.vars[Constants.name_in_url]['rand_num'][self.round_number -1]
+    }
+
+
+class Introduction(Page):
+
+    def is_displayed(self):
+        return self.round_number==1
+
+    def before_next_page(self):
+        self.player.set_payoff()
+
 class Question1(Page):
     form_model=models.Player
-    form_fields=['Rubin_q1']
+    form_fields=['Answer']
 
-class Question2(Page):
-    form_model=models.Player
-    form_fields=['Rubin_q2']
+    def before_next_page(self):
+        self.player.set_payoff()
 
-class Question3(Page):
-    form_model=models.Player
-    form_fields=['Rubin_q3']
-
-class Question4(Page):
-    form_model=models.Player
-    form_fields=['Rubin_q4']
-
-class Question5(Page):
-    form_model=models.Player
-    form_fields=['Rubin_q5']
 
 
 
 page_sequence = [
+    Introduction,
     Question1,
-    Question2,
-    Question3,
-    Question4,
-    Question5,
 ]
