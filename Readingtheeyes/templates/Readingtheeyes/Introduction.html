@@ -1,0 +1,57 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Introduction & Practice Question
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Reading the Mind in the Eyes
+    </h3>
+        <font size="4pt" style="line-height : 150%">
+    <p>
+       For each set of eyes, choose which word best describes what the person in the picture is thinking or feeling. You may feel that more than one word is applicable but please choose just one word, the word which you consider to be most suitable. Before making your choice, make sure that you ahve read all 4 words. You should try to do the task as quickly as possible but you will not be timed.
+    </p>
+        </font>
+</div>
+
+        <table class="table table-striped" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img src = "{% static "Readingtheeyes/Question_practice.png" %}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <h4>
+                    <p><font size="5pt" style="line-height:200%">
+                        [Practice]. Choose the word that best describes what the person in the picture is thinking or feeling.
+                    </font></p>
+
+                        <font size="5pt" style="line-height:200%">
+                        {% formfield player.eye_practice %}
+                        </font>
+
+                    </h4>
+
+                </td>
+            </tr>
+            </tbody>
+
+
+
+        </table>
+
+
+    {% next_button %}
+
+{% endblock %}

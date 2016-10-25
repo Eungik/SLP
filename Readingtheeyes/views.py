@@ -3,6 +3,11 @@ from . import models
 from ._builtin import Page, WaitPage
 from .models import Constants
 
+class Introduction(Page):
+    form_model = models.Player
+    form_fields = ['eye_practice']
+
+
 
 class Question1(Page):
     form_model = models.Player
@@ -185,6 +190,7 @@ class Question36(Page):
 
 
 page_sequence = [
+    Introduction,
     Question1,
     Question2,
     Question3,
