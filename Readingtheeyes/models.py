@@ -27,13 +27,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     eye_practice = models.PositiveIntegerField(initial=None,
-                                         choices=[[1, '① Hateful'],
-                                                  [2, '② Jealous'],
-                                                  [3, '③ Arrogant'],
-                                                  [4, '④ Panicked'],
-                                                  ],
-                                         verbose_name="",
-                                         widget=widgets.RadioSelect())
+                                         verbose_name="")
 
 
     eye_q1 = models.PositiveIntegerField(initial=None,
