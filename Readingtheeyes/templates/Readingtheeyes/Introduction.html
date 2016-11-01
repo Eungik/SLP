@@ -16,11 +16,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip({
-        placement : 'right'
-    });
+
+$(document).ready(function () {
+
+  $("body").tooltip({
+    selector: "[data-toggle='tooltip']",
+    container: "body"
+  })
+    //Popover, activated by clicking
+    .popover({
+    selector: "[data-toggle='popover']",
+    container: "body",
+    html: true
+  });
 });
+
 </script>
 </head>
 
@@ -30,7 +40,108 @@ input.largerCheckbox {
     height: 20px;
 }
 
+body {
+  background: #FFFFFF;
+  min-height: 520px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+div,
+button {
+  font-family-sans-serif: consolas, courier, monaco, menlo, monospace;
+}
+
+.ole,
+.elo {
+  padding: 6px 36px;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 4px;
+  border:0;
+  cursor: pointer;
+  color: #000;
+}
+
+.ct {
+  text-align: center
+}
+
+.two {
+  background: rgb(180,220,255);
+}
+
+.three {
+  background: rgb(160,200,255);
+}
+
+.four {
+  background: rgb(140,180,255);
+}
+
+.ole:
+,
+.elo:hover {
+
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 0 0 0 #555;
+}
+
+.multiple_elements {
+  padding: 30px 0 10px 0;
+  text-align: center;
+}
+
+/*customizing tooltip color*/
+/*right tooltip*/
+.tooltip.right > .tooltip-arrow {
+  border-right-color: dodgerblue;
+}
+
+/*bottom tooltip*/
+.tooltip.bottom > .tooltip-arrow {
+  border-bottom-color: dodgerblue;
+}
+
+/*top tooltip*/
+.tooltip.top > .tooltip-arrow {
+  border-top-color: dodgerblue;
+}
+
+/*left tooltip*/
+.tooltip.left > .tooltip-arrow {
+  border-left-color: dodgerblue;
+}
+
+/*tooltip inner*/
+.tooltip > .tooltip-inner {
+  background-color: dodgerblue;
+  text-shadow: 0 1px 1px #000;
+  font-weight: normal;
+}
+
+code {
+  color: royalblue;
+  background-color: azure;
+}
+
+@media (max-width:640px) {
+  .ole,
+  .elo {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+.after-box {
+    clear: left;
+}
 </style>
+
+
 
 
 
@@ -44,7 +155,7 @@ input.largerCheckbox {
     </h3>
         <font size="4pt" style="line-height : 150%">
     <p>
-       For each set of eyes, choose which word best describes what the person in the picture is thinking or feeling. You may feel that more than one word is applicable but please choose just one word, the word which you consider to be most suitable. Before making your choice, make sure that you ahve read all 4 words. You should try to do the task as quickly as possible but you will not be timed.
+       For each set of eyes, choose which word best describes what the person in the picture is thinking or feeling. You may feel that more than one word is applicable but please choose just one word, the word which you consider to be most suitable. Before making your choice, make sure that you have read all 4 words. You should try to do the task as quickly as possible but you will not be timed.
     </p>
         </font>
 </div>
@@ -68,14 +179,11 @@ input.largerCheckbox {
                     <p><font size="5pt" style="line-height:200%">
                         [Practice]. Choose the word that best describes what the person in the picture is thinking or feeling.
                     </font></p>
-                        <div class="bs-example">
-                            <ul class="list-inline">
-                             <p><li><p data-toggle="tooltip" title="Hateful means that blah blah blah blah blah blah blah blah blah blah"><input type="radio" name="eye_practice" value=1 class="largerCheckbox"> <font size="5pt"> ① Hateful</font> </p></li></p>
-                             <p><li><p data-toggle="tooltip" title="Comforting means that blah blah blah blah blah blah blah blah blah blah"><input type="radio" name="eye_practice" value=2 class="largerCheckbox"> <font size="5pt"> ② Jealous</font></p></li></p>
-                            <p><li><p data-toggle="tooltip" title="Arrogant means that blah blah blah blah blah blah blah blah blah blah"><input type="radio" name="eye_practice" value=3 class="largerCheckbox"> <font size="5pt"> ③ Arrogant</font></p></li></p>
-                             <p><li><p data-toggle="tooltip" title="Panicked means that blah blah blah blah blah blah blah blah blah blah"><input type="radio" name="eye_practice" value=4 class="largerCheckbox"> <font size="5pt"> ④ Panicked</font></p></li></p>
-                            </ul>
-                        </div>
+
+                             <div class="after-box" style="line-height: 200% " ><input type="radio" name="eye_practice" value=1 class="largerCheckbox"><p class="elo ex" data-toggle="popover" data-placement="right" data-original-title="Hateful" data-content="Someone or something that is hateful is extremely bad or unpleasant."><font size="5pt"> ① Hateful</font> </p></div>
+                             <div class="after-box" style="line-height: 200% " ><input type="radio" name="eye_practice" value=2 class="largerCheckbox"><p class="elo ex" data-toggle="popover" data-placement="right" data-original-title="Jealous" data-content="Someone or something that is hateful is extremely bad or unpleasant."> <font size="5pt"> ② Jealous</font></p>
+                             <div class="after-box" style="line-height: 200% " ><input type="radio" name="eye_practice" value=3 class="largerCheckbox"><p class="elo ex" data-toggle="popover" data-placement="right" data-original-title="Arrogant" data-content="Someone or something that is hateful is extremely bad or unpleasant."> <font size="5pt"> ③ Arrogant</font></p>
+                             <div class="after-box" style="line-height: 200% " ><input type="radio" name="eye_practice" value=4 class="largerCheckbox"><p class="elo ex" data-toggle="popover" data-placement="right" data-original-title="Panicked" data-content="Someone or something that is hateful is extremely bad or unpleasant."> <font size="5pt"> ④ Panicked</font></p>
 
 
 
