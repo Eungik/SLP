@@ -109,12 +109,14 @@ SESSION_CONFIG_DEFAULTS = {
 
 
 SESSION_CONFIGS = [
+
     {
-         'name': 'Race',
-         'display_name': 'Race',
+        'name': 'Race_Full_set1',
+        'display_name': 'Race_Full_set1',
         'num_demo_participants': 3,
-        'app_sequence': ['Race'],
-     },
+        'app_sequence': ['Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Result_Race'],
+    },
+
 
     {
         'name': 'Reading_the_eyes',

@@ -4,18 +4,19 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 import random
 
-class Introduction(Page):
 
 
-    def is_displayed(self):
-        return self.subsession.round_number==1
 
 class BasePage(Page):
     def is_displayed(self):
-        return self.participant.vars['games_finished'] < Constants.num_games and self.extra_is_displayed()
+        return sum([p.end for p in self.player.in_all_rounds()]) == 0
 
-    def extra_is_displayed(self):
-        return True
+
+
+class Introduction(Page):
+
+    def is_displayed(self):
+        return self.subsession.round_number==1
 
 
 class MyPage(BasePage):
@@ -30,23 +31,15 @@ class MyPage(BasePage):
             'previous_number' : self.player.previous_number,
             'round_number' : self.player.round_number,
             'ball_statuses': self.player.ball_statuses(),
-            'ball_numbers': range(1, Constants.Winning_number + 1)
+            'ball_numbers': range(1, Constants.Winning_number + 1),
+            'end' : self.player.end,
             }
-
-    def Choice_min(self):
-        return self.player.previous_number + 1
-
-    def Choice_max(self):
-        return self.player.previous_number + 3
 
 
 
     def before_next_page(self):
 
-        if self.player.Choice >= Constants.Winning_number - Constants.k:
-            self.player.game_finished = True
-            #
-        elif self.player.Choice in Constants.winning_set:
+        if self.player.Choice in Constants.winning_set:
             random_choice = random.randint(1, Constants.k)
             self.player.computer_choice=self.player.Choice+ random_choice
         else:
@@ -56,11 +49,6 @@ class MyPage(BasePage):
                     break
 
 
-    def is_displayed(self):
-        if self.round_number!=1:
-            return self.player.Choice < 15 and self.player.previous_number < 15 and self.player.computer_choice < 15
-        else:
-            return self.round_number==1
 
 
 class Computer(BasePage):
@@ -70,19 +58,18 @@ class Computer(BasePage):
     def vars_for_template(self):
             return{
                 'Choice': self.player.Choice,
-                'round_number': self.round_number,
-                'game_finished' : self.player.game_finished
+                'round_number': self.round_number
              }
 
-    def is_displayed(self):
-        return not self.player.game_finished
 
 class Win(BasePage):
     def is_displayed(self):
         return self.player.Choice == 15
 
     def before_next_page(self):
-        self.participant.vars['games_finished'] += 1
+         self.player.end =1
+         self.participant.vars['is_winner_15_3'] = 1
+
 
 
 class Lose(BasePage):
@@ -90,7 +77,9 @@ class Lose(BasePage):
         return 12 <= self.player.Choice < 15
 
     def before_next_page(self):
-        self.participant.vars['games_finished'] += 1
+        self.player.end = 1
+        self.participant.vars['is_winner_15_3'] = 0
+
 
 
 page_sequence = [
@@ -98,5 +87,6 @@ page_sequence = [
     MyPage,
     Computer,
     Win,
-    Lose
+    Lose,
+
 ]
