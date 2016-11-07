@@ -3,6 +3,14 @@ from . import models
 from ._builtin import Page, WaitPage
 from .models import Constants
 
+def vars_for_all_templates(self):
+    return {
+        'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num'],
+        'high_light' : self.player.participant.vars[Constants.name_in_url]['rand_num']+1
+    }
+
+
+
 
 class MyPage(Page):
 
@@ -13,15 +21,12 @@ class MyPage(Page):
             'payoff8_2' : self.participant.vars['is_winner_8_2'],
             'payoff11_3' : self.participant.vars['is_winner_11_3'],
             'payoff10_2' : self.participant.vars['is_winner_10_2'],
-            'payoff15_3' : self.participant.vars['is_winner_15_3']
+            'payoff15_3' : self.participant.vars['is_winner_15_3'],
 
         }
 
-
-class ResultsWaitPage(WaitPage):
-
-    def after_all_players_arrive(self):
-        pass
+    def before_next_page(self):
+        self.player.rand_num=self.player.participant.vars[Constants.name_in_url]['rand_num']
 
 
 class Results(Page):
@@ -30,6 +35,5 @@ class Results(Page):
 
 page_sequence = [
     MyPage,
-
     Results
 ]

@@ -150,41 +150,6 @@ class Question28(Page):
     form_fields = ['eye_q28']
 
 
-class Question29(Page):
-    form_model = models.Player
-    form_fields = ['eye_q29']
-
-
-class Question30(Page):
-    form_model = models.Player
-    form_fields = ['eye_q30']
-
-
-class Question31(Page):
-    form_model = models.Player
-    form_fields = ['eye_q31']
-
-
-class Question32(Page):
-    form_model = models.Player
-    form_fields = ['eye_q32']
-
-class Question33(Page):
-    form_model = models.Player
-    form_fields = ['eye_q33']
-
-class Question34(Page):
-    form_model = models.Player
-    form_fields = ['eye_q34']
-
-class Question35(Page):
-    form_model = models.Player
-    form_fields = ['eye_q35']
-
-class Question36(Page):
-    form_model = models.Player
-    form_fields = ['eye_q36']
-
 
 
 
@@ -218,15 +183,7 @@ page_sequence = [
     Question25,
     Question26,
     Question27,
-    Question28,
-    Question29,
-    Question30,
-    Question31,
-    Question32,
-    Question33,
-    Question34,
-    Question35,
-    Question36
+    Question28
 
 
 ]

@@ -6,9 +6,40 @@
 {% endblock %}
 
 {% block content %}
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <!-- Trigger the modal with a button -->
+<div id="test">
+  <p><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Instruction</button></p>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Instruction of Task2</h4>
+        </div>
+        <div class="modal-body">
+          <font size="4pt"><p>In this task, you will participate in 6 rounds of decision-making. In each round, you are asked to play one of six variations of the following game against a computer player who is programmed to make every choice to maximize the chance of winning.</p></font>
 
+          <font size="4pt"><p>The two players, you and the computer, alternate: you move first, the computer moves next, you move again, and so on. You always move first from 0, and in each turn one can add an integer number between 1 and K. (For instance, if K = 3, one can add 1, 2 or 3). The player who gets to M first wins the game (for example, M can be 10). If you win a game, you receive 5 tokens. Otherwise, you receive 0 tokens.</p></font>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
 
+    </div>
+  </div>
 
 {% if round_number > 1 %}
 

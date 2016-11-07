@@ -130,7 +130,14 @@ SESSION_CONFIGS = [
         'display_name': 'Rubinstein',
         'num_demo_participants': 3,
         'app_sequence': ['Rubinstein'],
+    },
+    {
+        'name': 'SLP2017',
+        'display_name': 'SLP_Complete1',
+        'num_demo_participants': 3,
+        'app_sequence': ['Rubinstein', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
     }
+
 ]
 
 # anything you put after the below line will override
