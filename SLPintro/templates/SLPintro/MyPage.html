@@ -1,0 +1,32 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Experimental Instructions
+    </h3>
+    &nbsp;
+
+    <h4>
+     <p>Thanks for your participation.</p>
+        &nbsp;
+     <p>In the following <b>20-30 minutes</b>, you will participate in decision-making for two tasks (Task I and Task II).</p>
+        &nbsp;
+     <p style="line-height: 150%">Please read the instructions below carefully; the cash payment you will get depends on how well you make your decisions after understanding these instructions.</p>
+        &nbsp;
+     <p>Please click on the next button to proceed.</p>
+    </h4>
+
+</div>
+
+
+    {% next_button %}
+
+{% endblock %}

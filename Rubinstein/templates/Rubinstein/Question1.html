@@ -2,15 +2,63 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Question{{ round_number }}
+    Round{{ round_number }}
 {% endblock %}
 
 {% block content %}
+
+<style type="text/css">
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+</style>
+
+
 {%  if current == 1 %}
 <h3><p>Your Position is <span style="color: crimson">A</span>.</p></h3>
     <h3><p> Choose the number between 11 and 20 </p></h3>
     <p>{% formfield  player.Answer with label="" %}</p>
-        <style type="text/css">
+    <style type="text/css">
     ul {
         list-style-type:circle;
         padding-left:20px;
@@ -21,38 +69,34 @@
     }
 </style>
 
-<div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
-
-    <h3 class="panel-sub-heading">
-        Payment information
-    </h3>
-    <h4>
-    <p>
-        You will be in a randomly formed group of 5 participants.
-        Your payment is defined by the following way : (Not yet filled)
-    </p>
-    <p>
-        You can get a bonus payment if you call ....
-    </p>
-        </h4>
-    <h3>
-    <p><span style="color: crimson">
-        In position  A, ....</span>
-        </p>
-    <p> In position B, ....
-
-        </p>
-    <p>
-        In position C, ....
-        </p>
-    <p>
-        In position D, ....
-        </p>
-    <p>
-        In position E, ...
-    </p>
-    </h3>
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position A</button></p>
 </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position A</font></h4>
+        </div>
+        <div class="modal-body">
+          <p><font size="4.5pt">If your position is A, there is no extra token you could receive.</font></p>
+          <p><font size="4.5pt"> You will get an amount of payment the number (between 11 and 20) you chose. </font> </p>
+          &nbsp;
+          &nbsp;
+          <p><font size="4pt">Example1) If your choice is 15 in A, you can get 15 token as a period payoff regardless of other players' chocies.</font></p>
+          <p><font size="4pt">Example2) If your choice is 19 in A, you can get 19 token as a period payoff regardless of other players' choices.</font></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
         <table class="table" align="center">
@@ -60,7 +104,7 @@
 
             <tr class="text-center">
                 <td>
-                <img src = "{% static "Rubinstein/PositionA.png" %}"/>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionA.png" %}"/>
                 </td>
             </tr>
 
@@ -86,46 +130,48 @@
     }
 </style>
 
-<div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
-
-    <h3 class="panel-sub-heading">
-        Payment information
-    </h3>
-    <h4>
-    <p>
-        You will be in a randomly formed group of 5 participants.
-        Your payment is defined by the following way : (Not yet filled)
-    </p>
-    <p>
-        You can get a bonus payment if you call ....
-    </p>
-        </h4>
-    <h3>
-    <p>
-        In position A, ....
-        </p>
-    <p> <span style="color: crimson">In position B, ....
-        </span>
-        </p>
-    <p>
-        In position C, ....
-        </p>
-    <p>
-        In position D, ....
-        </p>
-    <p>
-        In position E, ...
-    </p>
-    </h3>
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position B</button></p>
 </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position B</font></h4>
+        </div>
+        <div class="modal-body">
+          <p><font size="4.5pt">If your position is B, you can get an extra payment.</font></p>
+          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
+         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position C).</font></p>
+         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position C).</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+          <p><font size="4pt">Example1) Your choice is 15 in B and your opponent C choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example2) Your choice is 19 in B and your opponent C choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example3) Your choice is 11 in B and your opponent C choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
         <table class="table" align="center">
             <tbody>
 
             <tr class="text-center">
                 <td>
-                <img src = "{% static "Rubinstein/PositionB.png" %}"/>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionB.png" %}"/>
                 </td>
             </tr>
 
@@ -154,47 +200,48 @@
     }
 </style>
 
-<div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
-
-    <h3 class="panel-sub-heading">
-        Payment information
-    </h3>
-    <h4>
-    <p>
-        You will be in a randomly formed group of 5 participants.
-        Your payment is defined by the following way : (Not yet filled)
-    </p>
-    <p>
-        You can get a bonus payment if you call ....
-    </p>
-        </h4>
-    <h3>
-    <p>
-        In position A, ....
-        </p>
-    <p> In position B, ....
-        </p>
-    <p> <span style="color: crimson">
-        In position C, ....
-        </span>
-        </p>
-    <p>
-        In position D, ....
-        </p>
-    <p>
-        In position E, ...
-    </p>
-        </h3>
-
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position C</button></p>
 </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position C</font></h4>
+        </div>
+        <div class="modal-body">
+          <p><font size="4.5pt">If your position is C, you can get an extra payment.</font></p>
+          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
+         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position D).</font></p>
+         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position D).</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+          <p><font size="4pt">Example1) Your choice is 15 in C and your opponent D choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example2) Your choice is 19 in C and your opponent D choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example3) Your choice is 11 in C and your opponent D choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
         <table class="table" align="center">
             <tbody>
 
             <tr class="text-center">
                 <td>
-                <img src = "{% static "Rubinstein/PositionC.png" %}"/>
+                <img width ="300px" height="auto" src = "{% static "Rubinstein/PositionC.png" %}"/>
                 </td>
             </tr>
 
@@ -219,40 +266,41 @@
         padding-left:4px;
     }
 </style>
-
-<div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
-
-    <h3 class="panel-sub-heading">
-        Payment information
-    </h3>
-    <h4>
-    <p>
-        You will be in a randomly formed group of 5 participants.
-        Your payment is defined by the following way : (Not yet filled)
-    </p>
-    <p>
-        You can get a bonus payment if you call ....
-    </p>
-        </h4>
-    <h3>
-    <p>
-        In position A, ....
-        </p>
-    <p> In position B, ....
-        </p>
-    <p>
-        In position C, ....
-        </p>
-    <p> <span style="color: crimson">
-        In position D, ....
-        </span>
-        </p>
-    <p>
-        In position E, ...
-    </p>
-        </h3>
-
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position D</button></p>
 </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position D</font></h4>
+        </div>
+        <div class="modal-body">
+          <p><font size="4.5pt">If your position is D, you can get an extra payment.</font></p>
+          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
+         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position E).</font></p>
+         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position E).</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+          <p><font size="4pt">Example1) Your choice is 15 in D and your opponent E choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example2) Your choice is 19 in D and your opponent E choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example3) Your choice is 11 in D and your opponent E choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
         <table class="table" align="center">
@@ -260,7 +308,7 @@
 
             <tr class="text-center">
                 <td>
-                <img src = "{% static "Rubinstein/PositionD.png" %}"/>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionD.png" %}"/>
                 </td>
             </tr>
 
@@ -287,40 +335,41 @@
     }
 </style>
 
-<div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
-
-    <h3 class="panel-sub-heading">
-        Payment information
-    </h3>
-    <h4>
-    <p>
-        You will be in a randomly formed group of 5 participants.
-        Your payment is defined by the following way : (Not yet filled)
-    </p>
-    <p>
-        You can get a bonus payment if you call ....
-    </p>
-        </h4>
-    <h3>
-    <p>
-        In position A, ....
-        </p>
-    <p> In position B, ....
-        </p>
-    <p>
-        In position C, ....
-        </p>
-    <p>
-        In position D, ....
-
-        </p>
-    <p><span style="color: crimson">
-        In position E, ...
-        </span>
-    </p>
-        </h3>
-
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position E</button></p>
 </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position E</font></h4>
+        </div>
+        <div class="modal-body">
+          <p><font size="4.5pt">If your position is E, you can get an extra payment.</font></p>
+          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
+         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position A).</font></p>
+         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position A).</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+          <p><font size="4pt">Example1) Your choice is 15 in E and your opponent A choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example2) Your choice is 19 in E and your opponent A choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
+          <p><font size="4pt">Example3) Your choice is 11 in E and your opponent A choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
         <table class="table" align="center">
@@ -328,7 +377,7 @@
 
             <tr class="text-center">
                 <td>
-                <img src = "{% static "Rubinstein/PositionE.png" %}"/>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionE.png" %}"/>
                 </td>
             </tr>
 

@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Your Choice (Round {{player.round_number}})
+    Your Choice
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@
 
 {% if round_number > 1 %}
 
-<tr><h3>The other player choose <font color="red">{{player.previous_number}}</font></h3></tr>
+<tr><h3>Computer player choose <font color="red">{{player.previous_number}}</font></h3></tr>
 
 {% else %}
 
@@ -20,9 +20,36 @@
 
 {% endif %}
 
+<div id="test">
+  <p><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Instruction</button></p>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Task 2, Round 2, (6,3) game</h4>
+        </div>
+        <div class="modal-body">
+<p><font size="4pt" style="line-height: 200%">The two players, you and the computer, alternate: you move first, the computer moves next, you move again, and so on.</font></p>
+<p><font size="4pt" style="line-height: 200%">You always move first from 0, and in each turn one can add an integer number between 1 and 3.</font></p>
+<p><font size="4pt" style="line-height: 200%">The player who gets to 6 first wins the game </font></p>
+<p><font size="4pt" style="line-height: 200%">If you win a game, you receive 5 tokens. Otherwise, you receive 0 tokens.</font></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 &nbsp;
-<h3>Your Choice:</h3>
+<div id="test">
+<p><font size="6pt">Your Choice:</font></p>
+</div>
 
 
 

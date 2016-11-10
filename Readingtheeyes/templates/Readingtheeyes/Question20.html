@@ -21,8 +21,8 @@
 
                     <h4>
                     <p><font size="5pt" style="line-height:200%">
-                        [20]. Choose the word that best describes what the person in the picture is thinking or feeling.
-                    </font></p>
+                        Choose the word that best describes what the person in the picture is thinking or feeling.
+                    </font></p><p><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="float: right">?</button></p>
 
                         <font size="5pt" style="line-height:200%">
                         {% formfield player.eye_q20 %}
@@ -37,6 +37,27 @@
 
 
         </table>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Word Meaning</h4>
+        </div>
+        <div class="modal-body">
+          <font size="4pt"><p>1.Kind : caring about others; gentle, friendly and generous</p></font>
+          <font size="4pt"><p>2.Surprise : a feeling caused by something happening suddenly or unexpectedly</p></font>
+          <font size="4pt"><p>3.Not pleased</p></font>
+          <font size="4pt"><p>4.Excited : feeling or showing happiness and enthusiasm</p></font>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
 
 
     {% next_button %}

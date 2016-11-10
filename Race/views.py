@@ -61,6 +61,9 @@ class Computer(BasePage):
                 'round_number': self.round_number
              }
 
+    def is_displayed(self):
+        return self.player.Choice != Constants.Winning_number and sum([p.end for p in self.player.in_all_rounds()]) == 0
+
 
 class Win(BasePage):
     def is_displayed(self):

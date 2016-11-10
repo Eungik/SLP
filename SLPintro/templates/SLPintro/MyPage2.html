@@ -1,0 +1,41 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Cash Payment
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Your Cash Payment
+    </h3>
+    &nbsp;
+    <h4>
+    <p>Your cash payment consists of <b>three parts:</b></p>
+     &nbsp;
+    <p>1.	<span class="uline">Show-up fee of SGD 5</span>, upon completion of the experiments.</p>
+     &nbsp;
+    <p style="line-height : 150%">2.	The amount of tokens you earned in one randomly chosen round (out of 10 rounds) in Task I, translated into SGD as the exchange rate of <span class="uline">X points = 1 SGD</span>, depending on the outcome of a lucky draw in which each of you have 10% chance to win (one out of 10 participants will be selected for real payments in Task I).</p>
+     &nbsp;
+    <p style="line-height : 150%">3.	The amount of tokens you earned in one randomly chosen round (out of 6 rounds) in Task II, translated into SGD as the exchange rate of <span class="uline">X points = 1 SGD.</span></p>
+    </h4>
+
+</div>
+
+
+<style type="text/css">
+
+.uline {
+    text-decoration: underline;
+}
+
+
+</style>
+
+
+    {% next_button %}
+
+{% endblock %}
