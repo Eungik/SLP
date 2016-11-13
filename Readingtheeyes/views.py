@@ -7,7 +7,12 @@ class Introduction(Page):
     form_model = models.Player
     form_fields = ['eye_practice']
 
+class Introduction_Result(Page):
 
+    def vars_for_template(self):
+        return{
+        'eye_practice' : self.player.eye_practice
+        }
 
 class Question1(Page):
     form_model = models.Player
@@ -156,6 +161,7 @@ class Question28(Page):
 
 page_sequence = [
     Introduction,
+    Introduction_Result,
     Question1,
     Question2,
     Question3,

@@ -1,0 +1,76 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Answer of Practice Question
+{% endblock %}
+
+{% block content %}
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Tooltip</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Reading the Mind in the Eyes
+    </h3>
+        <font size="4pt" style="line-height : 150%">
+    <p>
+       For each set of eyes, choose which word best describes what the person in the picture is <b>thinking or feeling.</b> You may feel that more than one word is applicable but please choose <b>just one word,</b> the word which you consider to be most suitable. Before making your choice, make sure that you have read all <b>4 words.</b>
+    </p>
+        </font>
+</div>
+
+        <table class="table table-striped" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img src = "{% static "Readingtheeyes/Question_practice.png" %}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+
+                    <p><font size="5pt" style="line-height:200%">
+                        Your answer is {%  if eye_practice == 1 %} Jealous {% elif eye_practice == 2 %} Scared {% elif eye_practice == 3 %} Relaxed {% else %} Hate {% endif %}.</font></p>
+
+
+
+
+
+                        {% if eye_practice == 2 %}
+                       <p><font size="4pt" style="line-height:200%" color="#00008b">Your answer is correct.</font></p>
+                        {% else %}
+                        <p><font size="4pt" style="line-height:200%" color="#dc143c"> Your answer is incorrect.</font></p>
+                        <p> <font size="4pt" style="line-height:200%">The correct answer is Scared.</font></p>
+                        {% endif %}
+
+
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+
+
+
+    {% next_button %}
+
+<script>
+$(document).ready(function(){
+    $("tr:nth-child({{ high_light}})").css("background-color", "#FFD8D8");
+});
+</script>
+
+{% endblock %}
