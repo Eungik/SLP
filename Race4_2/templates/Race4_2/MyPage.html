@@ -14,6 +14,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
+
 {% if round_number > 1 %}
 
 <tr><h3>Computer player choose <font color="red">{{player.previous_number}}</font></h3></tr>
@@ -65,8 +67,8 @@
 {% if previous_number == 0 %}
 
     <p>
-     <button name="Choice" value=1 class="btn btn-warning btn-lg round" onclick="myFunction1()"><font size="50">1</font></button>
-     <button name="Choice" value=2 class="btn btn-warning btn-lg round" onclick="myFunction2()"><font size="50">2</font></button>
+     <button name="Choice" value=1 class="btn btn-warning btn-lg round width-150px" onclick="myFunction1()"><font size="50">1</font></button>
+     <button name="Choice" value=2 class="btn btn-warning btn-lg round width-150px" onclick="myFunction2()"><font size="50">2</font></button>
     </p>
 
 
@@ -140,7 +142,7 @@ Bootstrap comes pre-loaded, so you can use any Bootstrap elements:
 http://getbootstrap.com/components/
 
 -->
-    {% block scripts %}
+{% block scripts %}
         <script type="text/javascript">
 
             function myFunction() {
@@ -150,38 +152,38 @@ http://getbootstrap.com/components/
         }
         }
             function myFunction1() {
-                var c = confirm("Is that correct? You choose 1");
+                var c = confirm("Your choice is 1. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
             function myFunction2() {
-                var c = confirm("Is that correct? You choose 2");
+                var c = confirm("Your choice is 2. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
             function myFunction3() {
-                var c = confirm("Is that correct? You choose 3");
+                var c = confirm("Your choice is 3. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
             function myFunction4() {
-                var c = confirm("Is that correct? You choose 4");
+                var c = confirm("Your choice is 4. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
             function myFunction5() {
-                var c = confirm("Is that correct? You choose 5");
+                var c = confirm("Your choice is 5. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
 
              function myFunction6() {
-                var c = confirm("Is that correct? You choose 6");
+                var c = confirm("Your choice is 6. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
@@ -189,60 +191,60 @@ http://getbootstrap.com/components/
 
 
              function myFunction7() {
-                var c = confirm("Is that correct? You choose 7");
+                var c = confirm("Your choice is 7. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
 
             function myFunction8() {
-                var c = confirm("Is that correct? You choose 8");
+                var c = confirm("Your choice is 8. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
             function myFunction9() {
-                var c = confirm("Is that correct? You choose 9");
+                var c = confirm("Your choice is 9. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
 
             function myFunction10() {
-                var c = confirm("Is that correct? You choose 10");
+                var c = confirm("Your choice is 10. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
 
              function myFunction11() {
-                var c = confirm("Is that correct? You choose 11");
+                var c = confirm("Your choice is 11. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
 
              function myFunction12() {
-                var c = confirm("Is that correct? You choose 12");
+                var c = confirm("Your choice is 12. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
 
             function myFunction13() {
-                var c = confirm("Is that correct? You choose 13");
+                var c = confirm("Your choice is 13. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
            function myFunction14() {
-                var c = confirm("Is that correct? You choose 14");
+                var c = confirm("Your choice is 14. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
         }
             function myFunction15() {
-                var c = confirm("Is that correct? You choose 15");
+                var c = confirm("Your choice is 15. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
@@ -252,6 +254,12 @@ http://getbootstrap.com/components/
     {% endblock %}
 
 <style type="text/css">
+
+.width-150px{
+    width: 90px;
+    display: inline-block;
+}
+
 
 #test p {
     margin-top: 25px;
@@ -363,6 +371,14 @@ http://getbootstrap.com/components/
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }
+
+.btn-warning{
+
+    width: 90px;
+    display: inline-block;
+
+}
+
 
 .btn-primary {
     background: #0099cc;

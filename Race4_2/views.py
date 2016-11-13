@@ -18,11 +18,6 @@ class Introduction(Page):
         return self.subsession.round_number==1
 
 
-class Introduction2(Page):
-
-    def is_displayed(self):
-        return self.subsession.round_number==1
-
 class Introduction3(Page):
 
     def is_displayed(self):
@@ -99,7 +94,6 @@ class Lose(BasePage):
 
 page_sequence = [
     Introduction,
-    Introduction2,
     Introduction3,
     MyPage,
     Computer,
