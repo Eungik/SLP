@@ -147,6 +147,14 @@ SESSION_CONFIGS = [
 
 ]
 
+ROOMS = [
+    {
+        'name': 'SLP2017',
+        'display_name': 'SLP2017',
+        'participant_label_file': 'SLP.txt',
+    },
+]
+
 # anything you put after the below line will override
 # oTree's default settings. Use with caution.
 otree.settings.augment_settings(globals())
