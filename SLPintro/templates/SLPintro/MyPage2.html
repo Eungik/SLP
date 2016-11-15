@@ -11,13 +11,14 @@
 
     &nbsp;
     <h4>
-    <p>Your cash payment consists of <b>three parts:</b></p>
-     &nbsp;
-    <p>1.	<span class="uline">Show-up fee of SGD 5</span>, upon completion of the experiments.</p>
-     &nbsp;
-    <p style="line-height : 150%">2.	The amount of tokens you earned in one randomly chosen round (out of 10 rounds) in Task I, translated into SGD as the exchange rate of <span class="uline">X points = 1 SGD</span>, depending on the outcome of a lucky draw in which each of you have 10% chance to win (one out of 10 participants will be selected for real payments in Task I).</p>
-     &nbsp;
-    <p style="line-height : 150%">3.	The amount of tokens you earned in one randomly chosen round (out of 6 rounds) in Task II, translated into SGD as the exchange rate of <span class="uline">X points = 1 SGD.</span></p>
+    <p>You will earn money in Task 1 and Task II</p>
+    <p>&nbsp;</p>
+    <p style="line-height : 150%">1.	In Task I, your payment depends on a lucky draw which will take place at the end of this module.</p>
+    <p style="line-height : 150%"><pg>The lucky draw selects one out of 10 participants (10% chance of winning).</pg></p>
+    <p style="line-height : 150%"><pg><font color="darkblue"><b>If you are selected</b></font>, your cash payment will be based on the decisions you made in Task I.</pg></p>
+    <p style="line-height : 150%"><pg><font color="#dc143c"><b>Otherwise</b></font>, you will get $0 in Task I.</pg></p>
+    <p>&nbsp;</p>
+    <p style="line-height : 150%">2. In Task II, there is no lucky draw. Your cash payment will be based on the decisions you made in Task II.</p>
     </h4>
 
 </div>
@@ -28,6 +29,29 @@
 .uline {
     text-decoration: underline;
 }
+
+pg {
+    padding-left:20px;
+    position:relative;
+}
+pg:before {
+    content: "";
+    font-family:Arial;
+    position:absolute;
+    left:5px;
+}
+
+pg2 {
+    padding-left:40px;
+    position:relative;
+}
+pg2:before {
+    content: "-";
+    font-family:Arial;
+    position:absolute;
+    left:15px;
+}
+
 
 
 </style>

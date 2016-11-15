@@ -20,10 +20,19 @@ class Introduction(Page):
         return self.round_number==1
 
     def before_next_page(self):
-        self.player.set_payoff()
+        self.player.sequence()
 
 
 class Introduction2(Page):
+    def is_displayed(self):
+        return self.round_number==1
+
+
+class Example1(Page):
+    def is_displayed(self):
+        return self.round_number==1
+
+class Example2(Page):
     def is_displayed(self):
         return self.round_number==1
 
@@ -69,7 +78,7 @@ class Question1(Page):
     form_fields=['Answer']
 
     def before_next_page(self):
-        self.player.set_payoff()
+        self.player.sequence()
 
 
 
@@ -77,6 +86,8 @@ class Question1(Page):
 page_sequence = [
     Introduction,
     Introduction2,
+    Example1,
+    Example2,
     Practice,
     Answer,
     Practice2,

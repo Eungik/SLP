@@ -42,27 +42,28 @@ class Player(BasePlayer):
 
     Answer=models.PositiveIntegerField(
         initial=None,
-        min=11,
-        max=20,
+        choices=[[5,'$5'],[10,'$10'],[15,'$15'],[20,'$20'],[25,'$25'],[30,'$30'],[35,'$35'],[40,'$40'],[45,'$45'],[50,'$50']],
+        widget=widgets.RadioSelectHorizontal(),
     )
-
     Practice1=models.PositiveIntegerField(
-        initial=None,
-    )
-    Practice2=models.PositiveIntegerField(
         initial=None,
         choices=[[1,'A'],[2,'B'],[3,'C'],[4,'D'],[5,'E']],
         widget=widgets.RadioSelectHorizontal(),
     )
-    Practice3=models.PositiveIntegerField(
+    Practice2=models.PositiveIntegerField(
         initial=None,
+    )
+
+    Practice3=models.PositiveIntegerField(
+        choices=[[1,'A'],[2,'B'],[3,'C'],[4,'D'],[5,'E']],
+        widget=widgets.RadioSelectHorizontal(),
     )
     Practice4=models.PositiveIntegerField(
         initial=None,
     )
 
 
-    def set_payoff(self):
+    def sequence(self):
         self.Position=self.participant.vars[Constants.name_in_url]['rand_num'][self.round_number-1]
 
 

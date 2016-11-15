@@ -8,6 +8,14 @@
 {% block content %}
 
 <style type="text/css">
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
 #test p {
     margin-top: 25px;
     font-size: 21px;
@@ -49,15 +57,13 @@
         opacity: 1;
     }
 }
-
-
 </style>
 
 
 {%  if current == 1 %}
-<h3><p>Your Position is <span style="color: crimson">A</span>.</p></h3>
-    <h3><p> Choose the number between 11 and 20. </p></h3>
-    <p>{% formfield  player.Answer with label="" %}</p>
+<h3><p>You are in position <span style="color: crimson">A</span>.</p></h3>
+    <h3><p> Request the money amount between $5 and $50 in multiples of $5. </p></h3>
+    <div style="text-align: center;"><h3><p style="text-align:center">{% formfield  player.Answer with label="" %}</p></h3></div>
     <style type="text/css">
     ul {
         list-style-type:circle;
@@ -70,25 +76,33 @@
 </style>
 
 <div id="test">
-  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position A</button></p>
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position A</button></p>
 </div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position A</font></h4>
+          <h4 class="modal-title">Earnings information for <font color="#dc143c">position A</font></h4>
         </div>
         <div class="modal-body">
-          <p><font size="4.5pt">If your position is A, there is no extra token you could receive.</font></p>
-          <p><font size="4.5pt"> You will get an amount of payment the number (between 11 and 20) you chose. </font> </p>
-          &nbsp;
-          &nbsp;
-          <p><font size="4pt">Example1) If your choice is 15 in A, you can get 15 token as a period payoff regardless of other players' chocies.</font></p>
-          <p><font size="4pt">Example2) If your choice is 19 in A, you can get 19 token as a period payoff regardless of other players' choices.</font></p>
+
+        <h4>
+        <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+          <p><font size="4pt">Example1) If you request $25 in position A and your opponent B requests $30, you will receive $25.</font></p>
+          <p><font size="4pt">Example2) If you request $25 in position A and your opponent B requests $45, you will receive $25.</font></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -116,9 +130,13 @@
 
 
 {%  if current == 2 %}
-<h3><p>Your Position is <span style="color: crimson">B</span>.</p></h3>
-    <h3><p> Choose the number between 11 and 20. </p></h3>
-    <p>{% formfield  player.Answer with label="" %}</p>
+<h3><p>You are in position <span style="color: crimson">B</span>.</p></h3>
+    <h3><p>Request the money amount between $5 and $50 in multiples of $5. </p></h3>
+    <div style="text-align: center;">
+    <h3>
+        {% formfield  player.Answer with label="" %}
+     </h3>
+    </div>
         <style type="text/css">
     ul {
         list-style-type:circle;
@@ -131,32 +149,32 @@
 </style>
 
 <div id="test">
-  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position B</button></p>
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position B</button></p>
 </div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position B</font></h4>
+          <h4 class="modal-title">Earnings information for <font color="#dc143c">position B</font></h4>
         </div>
         <div class="modal-body">
-          <p><font size="4.5pt">If your position is B, you can get an extra payment.</font></p>
-          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
-         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position C).</font></p>
-         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position C).</font></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
-          <p><font size="4pt">Example1) Your choice is 15 in B and your opponent C choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example2) Your choice is 19 in B and your opponent C choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example3) Your choice is 11 in B and your opponent C choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        <h4>
+        <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+          <p><font size="4pt">Example1) If you request $25 in position B and your opponent C requests $30, you will receive $75.</font></p>
+          <p><font size="4pt">Example2) If you request $25 in position B and your opponent C requests $45, you will receive $25.</font></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -186,9 +204,9 @@
 
 
 {%  if current == 3 %}
-<h3><p>Your Position is <span style="color: crimson">C</span>.</p></h3>
-    <h3><p> Choose the number between 11 and 20. </p></h3>
-    <p>{% formfield  player.Answer with label="" %}</p>
+<h3><p>You are in position  <span style="color: crimson">C</span>.</p></h3>
+    <h3><p> Request the money amount between $5 and $50 in multiples of $5. </p></h3>
+    <div style="text-align: center;"><h3><p>{% formfield  player.Answer with label="" %}</p></h3></div>
         <style type="text/css">
     ul {
         list-style-type:circle;
@@ -201,32 +219,29 @@
 </style>
 
 <div id="test">
-  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position C</button></p>
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position C</button></p>
 </div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position C</font></h4>
+          <h4 class="modal-title">Earnings information <font color="#dc143c">position C</font></h4>
         </div>
         <div class="modal-body">
-          <p><font size="4.5pt">If your position is C, you can get an extra payment.</font></p>
-          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
-         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position D).</font></p>
-         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position D).</font></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
-          <p><font size="4pt">Example1) Your choice is 15 in C and your opponent D choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example2) Your choice is 19 in C and your opponent D choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example3) Your choice is 11 in C and your opponent D choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+          <p><font size="4pt">Example1) If you request $25 in position C and your opponent D requests $30, you will receive $75.</font></p>
+          <p><font size="4pt">Example2) If you request $25 in position C and your opponent D requests $45, you will receive $25.</font></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -253,9 +268,9 @@
 
 
 {%  if current == 4 %}
-<h3><p>Your Position is <span style="color: crimson">D</span>.</p></h3>
-    <h3><p> Choose the number between 11 and 20. </p></h3>
-    <p>{% formfield  player.Answer with label="" %}</p>
+<h3><p>You are in position  <span style="color: crimson">D</span>.</p></h3>
+    <h3><p> Request the money amount between $5 and $50 in multiples of $5. </p></h3>
+    <div style="text-align: center;"><h3><p style="text-align:center">{% formfield  player.Answer with label="" %}</p></h3></div>
         <style type="text/css">
     ul {
         list-style-type:circle;
@@ -267,10 +282,10 @@
     }
 </style>
 <div id="test">
-  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position D</button></p>
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position D</button></p>
 </div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -280,19 +295,16 @@
           <h4 class="modal-title">Payoff information for <font color="#dc143c">Position D</font></h4>
         </div>
         <div class="modal-body">
-          <p><font size="4.5pt">If your position is D, you can get an extra payment.</font></p>
-          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
-         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position E).</font></p>
-         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position E).</font></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
-          <p><font size="4pt">Example1) Your choice is 15 in D and your opponent E choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example2) Your choice is 19 in D and your opponent E choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example3) Your choice is 11 in D and your opponent E choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        <h4>
+        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+         <p>&nbsp;</p>
+          <p><font size="4pt">Example1) If you request $25 in position D and your opponent E requests $30, you will receive $75.</font></p>
+          <p><font size="4pt">Example2) If you request $25 in position D and your opponent E requests $45, you will receive $25.</font></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -321,9 +333,9 @@
 
 
 {%  if current == 5 %}
-<h3><p>Your Position is <span style="color: crimson">E</span>.</p></h3>
-    <h3><p> Choose the number between 11 and 20. </p></h3>
-    <p>{% formfield  player.Answer with label="" %}</p>
+<h3><p>You are in position  <span style="color: crimson">E</span>.</p></h3>
+    <h3><p> Request the money amount between $5 and $50 in multiples of $5. </p></h3>
+   <div style="text-align: center;"><h3><p style="text-align:center">{% formfield  player.Answer with label="" %}</p></h3></div>
         <style type="text/css">
     ul {
         list-style-type:circle;
@@ -336,10 +348,10 @@
 </style>
 
 <div id="test">
-  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Payment information for Position E</button></p>
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position E</button></p>
 </div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -349,19 +361,16 @@
           <h4 class="modal-title">Payoff information for <font color="#dc143c">Position E</font></h4>
         </div>
         <div class="modal-body">
-          <p><font size="4.5pt">If your position is E, you can get an extra payment.</font></p>
-          <p><font size="4.5pt">Regardless of other players' choices, you will get an amount of payment following the number (between 11 and 20) you chose. </font> </p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-         <p><font size="4pt" color="crimson">EXTRA PAYMENT</font></p>
-         <p><font size="4pt" color="crimson"> a.	You receive extra 10 tokens if you pick the same number as your opponent(position A).</font></p>
-         <p><font size="4p" color="crimson">b.	You receive extra 20 tokens if you pick a number that is exactly one less than your opponent(position A).</font></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
-          <p><font size="4pt">Example1) Your choice is 15 in E and your opponent A choose 14. Then, your payroff is : <b>15 + 20(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example2) Your choice is 19 in E and your opponent A choose 19. Then your payoff is <b>19 + 10(Extra) tokens.</b></font></p>
-          <p><font size="4pt">Example3) Your choice is 11 in E and your opponent A choose 13. Then your payoff is <b> 11 tokens.</b> </font></p>
+        <h4>
+        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+         <p>&nbsp;</p>
+          <p><font size="4pt">Example1) If you request $25 in position E and your opponent A requests $30, you will receive $75.</font></p>
+          <p><font size="4pt">Example2) If you request $25 in position E and your opponent A requests $45, you will receive $25.</font></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -387,6 +396,14 @@
 
 {%  endif %}
 
+<script type="text/javascript">
+
+$(".modal-wide").on("show.bs.modal", function() {
+  var height = $(window).height() - 200;
+  $(this).find(".modal-body").css("max-height", height);
+});
+
+</script>
 
 
     {% next_button %}
