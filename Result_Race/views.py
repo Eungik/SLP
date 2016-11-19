@@ -5,14 +5,16 @@ from .models import Constants
 
 def vars_for_all_templates(self):
     return {
+        'rand_num_task1' : self.player.participant.vars[Constants.name_in_url]['rand_num_task1'],
         'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num'],
         'high_light' : self.player.participant.vars[Constants.name_in_url]['rand_num']+1
     }
 
 
+class Task1_Result(Page):
+    pass
 
-
-class MyPage(Page):
+class Task2_Result(Page):
 
     def vars_for_template(self):
         return{
@@ -41,14 +43,23 @@ class MyPage(Page):
             self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
 
 
-class Results(Page):
+class Total_Result(Page):
+
     def vars_for_template(self):
         return{
-            'Final_payoff' : self.player.Final_payoff
+            'Final_payoff' : self.player.Final_payoff,
+            'payoff4_2': self.participant.vars['is_winner_4_2'],
+            'payoff6_3': self.participant.vars['is_winner_6_3'],
+            'payoff8_2': self.participant.vars['is_winner_8_2'],
+            'payoff11_3': self.participant.vars['is_winner_11_3'],
+            'payoff10_2': self.participant.vars['is_winner_10_2'],
+            'payoff15_3': self.participant.vars['is_winner_15_3'],
+            'Showup_added' : self.player.Final_payoff + 5
         }
 
 
 page_sequence = [
-    MyPage,
-    Results
+    Task1_Result,
+    Task2_Result,
+    Total_Result
 ]

@@ -1,0 +1,253 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Task2 : Practice
+{% endblock %}
+
+{% block content %}
+<h4><p>In this turn, the computer player choose the number given your choice to reach the target number first.</p></h4>
+<h4><p>Computer player will choose the number between <font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.</p></h4>
+<h4><p>After computer player ends the turn, you will play the next turn alternately.</p></h4>
+&nbsp;
+<h4><p>Instruction 2:  Please click on the <font color="#0000cd"><b>next button</b></font> to finish the practice round.</p></h4>
+<h4><p>After you finish the practice round, you will participate in round 1.</p></h4>
+&nbsp;
+
+<div id="test"><p>Computer player is thinking</p></div>
+<div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p>
+
+<p> </p>
+
+
+</div>
+
+<div id="test"> <p>
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+    <td><img src = "{% static "Race/1_a.png" %}"/></td>
+    <td><img src = "{% static "Race/2_a.png" %}"/></td>
+    <td><img src = "{% static "Race/3_b.png" %}"/></td>
+    <td><img src = "{% static "Race/4_b.png" %}"/></td>
+    <td><img src = "{% static "Race/5_b.png" %}"/></td>
+    </tr>
+
+</table>
+</div>
+
+
+    {% next_button %}
+
+<style type="text/css">
+
+#ballsWaveG{
+	position:relative;
+	width:192px;
+	height:45px;
+	margin:auto;
+}
+
+.ballsWaveG{
+	position:absolute;
+	top:0;
+	background-color:rgb(189,226,255);
+	width:24px;
+	height:24px;
+	animation-name:ballsWaveG;
+		-o-animation-name:ballsWaveG;
+		-ms-animation-name:ballsWaveG;
+		-webkit-animation-name:ballsWaveG;
+		-moz-animation-name:ballsWaveG;
+	animation-duration:1.5s;
+		-o-animation-duration:1.5s;
+		-ms-animation-duration:1.5s;
+		-webkit-animation-duration:1.5s;
+		-moz-animation-duration:1.5s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	border-radius:12px;
+		-o-border-radius:12px;
+		-ms-border-radius:12px;
+		-webkit-border-radius:12px;
+		-moz-border-radius:12px;
+}
+
+#ballsWaveG_1{
+	left:0;
+	animation-delay:0.6s;
+		-o-animation-delay:0.6s;
+		-ms-animation-delay:0.6s;
+		-webkit-animation-delay:0.6s;
+		-moz-animation-delay:0.6s;
+}
+
+#ballsWaveG_2{
+	left:24px;
+	animation-delay:0.75s;
+		-o-animation-delay:0.75s;
+		-ms-animation-delay:0.75s;
+		-webkit-animation-delay:0.75s;
+		-moz-animation-delay:0.75s;
+}
+
+#ballsWaveG_3{
+	left:48px;
+	animation-delay:0.9s;
+		-o-animation-delay:0.9s;
+		-ms-animation-delay:0.9s;
+		-webkit-animation-delay:0.9s;
+		-moz-animation-delay:0.9s;
+}
+
+#ballsWaveG_4{
+	left:72px;
+	animation-delay:1.05s;
+		-o-animation-delay:1.05s;
+		-ms-animation-delay:1.05s;
+		-webkit-animation-delay:1.05s;
+		-moz-animation-delay:1.05s;
+}
+
+#ballsWaveG_5{
+	left:96px;
+	animation-delay:1.2s;
+		-o-animation-delay:1.2s;
+		-ms-animation-delay:1.2s;
+		-webkit-animation-delay:1.2s;
+		-moz-animation-delay:1.2s;
+}
+
+#ballsWaveG_6{
+	left:120px;
+	animation-delay:1.35s;
+		-o-animation-delay:1.35s;
+		-ms-animation-delay:1.35s;
+		-webkit-animation-delay:1.35s;
+		-moz-animation-delay:1.35s;
+}
+
+#ballsWaveG_7{
+	left:144px;
+	animation-delay:1.5s;
+		-o-animation-delay:1.5s;
+		-ms-animation-delay:1.5s;
+		-webkit-animation-delay:1.5s;
+		-moz-animation-delay:1.5s;
+}
+
+#ballsWaveG_8{
+	left:168px;
+	animation-delay:1.64s;
+		-o-animation-delay:1.64s;
+		-ms-animation-delay:1.64s;
+		-webkit-animation-delay:1.64s;
+		-moz-animation-delay:1.64s;
+}
+
+
+
+@keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-o-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+
+
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+</style>
+{% endblock %}
+
+

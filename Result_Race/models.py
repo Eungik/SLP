@@ -23,6 +23,7 @@ class Subsession(BaseSubsession):
             for player in self.get_players():
                 player.participant.vars[Constants.name_in_url] = {}
                 player.participant.vars[Constants.name_in_url]['rand_num'] = random.randint(1, Constants.num_questions)
+                player.participant.vars[Constants.name_in_url]['rand_num_task1'] = random.randint(1, 10)
 
 
 class Group(BaseGroup):
@@ -32,3 +33,4 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     Final_payoff=models.PositiveIntegerField(initial=0)
     rand_num=models.PositiveIntegerField(initial=0)
+    rand_num_task1 = models.PositiveIntegerField(initial=0)

@@ -4,7 +4,10 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 import random
 
-
+def vars_for_all_templates(self):
+    return {
+        'Pseudo_round': Constants.Pseudo_round,
+    }
 
 
 class BasePage(Page):
@@ -12,13 +15,8 @@ class BasePage(Page):
         return sum([p.end for p in self.player.in_all_rounds()]) == 0
 
 
+
 class Introduction(Page):
-
-    def is_displayed(self):
-        return self.subsession.round_number==1
-
-
-class Introduction3(Page):
 
     def is_displayed(self):
         return self.subsession.round_number==1
@@ -94,7 +92,6 @@ class Lose(BasePage):
 
 page_sequence = [
     Introduction,
-    Introduction3,
     MyPage,
     Computer,
     Win,

@@ -1,0 +1,308 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Task2 : Practice
+{% endblock %}
+
+{% block content %}
+<h4><p>From now on, you will follow the decision-making process same with instruction.</p></h4>
+<h4><p>You are the first mover.</p></h4>
+<p>&nbsp;</p>
+<h4>Instruction 1 : please click on the <font color="#ff8c00" size="5pt"><b>orange ②</b></font> button.</h4>
+<div id="test">
+<p><font size="6pt">Your Choice:</font></p>
+</div>
+
+
+
+<div id="test"><p>
+
+    <p>
+     <button class="btn btn-warning btn-lg round" onclick="myFunction1()"><font size="50">1</font></button>
+     <button name="Practice" value=2 class="btn btn-warning btn-lg round" onclick="myFunction2()"><font size="50">2</font></button>
+    </p>
+
+
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+  <td><img src = "{% static "Race/1_b.png" %}"/></td>
+  <td><img src = "{% static "Race/2_b.png" %}"/></td>
+  <td><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td><img src = "{% static "Race/4_b.png" %}"/></td>
+  <td><img src = "{% static "Race/5_b.png" %}"/></td>
+    </tr>
+</table>
+
+
+
+
+<!--
+Documentation on how to write a django template here:
+https://docs.djangoproject.com/en/1.8/ref/templates/language/
+
+Bootstrap comes pre-loaded, so you can use any Bootstrap elements:
+http://getbootstrap.com/components/
+
+-->
+    {% block scripts %}
+        <script type="text/javascript">
+
+            function myFunction() {
+                var c = alert("Is that correct? You choose ");
+                event.preventDefault();
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction1() {
+                var c = alert("You chose 1. Please choose 2 following the instruction. ");
+                event.preventDefault();
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction2() {
+                var c = confirm("Your choice is 2. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction3() {
+                var c = confirm("Your choice is 3. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction4() {
+                var c = confirm("Your choice is 4. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction5() {
+                var c = confirm("Your choice is 5. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+             function myFunction6() {
+                var c = confirm("Your choice is 6. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+
+             function myFunction7() {
+                var c = confirm("Your choice is 7. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+            function myFunction8() {
+                var c = confirm("Your choice is 8. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction9() {
+                var c = confirm("Your choice is 9. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+            function myFunction10() {
+                var c = confirm("Your choice is 10. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+             function myFunction11() {
+                var c = confirm("Your choice is 11. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+             function myFunction12() {
+                var c = confirm("Your choice is 12. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+
+            function myFunction13() {
+                var c = confirm("Your choice is 13. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+           function myFunction14() {
+                var c = confirm("Your choice is 14. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+            function myFunction15() {
+                var c = confirm("Your choice is 15. Please click the OK button to confirm.");
+                if (!c) {
+                event.preventDefault();
+        }
+        }
+        </script>
+
+    {% endblock %}
+
+<style type="text/css">
+
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  ROUND BUTTONS
+************************/
+.round {
+  border-radius: 50px;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-xlarge {
+    padding: 50px 70px;
+    font-size: 33px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
+.btn-warning{
+
+    width: 90px;
+    text-align: center;
+    padding: 12px 12px;
+
+}
+
+
+</style>
+
+
+
+
+{% endblock %}

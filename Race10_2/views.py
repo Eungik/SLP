@@ -4,6 +4,12 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 import random
 
+def vars_for_all_templates(self):
+    return {
+        'Pseudo_round': Constants.Pseudo_round,
+    }
+
+
 
 class BasePage(Page):
     def is_displayed(self):

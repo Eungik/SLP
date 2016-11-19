@@ -114,7 +114,7 @@ SESSION_CONFIGS = [
         'name': 'Race_Full_set1',
         'display_name': 'Race_Full_set1',
         'num_demo_participants': 3,
-        'app_sequence': ['Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Result_Race'],
+        'app_sequence': ['Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Result_Race'],
     },
 
 
@@ -135,7 +135,7 @@ SESSION_CONFIGS = [
         'name': 'SLP2017',
         'display_name': 'SLP_2017',
         'num_demo_participants': 3,
-        'app_sequence': ['SLPintro','Rubinstein', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
+        'app_sequence': ['SLPintro','Rubinstein','Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
     },
 
     {
@@ -143,6 +143,12 @@ SESSION_CONFIGS = [
         'display_name': 'SLPintro',
         'num_demo_participants': 3,
         'app_sequence': ['SLPintro'],
+    },
+    {
+        'name': 'Race_Intro',
+        'display_name': 'Race_intro',
+        'num_demo_participants': 3,
+        'app_sequence': ['Race_intro'],
     }
 
 ]

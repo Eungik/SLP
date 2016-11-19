@@ -29,7 +29,8 @@ class Constants(BaseConstants):
     Winning_reward=20
     ##losing reward##
     Losing_reward=10
-    timeout_sec = 6
+    timeout_sec = 4
+    Pseudo_round=1
 
     winning_set = [p for p in range(1, Winning_number + 1) if (p % (3)) == 1]
 
@@ -50,6 +51,7 @@ class Player(BasePlayer):
     previous_number=models.PositiveIntegerField(initial=0)
     is_winner_4_2=models.PositiveIntegerField(initial=0)
     end = models.PositiveIntegerField(initial=0)
+    Current_Round=models.PositiveIntegerField(initial=0)
 
 
     def ball_statuses(self):
