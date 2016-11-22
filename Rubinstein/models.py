@@ -50,7 +50,7 @@ class Player(BasePlayer):
         choices=[[1,'A'],[2,'B'],[3,'C'],[4,'D'],[5,'E']],
         widget=widgets.RadioSelectHorizontal(),
     )
-    Practice2=models.PositiveIntegerField(
+    Practice2=models.CurrencyField(
         initial=None,
     )
 
@@ -58,7 +58,7 @@ class Player(BasePlayer):
         choices=[[1,'A'],[2,'B'],[3,'C'],[4,'D'],[5,'E']],
         widget=widgets.RadioSelectHorizontal(),
     )
-    Practice4=models.PositiveIntegerField(
+    Practice4=models.CurrencyField(
         initial=None,
     )
 
