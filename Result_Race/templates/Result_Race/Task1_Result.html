@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Task 1 Earnings
+    Task I Earnings
 {% endblock %}
 
 {% block content %}
@@ -53,14 +53,6 @@ body{margin:40px;}
     text-align: center;
     display:table-cell;
 vertical-align:middle;
-}
-
-.well {
-    background-color: rgba(245, 245, 245, 0.5);
-}
-.badge {
-    font-size: 30px;
-    background-color: rgb(0, 175, 225);
 }
 
 
@@ -243,16 +235,16 @@ b{
 </style>
 </head>
 <div id="triky">
-<a><h4><font color="black">Please click on the Draw button to decide whether you are selected or not.</font></h4></a>
+<a><h4><p><font color="black">Now, we are going to conduct the lucky draw for your Task I. </font></p><p><font color="black">Please click on the Draw button to decide whether you are selected or not.</font></p></h4></a>
 
 <b>
  {%  if rand_num_task1 == 10 %}
-<h4><p>You are <font color="#00008b">selected</font> to be paid the money amount in Task 1</p>
+<h4><p>You are <font color="#00008b">selected</font> to be paid the money amount in Task I</p>
 <p> We will let you know your exact money amount within 1 week by using email and SMS</p>
 </h4>
 {% else %}
-<h4> You are <font color="crimson"> not selected </font> to be paid in Task 1.</h4>
-<h4> Therefore, your earnings in Task 1 is $0.</h4>
+<h4> You are <font color="crimson"> not selected </font> to be paid in Task I.</h4>
+<h4> Therefore, your earnings in Task I is $0.</h4>
 {% endif %}
 </b>
 

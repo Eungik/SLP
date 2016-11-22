@@ -6,13 +6,11 @@
 {% endblock %}
 
 {% block content %}
-<h4><p>In this turn, the computer player choose the number given your choice to reach the target number first.</p></h4>
-<h4><p>Computer player will choose the number between <font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.</p></h4>
-<h4><p>After computer player ends the turn, you will play the next turn alternately.</p></h4>
+<h4><p>In this turn, the computer player chooses the number given your choice to reach the target number first.</p></h4>
+<h4><p>The computer player will choose the number between <font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.</p></h4>
+<h4><p>After the computer player finishes making its decision, you will take your next turn alternately.</p></h4>
 &nbsp;
-<h4><p>Please click on the <font color="#0000cd"><b>next button</b></font> to finish the practice round.</p></h4>
-<h4><p>After you finish the practice round, you will participate in round 1.</p></h4>
-&nbsp;
+
 
 <div id="test"><p>Computer player is thinking</p></div>
 <div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p>
@@ -36,7 +34,7 @@
 </div>
 
 
-    {% next_button %}
+<button class="btn btn-primary"><h4>If you are ready to start the game, please click this button.</h4> </button>
 
 <style type="text/css">
 

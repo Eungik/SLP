@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Task 2 Earnings
+    Task II Earnings
 {% endblock %}
 
 {% block content %}
@@ -26,13 +26,6 @@
         <style type="text/css">
 @import url(http://fonts.googleapis.com/css?family=Pathway+Gothic+One);
 
-.well {
-    background-color: rgba(245, 245, 245, 0.5);
-}
-.badge {
-    font-size: 30px;
-    background-color: rgb(0, 175, 225);
-}
 
 
 a{
@@ -241,7 +234,7 @@ b{
 </style>
 </head>
 <div id="triky">
-<a><h4><font color="black">Please click on the Draw button to decide what round you will be payed in Task 2.</font></h4></a>
+<a><h4><p><font color="black">Now, we are going to conduct the lucky draw for your Task II. </font></p><p><font color="black">Please click on the Draw button to decide what round you will be payed in Task II.</font></p></h4></a>
 			<div class="content" style="text-align: center">
 {% if rand_num == 1 %}
 				<div class="row">
@@ -448,10 +441,10 @@ b{
 </div>
 <b>
 <div class="table">
-<font size="4pt"><p>In Task 2, <font style="color : crimson"> Round {{ rand_num }} </font>is randomly selected</p></font>
+<font size="4pt"><p>In Task II, <font style="color : crimson"> Round {{ rand_num }} </font>is randomly selected.</p></font>
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
-        <th style="text-align: center"><font size="4pt">Task 2 earnings</font></th>
+        <th style="text-align: center"><font size="4pt">Task II earnings</font></th>
         <th style="text-align: center"><font size="4pt">Round</font></th>
         <th style="text-align: center"><font size="4pt">Results</font></th>
     </tr>
@@ -512,7 +505,7 @@ b{
 </table>
 </div>
 </b>
-<font size="4pt"><p> To see the total amount of payoff please click on the next button</p></font>
+<font size="4pt"><p> To see the total amount of payoff please click on the next button.</p></font>
 
     {% next_button %}
 

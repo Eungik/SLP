@@ -9,13 +9,13 @@
 <h4><p><b>Thank you for your participation. The experiment is now completed.</b></p>
 <p>&nbsp;</p>
  {% if rand_num_task1 == 10 %}
-<p>1.	Task I:  We will inform you the result from Task I <font color="#dc143c"><b>in one week.</b></font>  <font color="#00008b"><b>(You are selected to be paid)</b></font> </p>
+<p>1.	Task I:  We will inform you how much you are going to receive from Task I <font color="#dc143c"><b>within one week by emails and SMS.</b></font>  <font color="#00008b"></font>. </p>
      <p>&nbsp;</p>
  {% else %}
- <p>1.	Task I: $0 <font color="crimson">(You are not selected to be paid)</font> </p>
+ <p>1.	Task I: $0 <font color="crimson">(You are not selected to be paid)</font>.</p>
 <p>&nbsp;</p>
 {% endif %}
-<p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Round {{ player.rand_num }}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>$ {{ player.Final_payoff }}</b></font></p>
+<p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Round {{ player.rand_num }}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>$ {{ player.Final_payoff }}</b></font>.</p>
 <p>&nbsp;</p>
 <p>3.	Because you completed the experiments, we will pay you the show-up fee of $ 5.</p>
 <p>&nbsp;</p>
@@ -32,9 +32,9 @@ Earning from Task I (To be announced) </font>+ <font color="#dc143c">Earning fro
 <h4>
 <p style="text-align : center">
 <b>The cash payment you will receive = <font color="#00008b">
-Earning from Task I ($0) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Show-up Fee ($5)</font></b></p>
+Earning from Task I ($0) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Show-up Fee ($5)</font></b>.</p>
 <p>&nbsp;</p>
-<p style="text-align : center">Total payment = ${{ Showup_added }}</p></h4>
+<p style="text-align : center">Total payment = ${{ Showup_added }}.</p></h4>
 
 {% endif %}
 
@@ -42,14 +42,8 @@ Earning from Task I ($0) </font>+ <font color="#dc143c">Earning from Task II (${
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-    {% next_button %}
- <h4><p>Thank you very much for your participation. Please click on the next button to finish the survey.</p></h4>
+<button class="btn btn-primary"><h4>Thank you very much for your participation. Please click this button to finish the survey.</h4> </button>
 
-<script type="text/javascript">
-
-
-
-</script>
 
 {% endblock %}
 
