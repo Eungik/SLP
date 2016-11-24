@@ -439,8 +439,8 @@ b{
 			</div>
     			<div class="clearfix"></div>
 </div>
-<b>
-<div class="table">
+
+<div class="col-sm-12">
 <font size="4pt"><p>In Task II, <font style="color : crimson"> Round {{ rand_num }} </font>is randomly selected.</p></font>
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
@@ -504,11 +504,12 @@ b{
     </tr>
 </table>
 </div>
-</b>
 
-<b>
-<button class="btn btn-primary"><h4> Please click this button to see the total amount of earnings.</h4> </button>
-</b>
+<p>
+<button class="btn btn-primary"> <font size="4pt">Please click this button to see the total amount of earnings. </font></button>
+</p>
+
+
 <script type="text/javascript">
 $(document).ready(function(){
     $("tr:nth-child({{ high_light}})").css("background-color", "#FFD8D8");
@@ -524,7 +525,7 @@ $(document).ready(function(){
 				});
 				$("#trikyShuffle").click(function(){
 					triky.shuffle(20);
-                    $("b").show();
+                    $("b").delay(4000).show(0);
                     $("a").hide();
 				})
 			});

@@ -1,0 +1,58 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Earnings in Task I
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+    <h4>
+    <p style="line-height : 150%">In this task, you will participate in 10 rounds of decision-making.</p>
+    <p style="line-height : 150%">At the beginning of each round of this task, you will be randomly matched with four other participants to form a group.</p>
+    <p>&nbsp;</p>
+    <p style="line-height : 150%">If you are selected for real payment, one round out of 10 rounds will be randomly selected for your earnings.</p>
+    <p style="line-height : 150%">Therefore, please make a careful decision in each round as if it was selected for real payment.</p>
+    <p style="line-height : 150%">In the selected round, your payment will be determined by the choices of you and other participants in group.</p>
+    </h4>
+
+</div>
+
+
+<style type="text/css">
+
+.uline {
+    text-decoration: underline;
+}
+
+pg {
+    padding-left:20px;
+    position:relative;
+}
+pg:before {
+    content: "";
+    font-family:Arial;
+    position:absolute;
+    left:5px;
+}
+
+pg2 {
+    padding-left:40px;
+    position:relative;
+}
+pg2:before {
+    content: "-";
+    font-family:Arial;
+    position:absolute;
+    left:15px;
+}
+
+
+
+</style>
+
+
+    {% next_button %}
+
+{% endblock %}

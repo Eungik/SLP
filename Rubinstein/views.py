@@ -14,6 +14,10 @@ def vars_for_all_templates(self):
     }
 
 
+class CashPayment(Page):
+    def is_displayed(self):
+        return self.round_number==1
+
 class Introduction(Page):
 
     def is_displayed(self):
@@ -84,6 +88,7 @@ class Question1(Page):
 
 
 page_sequence = [
+    CashPayment,
     Introduction,
     Introduction2,
     Example1,

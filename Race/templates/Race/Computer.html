@@ -5,6 +5,15 @@
     Round {{ Pseudo_round }} : The Computer Player's Choice
 {% endblock %}
 {% block content %}
+{% block scripts %}
+    <script>
+        $(document).ready(function ($) {
+            $('#time-limit').hide();
+        });
+    </script>
+{% endblock %}
+
+
 <div id="test"><p>The computer player is thinking</p></div>
 <div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p></div>
 
