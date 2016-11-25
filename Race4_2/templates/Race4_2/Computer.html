@@ -7,11 +7,15 @@
 
 {% block content %}
 {% block scripts %}
-    <script>
+<script>
         $(document).ready(function ($) {
             $('#time-limit').hide();
         });
-    </script>
+        $(document).ready(function(){
+            $('#table').fadeIn(2000);
+        })
+</script>
+
 {% endblock %}
 
 <div id="test"><p>The computer player is thinking</p></div>
@@ -36,7 +40,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_b.png" %}"/></td>
@@ -54,7 +58,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -72,7 +76,7 @@
 {% if Choice == 3 %}
 
 <div id="test"> <p>
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -299,6 +303,11 @@
     to {
         opacity: 1;
     }
+}
+
+#table{
+display:none;
+
 }
 </style>
 

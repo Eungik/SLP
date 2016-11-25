@@ -36,7 +36,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_b.png" %}"/></td>
@@ -69,7 +69,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -102,7 +102,7 @@
 {% if Choice == 3 %}
 
 <div id="test"> <p>
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -136,7 +136,7 @@
 {% if Choice == 4 %}
 
 <div id="test"> <p>
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -170,7 +170,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -204,7 +204,7 @@
 {% if Choice == 6 %}
 
 <div id="test"> <p>
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -238,7 +238,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -273,7 +273,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -306,7 +306,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -339,7 +339,7 @@
 {% if Choice == 10 %}
 
 <div id="test"> <p>
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -373,7 +373,7 @@
 {% if Choice == 11 %}
 
 <div id="test"> <p>
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -407,7 +407,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -440,7 +440,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -476,7 +476,7 @@
 
 <div id="test"> <p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -724,9 +724,18 @@
     height:40px;
     position:absolute;
 }
+#table{
+display:none;
+
+}
 </style>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 
 
 {% endblock %}

@@ -15,7 +15,7 @@
 
 <div id="test"><p>
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
     <td><img src = "{% static "Race/1_a.png" %}"/></td>
     <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -81,10 +81,18 @@
         opacity: 1;
     }
 }
+#table{
+display:none;
 
+}
 
 </style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 
 {% endblock %}
 

@@ -15,7 +15,7 @@
 
 <div id="test"><p>
 
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
     <td><img src = "{% static "Race/1_a.png" %}"/></td>
     <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -43,7 +43,10 @@
 
 
 <style type="text/css">
+#table{
+display:none;
 
+}
 #test p {
     margin-top: 25px;
     font-size: 21px;
@@ -89,7 +92,12 @@
 
 </style>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 {% endblock %}
 
 

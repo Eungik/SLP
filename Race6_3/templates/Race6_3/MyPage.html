@@ -65,7 +65,7 @@
     </p>
 
 
-<table class="table table-responsive" align="center" width="auto" margin="auto">
+<table class="table table-responsive" align="center" width="auto" margin="auto" id="table">
     <tr>
   <td  align="center"><img src = "{% static "Race/1_b.png" %}"/></td>
   <td  align="center"><img src = "{% static "Race/2_b.png" %}"/></td>
@@ -89,7 +89,7 @@
     </p>
 
 
-<table class="table table-responsive" align="center" width="auto" margin="auto">
+<table class="table table-responsive" align="center" width="auto" margin="auto" id="table">
     <tr>
   <td align="center"><img src = "{% static "Race/1_a.png" %}"/></td>
   <td align="center"><img src = "{% static "Race/2_b.png" %}"/></td>
@@ -114,7 +114,7 @@
     </p>
 
 
-<table class="table table-responsive" align="center" width="auto" margin="auto">
+<table class="table table-responsive" align="center" width="auto" margin="auto" id="table">
     <tr>
   <td align="center"><img src = "{% static "Race/1_a.png" %}"/></td>
   <td align="center"><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -139,7 +139,7 @@
     </p>
 
 
-<table class="table table-responsive" align="center" width="auto" margin="auto">
+<table class="table table-responsive" align="center" width="auto" margin="auto" id="table">
     <tr>
   <td align="center"><img src = "{% static "Race/1_a.png" %}"/></td>
   <td align="center"><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -162,7 +162,7 @@
     </p>
 
 
-<table class="table table-responsive" align="center" width="auto" margin="auto">
+<table class="table table-responsive" align="center" width="auto" margin="auto" id="table">
     <tr>
   <td align="center"><img src = "{% static "Race/1_a.png" %}"/></td>
   <td align="center"><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -183,7 +183,7 @@
     </p>
 
 
-<table class="table table-responsive" align="center" width="auto" margin="auto">
+<table class="table table-responsive" align="center" width="auto" margin="auto" id="table">
     <tr>
   <td align="center"><img src = "{% static "Race/1_a.png" %}"/></td>
   <td align="center"><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -470,10 +470,18 @@ http://getbootstrap.com/components/
        -moz-border-radius: 8px;
             border-radius: 8px;
     }
+#table{
+display:none;
 
+}
 </style>
 
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 
 {% endblock %}

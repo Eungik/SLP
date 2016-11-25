@@ -16,7 +16,7 @@
 <div id="test" style="resize:both;">
 
 
-<table class="table" align="center">
+<table class="table" align="center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}" style="width:auto; height:auto"/></td>
   <td><img src = "{% static "Race/2_a.png" %}" style="width:auto; height:auto"/></td>
@@ -47,6 +47,11 @@
         {% next_button %}
 
 <style type="text/css">
+#table{
+display:none;
+
+}
+
 img{
     width: 20%;
     height: auto
@@ -97,7 +102,12 @@ img{
 
 </style>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 {% endblock %}
 
 

@@ -64,7 +64,7 @@
     </p>
 
 
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_b.png" %}"/></td>
   <td><img src = "{% static "Race/2_b.png" %}"/></td>
@@ -87,7 +87,7 @@
      <button name="Choice" value=3 class="btn btn-warning btn-lg round" onclick="myFunction3()"><font size="50">3</font></button>
     </p>
 
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_b.png" %}"/></td>
@@ -110,7 +110,7 @@
      <button name="Choice" value=3 class="btn btn-warning btn-lg round" onclick="myFunction3()"><font size="50">3</font></button>
      <button name="Choice" value=4 class="btn btn-warning btn-lg round" onclick="myFunction4()"><font size="50">4</font></button>
     </p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -133,7 +133,7 @@
      <button name="Choice" value=4 class="btn btn-warning btn-lg round" onclick="myFunction4()"><font size="50">4</font></button>
      <button name="Choice" value=5 class="btn btn-warning btn-lg round" onclick="myFunction5()"><font size="50">5</font></button>
     </p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -156,7 +156,7 @@
      <button name="Choice" value=5 class="btn btn-warning btn-lg round" onclick="myFunction5()"><font size="50">5</font></button>
      <button name="Choice" value=6 class="btn btn-warning btn-lg round" onclick="myFunction6()"><font size="50">6</font></button>
     </p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -179,7 +179,7 @@
      <button name="Choice" value=6 class="btn btn-warning btn-lg round" onclick="myFunction6()"><font size="50">6</font></button>
      <button name="Choice" value=7 class="btn btn-warning btn-lg round" onclick="myFunction7()"><font size="50">7</font></button>
     </p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -201,7 +201,7 @@
      <button name="Choice" value=7 class="btn btn-warning btn-lg round" onclick="myFunction7()"><font size="50">7</font></button>
      <button name="Choice" value=8 class="btn btn-warning btn-lg round" onclick="myFunction8()"><font size="50">8</font></button>
     </p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -223,7 +223,7 @@
     <p>
      <button name="Choice" value=8 class="btn btn-warning btn-lg round" onclick="myFunction8()"><font size="50">8</font></button>
     </p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -509,10 +509,18 @@ http://getbootstrap.com/components/
        -moz-border-radius: 8px;
             border-radius: 8px;
     }
+#table{
+display:none;
 
+}
 </style>
 
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 
 {% endblock %}

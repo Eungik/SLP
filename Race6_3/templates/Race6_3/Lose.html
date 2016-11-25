@@ -14,7 +14,7 @@
 <div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p></div>
 
 <div id="test"> <p>
-<table class="table" align="center" style="text-align : center">
+<table class="table" align="center" style="text-align : center" id="table">
     <tr>
   <td><img src = "{% static "Race/1_a.png" %}"/></td>
   <td><img src = "{% static "Race/2_a.png" %}"/></td>
@@ -31,7 +31,12 @@
 </div>
 
     {% next_button %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
 
+</script>
 
 <style type="text/css">
 
@@ -76,7 +81,10 @@
         opacity: 1;
     }
 }
+#table{
+display:none;
 
+}
 
 </style>
 
