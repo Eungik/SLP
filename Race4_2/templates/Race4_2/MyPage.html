@@ -93,10 +93,10 @@
 
 <table class="table" align="center" style="text-align : center" id="table">
     <tr>
-  <td style="width:25%"><img src = "{% static "Race/1_a.png" %}"/></td>
-  <td style="width:25%"><img src = "{% static "Race/2_b.png" %}"/></td>
-  <td style="width:25%"><img src = "{% static "Race/3_b.png" %}"/></td>
-  <td style="width:25%"><img src = "{% static "Race/4_c.png" %}"/></td>
+  <td><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td><img src = "{% static "Race/2_b.png" %}"/></td>
+  <td><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td><img src = "{% static "Race/4_c.png" %}"/></td>
     </tr>
 </table>
 
@@ -263,6 +263,7 @@ http://getbootstrap.com/components/
     {% endblock %}
 
 <style type="text/css">
+
 .modal.modal-wide .modal-dialog {
   width: 50%;
 }
@@ -420,10 +421,15 @@ http://getbootstrap.com/components/
 
 #table{
 display:none;
-
 }
 
-img { max-width: 100%;  }
+
+td{
+    width:25%;
+}
+img {
+    max-width: 100%;
+}
 </style>
 
 <script type="text/javascript">
