@@ -231,6 +231,10 @@ b{
     display:none;
 }
 
+table{
+    display:none;
+}
+
 </style>
 </head>
 <div id="triky">
@@ -440,8 +444,8 @@ b{
     			<div class="clearfix"></div>
 </div>
 
-<div class="col-sm-12">
-<font size="4pt"><p>In Task II, <font style="color : crimson"> Round {{ rand_num }} </font>is randomly selected.</p></font>
+<div class="table">
+<b><font size="4pt"><p>In Task II, <font style="color : crimson"> Round {{ rand_num }} </font>is randomly selected.</p></font></b>
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
         <th style="text-align: center"><font size="4pt">Task II earnings</font></th>
@@ -505,10 +509,9 @@ b{
 </table>
 </div>
 
-<p>
-<button class="btn btn-primary"> <font size="4pt">Please click this button to see the total amount of earnings. </font></button>
-</p>
-
+<b>
+<button class="btn btn-primary"><h4> Please click this button to see the total amount of earnings.</h4> </button>
+</b>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -527,6 +530,7 @@ $(document).ready(function(){
 					triky.shuffle(20);
                     $("b").delay(4000).show(0);
                     $("a").hide();
+                    $('table').delay(4000).show(0)
 				})
 			});
 </script>
