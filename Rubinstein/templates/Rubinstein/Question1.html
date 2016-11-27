@@ -14,7 +14,7 @@ width: 20px;
 height: 20px;
 }
 .modal.modal-wide .modal-dialog {
-  width: 50%;
+  width: 100%;
 }
 .modal-wide .modal-body {
   overflow-y: auto;
@@ -61,6 +61,44 @@ height: 20px;
         opacity: 1;
     }
 }
+
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
 </style>
 
 
@@ -71,7 +109,7 @@ height: 20px;
 <h3>
 <table align="center" style="text-align: center">
 <tr>
-<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11"> &nbsp;&nbsp;$5&nbsp;</label> &nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
@@ -112,19 +150,19 @@ height: 20px;
         </div>
         <div class="modal-body">
 
-        <h4>
+        <h4 style="line-height: 150%;">
         <p>Your earnings consist of <b>two parts.</b></p>
         <p>&nbsp;</p>
-        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
-        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
-        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
-        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
-        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
-        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+        <div style="padding-left:10px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:10px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:20px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:20px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:30px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:30px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div>
          <p>&nbsp;</p>
          <p>&nbsp;</p>
-          <p><font size="4pt">Example1) If you request $25 in position A and your opponent B requests $30, you will receive $25.</font></p>
-          <p><font size="4pt">Example2) If you request $25 in position A and your opponent B requests $45, you will receive $25.</font></p>
+          <p>Example1) If you request $25 in position A and your opponent B requests $30, you will receive $25.</p>
+          <p>Example2) If you request $25 in position A and your opponent B requests $45, you will receive $25.</p></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -158,7 +196,7 @@ height: 20px;
 <h3>
 <table align="center" style="text-align: center">
 <tr>
-<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11"> &nbsp;&nbsp;$5&nbsp;</label> &nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
@@ -197,19 +235,19 @@ height: 20px;
           <h4 class="modal-title">Earnings information for <font color="#dc143c">position B</font></h4>
         </div>
         <div class="modal-body">
-        <h4>
+        <h4 style="line-height: 150%;">
         <p>Your earnings consist of <b>two parts.</b></p>
         <p>&nbsp;</p>
-        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
-        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
-        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
-        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
-        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
-        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+        <div style="padding-left:10px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:10px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:20px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:20px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:30px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:30px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div>
          <p>&nbsp;</p>
          <p>&nbsp;</p>
-          <p><font size="4pt">Example1) If you request $25 in position B and your opponent C requests $30, you will receive $75.</font></p>
-          <p><font size="4pt">Example2) If you request $25 in position B and your opponent C requests $45, you will receive $25.</font></p>
+          <p>Example1) If you request $25 in position B and your opponent C requests $30, you will receive $75.</p>
+          <p>Example2) If you request $25 in position B and your opponent C requests $45, you will receive $25.</p></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -245,7 +283,7 @@ height: 20px;
 <h3>
 <table align="center" style="text-align: center">
 <tr>
-<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11"> &nbsp;&nbsp;$5&nbsp;</label> &nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
@@ -284,17 +322,17 @@ height: 20px;
           <h4 class="modal-title">Earnings information for <font color="#dc143c">position C</font></h4>
         </div>
         <div class="modal-body">
-         <h4>
-        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
-        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
-        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
-        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
-        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
-        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+         <h4 style="line-height: 150%">
+        <div style="padding-left:10px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:10px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:20px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:20px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:30px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:30px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div>
          <p>&nbsp;</p>
          <p>&nbsp;</p>
-          <p><font size="4pt">Example1) If you request $25 in position C and your opponent D requests $30, you will receive $75.</font></p>
-          <p><font size="4pt">Example2) If you request $25 in position C and your opponent D requests $45, you will receive $25.</font></p>
+          <p>Example1) If you request $25 in position C and your opponent D requests $30, you will receive $75.</p>
+          <p>Example2) If you request $25 in position C and your opponent D requests $45, you will receive $25.</p></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -327,7 +365,7 @@ height: 20px;
 <h3>
 <table align="center" style="text-align: center">
 <tr>
-<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer" value="5"><label for="11"> &nbsp;&nbsp;$5&nbsp;</label> &nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer" value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer" value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer" value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
@@ -366,16 +404,16 @@ height: 20px;
           <h4 class="modal-title">Payoff information for <font color="#dc143c">Position D</font></h4>
         </div>
         <div class="modal-body">
-        <h4>
-        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
-        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
-        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
-        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
-        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
-        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+        <h4 style="line-height: 150%">
+        <div style="padding-left:10px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:10px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:20px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:20px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:30px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:30px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div>
          <p>&nbsp;</p>
-          <p><font size="4pt">Example1) If you request $25 in position D and your opponent E requests $30, you will receive $75.</font></p>
-          <p><font size="4pt">Example2) If you request $25 in position D and your opponent E requests $45, you will receive $25.</font></p>
+          <p>Example1) If you request $25 in position D and your opponent E requests $30, you will receive $75.</p>
+          <p>Example2) If you request $25 in position D and your opponent E requests $45, you will receive $25.</p></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -410,7 +448,7 @@ height: 20px;
 <h3>
 <table align="center" style="text-align: center">
 <tr>
-<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11"> &nbsp;&nbsp;$5&nbsp;</label> &nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
@@ -449,16 +487,16 @@ height: 20px;
           <h4 class="modal-title">Payoff information for <font color="#dc143c">Position E</font></h4>
         </div>
         <div class="modal-body">
-        <h4>
-        <div style="padding-left:20px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
-        <div style="padding-left:20px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
-        <div style="padding-left:40px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
-        <div style="padding-left:40px"><p>2.	If your position is not A :</p></div>
-        <div style="padding-left:60px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
-        <div style="padding-left:60px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div></h4>
+        <h4 style="line-height: 150%;;">
+        <div style="padding-left:10px"><p>You can receive the money amount you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+        <div style="padding-left:10px"><p>You can receive extra money amount depending on your position <font color="#8b008b"><b>(the second part).</b></font></p></div>
+        <div style="padding-left:20px"><p>1.	If your position is A, there is no extra money you could receive.</p></div>
+        <div style="padding-left:20px"><p>2.	If your position is not A :</p></div>
+        <div style="padding-left:30px"><p>a.	You receive <b>extra $25</b> if you request the same money amount as your opponent.</p></div>
+        <div style="padding-left:30px"><p style="line-height:150%">b.	You receive <b>extra $50</b> if you request the money amount that is <b><font color="crimson">exactly $5 less</font></b> than the money amount of your opponent requested.</p></div>
          <p>&nbsp;</p>
-          <p><font size="4pt">Example1) If you request $25 in position E and your opponent A requests $30, you will receive $75.</font></p>
-          <p><font size="4pt">Example2) If you request $25 in position E and your opponent A requests $45, you will receive $25.</font></p>
+          <p>Example1) If you request $25 in position E and your opponent A requests $30, you will receive $75.</p>
+          <p>Example2) If you request $25 in position E and your opponent A requests $45, you will receive $25.</p></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
