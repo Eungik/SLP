@@ -6,33 +6,68 @@
 {% endblock %}
 
 {% block content %}
+<h4><p>You chose {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>①</b></font> step {% else %} <font color="#ff8c00" size="5pt"><b>②</b></font> steps{% endif %} in the previous turn.</p></h4>
 <h4><p>In this turn, the computer player chooses the number given your choice to reach the target number first.</p></h4>
-<h4><p>The computer player will choose the number between <font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.</p></h4>
-<h4><p>After the computer player finishes making its decision, you will take your next turn alternately.</p></h4>
+<h4><p>The computer player will choose the number between {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> and <font color="#ff8c00" size="5pt"><b>③</b></font>.
+{% else %}
+<font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.
+{% endif %}
+</p>
+<p>&nbsp;</p>
+{% if practice == 1 %}
+<p> Choosing <font color="#ff8c00" size="5pt"><b>②</b></font> means that the computer player takes 1 step from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player takes 2 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
+{% else %}
+<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player takes 1 step from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player takes 2 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+{% endif %}
+</h4>
+<p>&nbsp;</p>
+<h4><p><b>Instruction 2 : please click the <span class="btn btn-primary">Next</span> button.</b></p>
 &nbsp;
 
 
 <div id="test"><p>The computer player is thinking</p></div>
 <div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p>
-
-<p> </p>
-
-
 </div>
 
+{% if practice == 1 %}
 <div id="test"> <p>
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
-    <td><img src = "{% static "Race/1_a.png" %}"/></td>
-    <td><img src = "{% static "Race/2_a.png" %}"/></td>
-    <td><img src = "{% static "Race/3_b.png" %}"/></td>
-    <td><img src = "{% static "Race/4_b.png" %}"/></td>
-    <td><img src = "{% static "Race/5_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/2_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/4_b.png" %}"/></td>
+    </tr>
+    <tr>
+   <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
     </tr>
 
 </table>
 </div>
+{% else %}
+<div id="test"> <p>
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+  <td style="width:25%;"><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/2_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/4_b.png" %}"/></td>
+    </tr>
+    <tr>
+   <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
+    </tr>
 
+</table>
+</div>
+{% endif %}
+
+    {% next_button %}
 
 <button class="btn btn-primary"><h4><p>If you are ready to start the game,</p> <p>please click this button.</p></h4> </button>
 

@@ -9,7 +9,13 @@
 <h4><p>Please follow the instruction 1 below.</p></h4>
 <h4><p>You are the first mover.</p></h4>
 <p>&nbsp;</p>
-<h4><b>Instruction 1 : please click on the <font color="#ff8c00" size="5pt"><b>orange ②</b></font> button.</b></h4>
+<h4><p><b>Instruction 1 : please click on the <font color="#ff8c00" size="5pt"><b>orange ① or ②</b></font> button.</b></p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>①</b></font> means that you take 1 step.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>②</b></font> means that you take 2 steps.</p>
+
+
+</h4>
+
 <div id="test">
 <p><font size="6pt">Your Choice:</font></p>
 </div>
@@ -19,18 +25,22 @@
 <div id="test"><p>
 
     <p>
-     <button class="btn btn-warning btn-lg round" onclick="myFunction1()"><font size="50">1</font></button>
+     <button name="Practice" value=1 class="btn btn-warning btn-lg round" onclick="myFunction1()"><font size="50">1</font></button>
      <button name="Practice" value=2 class="btn btn-warning btn-lg round" onclick="myFunction2()"><font size="50">2</font></button>
     </p>
 
 
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
-  <td style="width:20%;"><img src = "{% static "Race/1_b.png" %}"/></td>
-  <td style="width:20%;"><img src = "{% static "Race/2_b.png" %}"/></td>
-  <td style="width:20%;"><img src = "{% static "Race/3_b.png" %}"/></td>
-  <td style="width:20%;"><img src = "{% static "Race/4_b.png" %}"/></td>
-  <td style="width:20%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/1_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/2_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/4_b.png" %}"/></td>
+    </tr>
+    <tr>
+   <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
     </tr>
 </table>
 
@@ -56,8 +66,7 @@ http://getbootstrap.com/components/
         }
         }
             function myFunction1() {
-                var c = alert("You chose 1. Please choose 2 following the instruction. ");
-                event.preventDefault();
+                var c = confirm("Your choice is 1. Please click the OK button to confirm.");
                 if (!c) {
                 event.preventDefault();
         }
