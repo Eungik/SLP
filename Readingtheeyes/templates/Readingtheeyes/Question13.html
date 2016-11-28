@@ -6,6 +6,85 @@
 {% endblock %}
 
 {% block content %}
+    <style type="text/css">
+
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 5vmin;
+}
+
+img{
+
+    width:80%;
+    height: auto;
+
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+
+.modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+img{
+
+    width : 60%;
+    height: auto;
+
+
+}
+
+
+}
+
+
+
+</style>
 
         <table class="table table-striped" align="center">
             <tbody>
@@ -19,16 +98,14 @@
             <tr>
                 <td>
 
-                    <h4>
-                    <p><font size="5pt" style="line-height:200%">
+                    <p><h3 style="line-height: 150%">
                         Choose the word that best describes what the person in the picture is thinking or feeling.
-                    </font></p><p><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="float: right">?</button></p>
+                    </h3></p><p><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="float: right">?</button></p>
 
-                        <font size="5pt" style="line-height:200%">
+                        <h3 style="line-height: 200%">
                         {% formfield player.eye_q13 %}
-                        </font>
+                        </h3>
 
-                    </h4>
 
                 </td>
             </tr>
