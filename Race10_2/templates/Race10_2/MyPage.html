@@ -35,10 +35,11 @@
         <div class="modal-body">
 <p><font size="5pt" style="line-height: 200%"><b><font color="#00008b">TARGET NUMBER : 10 </font></b></font></p>
 <p><font size="5pt" style="line-height: 200%"><b><font color="#dc143c">STEPS : 2</font></b> </font></p>
-<p><font size="4pt" style="line-height: 200%">You are the first mover, in each turn you or the computer player can add an integer number between 1 and 2.</font></p>
-<p><font size="4pt>">The player who gets to 10 first wins the game. </font></p>
-<p><font size="4pt" style="line-height: 200%">If you win the game, you receive $5. Otherwise, you receive $0.</font></p>
-
+<h4 style="line-height: 150%">
+<p>You are the first mover, in each turn you or the computer player can add a number between 1 and 2.</p>
+<p>The player who gets to 10 first wins the game.</p>
+<p>If you win the game, you receive $5. Otherwise, you receive $0.</p>
+</h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -593,7 +594,69 @@ display:none;
 td{
     width:20%;
 }
-img { max-width: 100%;  }
+img { max-width: 100%;}
+
+
+
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+
+.modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+
+}
+
 
 </style>
 

@@ -232,6 +232,66 @@ b{
     display:block;
     text-align:center
   }
+
+
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+
+.modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+
+}
 </style>
 </head>
 <div id="triky">
@@ -350,5 +410,5 @@ b{
 
 
 <p>&nbsp;</p>
-<b><button class="btn btn-primary"><h4> Please click this button to decide the earnings of Task II.</h4> </button></b>
+<b><button class="btn btn-primary"><h4><p>Please click the button</p><p> to decide the earnings of Task II.</p></h4> </button></b>
 {% endblock %}
