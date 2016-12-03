@@ -14,7 +14,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'Race8_2'
     players_per_group = None
-    num_rounds = 10
+    num_rounds = 5
     ## Race game N in paper##
     Winning_number=8
     ## Race game k in paper ##

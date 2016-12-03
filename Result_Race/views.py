@@ -12,7 +12,9 @@ def vars_for_all_templates(self):
 
 
 class Task1_Result(Page):
-    pass
+
+    def before_next_page(self):
+        self.player.rand_num_task1 = self.player.participant.vars[Constants.name_in_url]['rand_num_task1']
 
 class Task2_Result(Page):
 

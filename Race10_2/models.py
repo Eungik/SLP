@@ -14,7 +14,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'Race10_2'
     players_per_group = None
-    num_rounds = 10
+    num_rounds = 5
     ## Race game N in paper##
     Winning_number=10
     ## Race game k in paper ##
@@ -42,7 +42,7 @@ class Player(BasePlayer):
     Choice=models.PositiveIntegerField(min=1, max=Constants.Winning_number, initial=0)
     computer_choice=models.PositiveIntegerField(initial=0)
     previous_number=models.PositiveIntegerField(initial=0)
-    is_winner_4_2=models.PositiveIntegerField(initial=0)
+    is_winner_10_2=models.PositiveIntegerField(initial=0)
     end = models.PositiveIntegerField(initial=0)
 
 

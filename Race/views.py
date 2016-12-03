@@ -76,6 +76,7 @@ class Win(BasePage):
     def before_next_page(self):
          self.player.end =1
          self.participant.vars['is_winner_15_3'] = 1
+         self.player.is_winner_15_3 =1
 
 
 
@@ -86,7 +87,7 @@ class Lose(BasePage):
     def before_next_page(self):
         self.player.end = 1
         self.participant.vars['is_winner_15_3'] = 0
-
+        self.player.is_winner_15_3 = 0
 
 
 page_sequence = [
