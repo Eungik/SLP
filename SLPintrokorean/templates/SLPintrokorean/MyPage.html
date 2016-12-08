@@ -1,0 +1,70 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    한국 노동 패널 조사
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        지시서
+    </h3>
+    &nbsp;
+
+    <h4>
+      <ul>
+     <li><p style="line-height: 150%"> 한국 노동 패널의 조사에 참에 주셔서 감사합니다.</p></li>
+      &nbsp;
+      <li><p style="line-height: 150%"> 당신은 3가지 과제에 약 10 ~ 20분간 참여하게 됩니다. (과제1, 과제2, 과제3)</p></li>
+      &nbsp;
+       <li> <p style="line-height: 150%">조사에 끝까지 응하시는 경우 <b><font color="#00008b">₩5000</font></b>을 받아가실 수 있습니다 . 또한 당신의 선택과 상대방에 선택에 따라 <b><font color="#00008b">추가적인 보수</font></b>를 획득하실 수 있습니다. </p></li>
+      &nbsp;
+     <li><p style="line-height: 150%">모든 참여자는 동일한 지시서를 읽게 됩니다.</p></li>
+     &nbsp;
+     <li><p style="line-height: 150%">모든 사항을 읽으신 후에, 다음 버튼을 눌러 주세요.</p></li>
+     </ul>
+    </h4>
+
+</div>
+
+
+
+    {% next_button %}
+
+
+<style type="text/css">
+
+
+h4 {
+  font-size: 4vmin;
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+  /* 480px 이상 */
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+}
+
+</style>
+
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    과제1 보수
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+    <h4>
+    <ul>
+    <p><li style="line-height : 150%">이번 과제에서 당신은 총 10번의 의사결정을 하게 됩니다.</li></p>
+    <p><li style="line-height : 150%">과제가 시작될 때, 당신은 무작위로 다른 참여자와 그룹을 이루어 실험에 참여하게 됩니다.</li></p>
+    <p>&nbsp;</p>
+    <p><li style="line-height : 150%">당신의 그룹이 당첨되면, 10번 중 1번의 선택이 무작위로 선택되어 보수로 지급됩니다.</li></p>
+    <p><li style="line-height : 150%">어떤 선택이 실제 보수로 추첨 될지 모르니, 항상 신중을 기해 선택해 주시길 부탁드립니다.</li></p>
+    <p><li style="line-height : 150%">추첨된 라운드의 당신의 선택과 그룹 내의 다른 사람의 선택에 의해 당신의 보수가 결정됩니다.</li></p>
+    </ul>
+    </h4>
+
+</div>
+
+
+<style type="text/css">
+p {
+  font-size: 1.78vmin;
+}
+
+.uline {
+    text-decoration: underline;
+}
+
+pg {
+    padding-left:20px;
+    position:relative;
+}
+pg:before {
+    content: "";
+    font-family:Arial;
+    position:absolute;
+    left:5px;
+}
+
+pg2 {
+    padding-left:40px;
+    position:relative;
+}
+pg2:before {
+    content: "-";
+    font-family:Arial;
+    position:absolute;
+    left:15px;
+}
+
+h4 {
+  font-size: 4vmin;
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+  /* 480px 이상 */
+}
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+}
+
+
+</style>
+
+
+    {% next_button %}
+
+{% endblock %}

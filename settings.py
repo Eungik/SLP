@@ -151,7 +151,13 @@ SESSION_CONFIGS = [
         'display_name': 'Race_intro',
         'num_demo_participants': 3,
         'app_sequence': ['Race_intro'],
-    }
+    },
+    {
+        'name': 'SLPintrokorean',
+        'display_name': '노동패널조사',
+        'num_demo_participants': 3,
+        'app_sequence': ['SLPintrokorean', 'Rubinsteinkorean'],
+    },
 
 ]
 
