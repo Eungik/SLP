@@ -6,24 +6,24 @@
 {% endblock %}
 
 {% block content %}
-<h4 style="line-height: 150%"><p>You chose {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>①</b></font> step {% else %} <font color="#ff8c00" size="5pt"><b>②</b></font> steps{% endif %} in the previous turn.</p></h4>
-<h4 style="line-height: 150%"><p>In this turn, the computer player chooses the number given your choice to reach the target number first.</p></h4>
-<h4 style="line-height: 150%"><p>The computer player will choose the number between {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> and <font color="#ff8c00" size="5pt"><b>③</b></font>.
+<h4 style="line-height: 150%"><p>You chose {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>1</b></font> step {% else %} <font color="#ff8c00" size="5pt"><b>2</b></font> steps{% endif %} in the first turn.</p></h4>
+<h4 style="line-height: 150%"><p>In the second turn, the computer player adds 1 step or 2 steps</p></h4>
+<h4 style="line-height: 150%"><p>It means that the computer player will choose the number between {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> and <font color="#ff8c00" size="5pt"><b>③</b></font>.
 {% else %}
 <font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.
 {% endif %}
 </p>
 <p>&nbsp;</p>
 {% if practice == 1 %}
-<p> Choosing <font color="#ff8c00" size="5pt"><b>②</b></font> means that the computer player will take 1 step from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player will take 2 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>②</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
 {% else %}
-<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player will take 1 step from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player will take 2 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
 {% endif %}
 </h4>
 <p>&nbsp;</p>
-<h4 style="line-height: 150%"><p><b>Instruction 2 : please click the <span class="btn btn-primary">Next</span> button.</b></p>
+<h4 style="line-height: 150%"><p><b>Instruction 2 : please click the next button.</b></p>
 &nbsp;
 
 

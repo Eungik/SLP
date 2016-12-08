@@ -10,6 +10,12 @@ class Introduction(Page):
     def is_displayed(self):
         return self.round_number == 1
 
+class Introduction2(Page):
+    def is_displayed(self):
+        return self.round_number == 1
+
+
+
 class Sample_intro(Page):
     def is_displayed(self):
         return self.round_number == 1
@@ -41,6 +47,7 @@ class Sample3(Page):
 
 page_sequence = [
     Introduction,
+    Introduction2,
     Sample_intro,
     Sample1,
     Sample2,
