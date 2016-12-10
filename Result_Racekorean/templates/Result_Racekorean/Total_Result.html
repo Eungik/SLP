@@ -1,0 +1,51 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    최종 보수 결과
+{% endblock %}
+
+{% block content %}
+<h4><p><b>실험에 참여해주셔서 감사합니다.</b></p>
+<p>&nbsp;</p>
+ {% if rand_num_task1 == 10 %}
+<p>1.	과제 1:  일주일 안에 문자메시지와 이메일을 통해 정확한 금액을 안내해 드리겠습니다. <font color="#dc143c"><b>within one week by emails and SMS.</b></font>  <font color="#00008b"></font>. </p>
+     <p>&nbsp;</p>
+ {% else %}
+ <p>1.	과제 1: $0 <font color="crimson">(당신은 실제 보수를 위해 선택되지 않았습니다.)</font>.</p>
+<p>&nbsp;</p>
+{% endif %}
+<p>2.	과제 2:  <font color="#dc143c"><b>"라운드 {{ player.rand_num }}"</b></font>이(가) 무작위로 추첨되었고 해당 라운드에서 당신의 보수는 <font color="crimson"><b>$ {{ player.Final_payoff }}</b></font>입니다.</p>
+<p>&nbsp;</p>
+<p>3.	끝까지 과제를 마치셨기 때문에 참여비 $5을 받아가시게 됩니다.</p>
+<p>&nbsp;</p>
+
+{% if rand_num_task1 == 10 %}
+<p style="text-align : center">
+<b>당신의 최종보수는 = <font color="#00008b">
+과제 1 보수 (1 주일 소요 예정) </font>+ <font color="#dc143c">과제 2 보수 (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">참여비 ($5)</font></b></p>
+<p>&nbsp;</p>
+<p style="text-align : center">최종 보수 : 추후 연락</p></h4>
+
+{% else %}
+
+<h4>
+<p style="text-align : center">
+<b>당신의 최종보수는 = <font color="#00008b">
+과제 1 보수 ($0) </font>+ <font color="#dc143c">과제 2 보수 (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">참여비 ($5)</font></b>.</p>
+<p>&nbsp;</p>
+<p style="text-align : center">최종 보수 = ${{ Showup_added }}.</p></h4>
+
+{% endif %}
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<button class="btn btn-primary"><h4><p>노동 패널 연구에 참여해주셔서 감사합니다.</p>
+    <p>해당 버튼을 클릭해 주십시오.</p></h4> </button>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,79 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    과제 2
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+<h4 style="line-height:150%">
+ <ul>
+<p><li>매 라운드마다 당신과 컴퓨터는 번갈아가면서 얼마만큼의 <b><font color="#008b8b">"단계"</font></b>를 선택할 것인지 결정하게 됩니다.</li></p>
+<p><li>당신이 항상 첫번째 선택을 하게 됩니다.</li></p>
+<p><li>매 선택마다 당신과 컴퓨터는 번갈아 가면서 지금까지 선택한 수에 더하여 최대 K (1,2,...K) 만큼의 단계를 선택하게 됩니다. </li></p>
+<p><li><font color="#00008b"><b>"목표"</b></font>에 먼저 도달한 사람이 해당 라운드를 이기게 됩니다.</li></p>
+<p><li>만약 당신이 이기면 $5을 받게되고, 컴퓨터가 이기면 $0을 받게 됩니다.</li></p>
+
+</ul>
+</h4>
+
+</div>
+    {% next_button %}
+
+
+
+ <style type="text/css">
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+}
+
+ul{
+
+    padding-left:5px;
+}
+
+
+
+
+ </style>
+
+{% endblock %}

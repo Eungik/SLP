@@ -1,0 +1,76 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    과제 2
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+<h4 style="line-height:150%">
+ <ul>
+<p><li>당신은 6번의 라운드에 참여하게 됩니다.</li></p>
+<p><li>각 라운드 마다 당신은 <b><font color="#dc143c">컴퓨터</font></b>와 대결하게 되며, 컴퓨터는 매 선택마다 당신을 상대로 승리확률을 극대화할 수 있도록 프로그램되어 있습니다.</li></p>
+<p><li>6번의 라운드 중 1번의 라운드가 선택되어 과제 2에 대한 최종 보수로 선택됩니다. </li> </p>
+</ul>
+</h4>
+
+</div>
+    {% next_button %}
+
+
+
+ <style type="text/css">
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+}
+
+ul{
+
+    padding-left:5px;
+}
+
+
+
+
+ </style>
+
+{% endblock %}

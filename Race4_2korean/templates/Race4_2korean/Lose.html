@@ -1,0 +1,141 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+   라운드 {{ Pseudo_round }}
+{% endblock %}
+
+{% block content %}
+<h3> <p>컴퓨터가 이번 라운드에서 승리하였습니다.</p>
+<p>&nbsp;</p>
+<p>당신의 이번 라운드의 보수는 $0 입니다.</p></h3>
+
+<div id="test"><p>The computer player chose 4.</p></div>
+<div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p></div>
+
+<div id="test"><p>
+
+<table class="table" align="center" style="text-align : center" id="table">
+    <tr>
+  <td><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td><img src = "{% static "Race/2_a.png" %}"/></td>
+  <td><img src = "{% static "Race/3_a.png" %}"/></td>
+  <td><img src = "{% static "Race/4_a.png" %}"/></td>
+    </tr>
+</table>
+
+</p>
+</div>
+
+    {% next_button %}
+
+
+<style type="text/css">
+
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#table{
+display:none;
+
+}
+
+td{
+
+    width:25%;
+
+}
+img { max-width: 100%;  }
+
+
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+@media only screen and (min-width: 480px) {
+
+    h4 {
+        font-size: 1.78vmin
+    }
+
+    h3 {
+        font-size: 2.5vmin
+
+    }
+
+    h2 {
+        display: block;
+        font-size: 2.2em;
+        margin-before: 0.83em;
+        margin-after: 0.83em;
+        margin-start: 0;
+        margin-end: 0;
+    }
+}
+
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#table').fadeIn(2000);
+})
+
+</script>
+
+{% endblock %}
+
+
+

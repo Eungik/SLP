@@ -1,0 +1,276 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    문제 1
+{% endblock %}
+
+{% block content %}
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Tooltip</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+  $("body").tooltip({
+    selector: "[data-toggle='tooltip']",
+    container: "body"
+  })
+    //Popover, activated by clicking
+    .popover({
+    selector: "[data-toggle='popover']",
+    container: "body",
+    html: true
+  });
+});
+
+</script>
+</head>
+
+
+<style type="text/css">
+input.largerCheckbox {
+    width: 20px;
+    height: 20px;
+}
+
+body {
+  background: #FFFFFF;
+  min-height: 520px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+div,
+button {
+  font-family-sans-serif: consolas, courier, monaco, menlo, monospace;
+}
+
+.ole,
+.elo {
+  padding: 6px 36px;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 4px;
+  border:0;
+  cursor: pointer;
+  color: #000;
+}
+
+.ct {
+  text-align: center
+}
+
+.two {
+  background: rgb(180,220,255);
+}
+
+.three {
+  background: rgb(160,200,255);
+}
+
+.four {
+  background: rgb(140,180,255);
+}
+
+.ole:
+,
+.elo:hover {
+
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 0 0 0 #555;
+}
+
+.multiple_elements {
+  padding: 30px 0 10px 0;
+  text-align: center;
+}
+
+/*customizing tooltip color*/
+/*right tooltip*/
+.tooltip.right > .tooltip-arrow {
+  border-right-color: dodgerblue;
+}
+
+/*bottom tooltip*/
+.tooltip.bottom > .tooltip-arrow {
+  border-bottom-color: dodgerblue;
+}
+
+/*top tooltip*/
+.tooltip.top > .tooltip-arrow {
+  border-top-color: dodgerblue;
+}
+
+/*left tooltip*/
+.tooltip.left > .tooltip-arrow {
+  border-left-color: dodgerblue;
+}
+
+/*tooltip inner*/
+.tooltip > .tooltip-inner {
+  background-color: dodgerblue;
+  text-shadow: 0 1px 1px #000;
+  font-weight: normal;
+}
+
+code {
+  color: royalblue;
+  background-color: azure;
+}
+
+@media (max-width:640px) {
+  .ole,
+  .elo {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+.after-box {
+    clear: left;
+}
+
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 5vmin;
+}
+
+img{
+
+    width:80%;
+    height: auto;
+
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+
+.modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+img{
+
+    width : 60%;
+    height: auto;
+
+
+}
+
+
+}
+
+</style>
+
+
+
+        <table class="table table-striped" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img src = "{% static "Readingtheeyes/Question1_Child.png" %}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+
+                    <p><h3 style="line-height: 150%">
+                       사진 안에 있는 사람의 눈을 보고 감정 혹은 생각을 가장 잘 표현하는 단어를 골라주십시오.
+                    </h3></p>     <p><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="float: right">?</button></p>
+
+                        <h3 style="line-height: 200%">
+                        {% formfield player.eye_q1 %}
+                        </h3>
+
+
+
+                </td>
+            </tr>
+            </tbody>
+
+
+
+        </table>
+      <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Word Meaning</h4>
+        </div>
+        <div class="modal-body">
+          <font size="4pt"><p>1.Hate : to dislike something very much</p></font>
+          <font size="4pt"><p>2.Surprised : feeling or showing surprise</p></font>
+          <font size="4pt"><p>3.Kind : caring about others; gentle, friendly and generous</p></font>
+          <font size="4pt"><p>4.Cross : annoyed or quite angry</p></font>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    {% next_button %}
+
+{% endblock %}

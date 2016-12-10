@@ -1,0 +1,224 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    과제 2 : 연습 라운드
+{% endblock %}
+
+{% block content %}
+<h4 style="line-height: 150%"><p>당신은 {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>1</b></font> 단계 {% else %} <font color="#ff8c00" size="5pt"><b>2</b></font> 단계{% endif %}를 선택하였습니다.</p></h4>
+<h4 style="line-height: 150%"><p>두번째로는, 컴퓨터가 얼마만큼의 단계를 더할지 결정하게 됩니다.</p></h4>
+<h4 style="line-height: 150%"><p>컴퓨터는 {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> , <font color="#ff8c00" size="5pt"><b>③</b></font>중 하나의 선택을 하게 될 것입니다..
+{% else %}
+<font color="#ff8c00" size="5pt"><b>③</b></font> ,<font color="#ff8c00" size="5pt"><b>④</b></font>중 하나의 선택을 하게 될 것입니다..
+{% endif %}
+</p>
+<p>&nbsp;</p>
+{% if practice == 1 %}
+<p> <font color="#ff8c00" size="5pt"><b>②</b></font>를 선택하는 것은 <font color="#ff8c00" size="5pt"><b>①</b></font>으로 부터 1 단계를 더하는 것을 의미합니다.</p>
+<p> <font color="#ff8c00" size="5pt"><b>③</b></font>를 선택하는 것은 <font color="#ff8c00" size="5pt"><b>①</b></font>으로 부터 2 단계를 더하는 것을 의미합니다.</p>
+{% else %}
+<p> <font color="#ff8c00" size="5pt"><b>③</b></font>를 선택하는 것은 <font color="#ff8c00" size="5pt"><b>②</b></font>로 부터 1 단계를 더하는 것을 의미합니다..</p>
+<p> <font color="#ff8c00" size="5pt"><b>④</b></font>를 선택하는 것은 <font color="#ff8c00" size="5pt"><b>②</b></font>로 부터 2 단계를 더하는 것을 의미합니다..</p>
+{% endif %}
+</h4>
+<p>&nbsp;</p>
+<h4 style="line-height: 150%"><p><b>다음 버튼을 눌러주세요.</b></p>
+&nbsp;
+
+
+<div id="test"><p>The computer player is thinking</p></div>
+<div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p>
+</div>
+
+{% if practice == 1 %}
+<div id="test"> <p>
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+  <td style="width:25%;"><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/2_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/4_b.png" %}"/></td>
+    </tr>
+    <tr>
+   <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
+    </tr>
+
+</table>
+</div>
+{% else %}
+<div id="test"> <p>
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+  <td style="width:25%;"><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/2_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/3_b.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/4_b.png" %}"/></td>
+    </tr>
+    <tr>
+   <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
+    </tr>
+
+</table>
+</div>
+{% endif %}
+
+    {% next_button %}
+
+
+
+<style type="text/css">
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+}
+
+ul{
+
+    padding-left:5px;
+}
+
+
+
+@keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-o-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes ballsWaveG{
+	0%{
+		background-color:rgb(184,233,255);
+	}
+
+	100%{
+		background-color:rgb(255,255,255);
+	}
+}
+
+
+
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+td{
+    width:20%;
+}
+img { max-width: 100%;  }
+</style>
+{% endblock %}
+
+
