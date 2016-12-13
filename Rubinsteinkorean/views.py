@@ -88,14 +88,5 @@ class Question1(Page):
 
 
 page_sequence = [
-    CashPayment,
-    Introduction,
-    Introduction2,
-    Example1,
-    Example2,
-    Practice,
-    Answer,
-    Practice2,
-    Answer2,
     Question1,
 ]

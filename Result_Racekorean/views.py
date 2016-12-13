@@ -4,10 +4,11 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 def vars_for_all_templates(self):
+    self.participant.vars['is_winner_4_2'] = 1
     self.participant.vars['is_winner_6_3'] = 0
-    self.participant.vars['is_winner_8_2'] = 0
+    self.participant.vars['is_winner_8_2'] = 1
     self.participant.vars['is_winner_11_3'] = 0
-    self.participant.vars['is_winner_10_2'] = 0
+    self.participant.vars['is_winner_10_2'] = 1
     return {
         'rand_num_task1' : self.player.participant.vars[Constants.name_in_url]['rand_num_task1'],
         'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num'],
