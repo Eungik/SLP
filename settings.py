@@ -154,9 +154,9 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'SLPintrokorean',
-        'display_name': '노동패널조사',
+        'display_name': '한글화샘플',
         'num_demo_participants': 3,
-        'app_sequence': ['Rubinsteinkorean','Racekorean', 'Readingtheeyeskorean', 'Result_Racekorean'],
+        'app_sequence': ['Rubinsteinkorean','Racekorean', 'Readingtheeyeskorean'],
     },
 
 ]
