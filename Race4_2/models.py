@@ -38,8 +38,9 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
-
+    def vars_for_admin_report(self):
+        payoffs = sorted([p.payoff for p in self.get_players()])
+        return {'payoffs': payoffs}
 
 class Group(BaseGroup):
     pass

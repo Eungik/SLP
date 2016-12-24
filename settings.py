@@ -118,8 +118,6 @@ SESSION_CONFIGS = [
         'num_demo_participants': 3,
         'app_sequence': ['Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Result_Race'],
     },
-
-
     {
         'name': 'Reading_the_eyes',
         'display_name': 'Readingtheeyes',

@@ -165,7 +165,7 @@ class Player(BasePlayer):
     eye_q15 = models.PositiveIntegerField(initial=None,
                                           choices=[[1, '① Not believing'],
                                                    [2, '② Friendly'],
-                                                   [3, '③ Wanting to pay'],
+                                                   [3, '③ Wanting to play'],
                                                    [4, '④ Relaxed'],
                                                    ],
                                           verbose_name="",

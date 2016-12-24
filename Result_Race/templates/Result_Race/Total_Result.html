@@ -15,15 +15,15 @@
  <p>1.	Task I: $0 <font color="crimson">(You are not selected to be paid)</font>.</p>
 <p>&nbsp;</p>
 {% endif %}
-<p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Round {{ player.rand_num }}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>$ {{ player.Final_payoff }}</b></font>.</p>
+<p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Round {{ player.rand_num }}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>${{ player.Final_payoff }}</b></font>.</p>
 <p>&nbsp;</p>
-<p>3.	Because you completed the experiments, we will pay you the show-up fee of $ 5.</p>
+<p>3.	Because you completed the experiments, we will pay you the participation fee of $5.</p>
 <p>&nbsp;</p>
 
 {% if rand_num_task1 == 10 %}
 <p style="text-align : center">
 <b>The cash payment you will receive = <font color="#00008b">
-Earning from Task I (To be announced) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Show-up Fee ($5)</font></b></p>
+Earning from Task I (To be announced) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Participation fee ($5)</font></b></p>
 <p>&nbsp;</p>
 <p style="text-align : center">Total payment : To be announced</p></h4>
 
@@ -32,7 +32,7 @@ Earning from Task I (To be announced) </font>+ <font color="#dc143c">Earning fro
 <h4>
 <p style="text-align : center">
 <b>The cash payment you will receive = <font color="#00008b">
-Earning from Task I ($0) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Show-up Fee ($5)</font></b>.</p>
+Earning from Task I ($0) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Participation fee ($5)</font></b>.</p>
 <p>&nbsp;</p>
 <p style="text-align : center">Total payment = ${{ Showup_added }}.</p></h4>
 
