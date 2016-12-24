@@ -288,6 +288,38 @@ class Player(BasePlayer):
                                           verbose_name="",
                                           widget=widgets.RadioSelect())
 
+    correct0 = models.IntegerField(initial=0)
+    correct1 = models.IntegerField(initial=0)
+    correct2 = models.IntegerField(initial=0)
+    correct3 = models.IntegerField(initial=0)
+    correct4 = models.IntegerField(initial=0)
+    correct5 = models.IntegerField(initial=0)
+    correct6 = models.IntegerField(initial=0)
+    correct7 = models.IntegerField(initial=0)
+    correct8 = models.IntegerField(initial=0)
+    correct9 = models.IntegerField(initial=0)
+    correct10 = models.IntegerField(initial=0)
+    correct11 = models.IntegerField(initial=0)
+    correct12 = models.IntegerField(initial=0)
+    correct13 = models.IntegerField(initial=0)
+    correct14 = models.IntegerField(initial=0)
+    correct15 = models.IntegerField(initial=0)
+    correct16 = models.IntegerField(initial=0)
+    correct17 = models.IntegerField(initial=0)
+    correct18 = models.IntegerField(initial=0)
+    correct19 = models.IntegerField(initial=0)
+    correct20 = models.IntegerField(initial=0)
+    correct21 = models.IntegerField(initial=0)
+    correct22 = models.IntegerField(initial=0)
+    correct23 = models.IntegerField(initial=0)
+    correct24 = models.IntegerField(initial=0)
+    correct25 = models.IntegerField(initial=0)
+    correct26 = models.IntegerField(initial=0)
+    correct27 = models.IntegerField(initial=0)
+    correct28 = models.IntegerField(initial=0)
+    correct_total=models.IntegerField(initial=0)
+
+
 
 
 
