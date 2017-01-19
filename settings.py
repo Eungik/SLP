@@ -135,7 +135,7 @@ SESSION_CONFIGS = [
         'name': 'SLP2017',
         'display_name': 'SLP_2017',
         'num_demo_participants': 3,
-        'app_sequence': ['SLPintro','Rubinstein','Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
+        'app_sequence': ['IRB','SLPintro','Rubinstein','Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
     },
 
     {
@@ -149,6 +149,13 @@ SESSION_CONFIGS = [
         'display_name': 'Race_intro',
         'num_demo_participants': 3,
         'app_sequence': ['Race_intro'],
+    },
+    {
+        'name': 'IRB',
+        'display_name': 'IRB',
+        'num_demo_participants': 3,
+        'app_sequence': ['IRB'],
+
     },
     {
         'name': 'SLPintrokorean',
