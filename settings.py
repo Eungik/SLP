@@ -113,48 +113,25 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
 
     {
-        'name': 'Race_Full_set1',
-        'display_name': 'Race_Full_set1',
-        'num_demo_participants': 3,
-        'app_sequence': ['Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Result_Race'],
-    },
-    {
-        'name': 'Reading_the_eyes',
-        'display_name': 'Readingtheeyes',
-        'num_demo_participants': 3,
-        'app_sequence': ['Readingtheeyes'],
-    },
-
-    {
-        'name': 'Rubinstein',
-        'display_name': 'Rubinstein',
-        'num_demo_participants': 3,
-        'app_sequence': ['Rubinstein'],
-    },
-    {
         'name': 'SLP2017',
         'display_name': 'SLP_2017',
         'num_demo_participants': 3,
-        'app_sequence': ['IRB','SLPintro','Rubinstein','Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
+        'app_sequence': ['IRB','SLPintro','Rubinstein', 'Rubinstein2', 'Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
     },
 
+
     {
-        'name': 'SLPintro',
-        'display_name': 'SLPintro',
+        'name': 'Rubinstein_Second_5',
+        'display_name': 'Rubinstein Second 5',
         'num_demo_participants': 3,
-        'app_sequence': ['SLPintro'],
+        'app_sequence': ['Rubinstein2'],
+
     },
     {
-        'name': 'Race_Intro',
-        'display_name': 'Race_intro',
+        'name': 'BRET',
+        'display_name': 'BRET',
         'num_demo_participants': 3,
-        'app_sequence': ['Race_intro'],
-    },
-    {
-        'name': 'IRB',
-        'display_name': 'IRB',
-        'num_demo_participants': 3,
-        'app_sequence': ['IRB'],
+        'app_sequence': ['bret'],
 
     },
     {

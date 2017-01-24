@@ -1,0 +1,526 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Round {{ round_number }}
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+input.largerCheckbox
+{
+width: 20px;
+height: 20px;
+}
+.modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+#test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+
+
+.modal.modal-wide .modal-dialog {
+  width: 50%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+</style>
+
+
+{%  if current == 1 %}
+<h4><p>You are in position <span style="color: crimson">A</span>.</p></h4>
+<h4><p> Request the money amount between $5 and $50 in multiples of $5. </p></h4>
+&nbsp;
+<h3>
+<table align="center" style="text-align: center">
+<tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer_2"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer_2"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer_2"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer_2"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="15" name="Answer_2" value="25"><label for="15">&nbsp;&nbsp;$25 </label>&nbsp;&nbsp;</td>
+</tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="16" name="Answer_2"  value="30"><label for="16"> &nbsp;&nbsp;$30 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="17" name="Answer_2" value="35"><label for="17"> &nbsp;&nbsp;$35 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="18" name="Answer_2" value="40"><label for="18"> &nbsp;&nbsp;$40 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="19" name="Answer_2" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="20" name="Answer_2" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
+</table>
+&nbsp;
+</h3>
+
+<style type="text/css">
+    ul {
+        list-style-type:circle;
+        padding-left:20px;
+    }
+    h3.panel-sub-heading {
+        padding-bottom:10px;
+        padding-left:4px;
+    }
+</style>
+
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position A</button></p>
+</div>
+  <!-- Modal -->
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Earnings information for <font color="#dc143c">position A</font></h4>
+        </div>
+        <div class="modal-body">
+
+        <h4 style="line-height: 150%;">
+        <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+    <div style="padding-left:10px"><p>- You will receive $55 <b>minus</b> the amount of money you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+    <div style="padding-left:10px"><p>- You will receive extra money amount as follows <font color="#8b008b"><b>(the second part).</b></font></p></div>
+    <div style="padding-left:25px"><p> 1.	If your position is A, there is <b>NO</b> extra money you could receive.</p></div>
+    <div style="padding-left:25px"><p> 2.	If your position is <b>NOT</b> A :</p></div>
+<div style="padding-left:40px"><p>a.	You receive <b><font color="#dc143c">extra $50</font></b> if you request the money amount that is <b><font color="crimson">exactly $5 more</font></b> than the money amount that your opponent requested.</p></div>
+<div style="padding-left:40px"><p>b.	You receive <b><font color="#dc143c">extra $25</font></b> if you request the same money amount as your opponent.</p></div>
+        </h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+        <table class="table" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionA.png" %}"/>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+{%  endif %}
+
+
+{%  if current == 2 %}
+<h4><p>You are in position <span style="color: crimson">B</span>.</p></h4>
+<h4><p>Request the money amount between $5 and $50 in multiples of $5. </p></h4>
+&nbsp;
+<h3>
+<table align="center" style="text-align: center">
+<tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer_2"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer_2"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer_2"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer_2"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="15" name="Answer_2" value="25"><label for="15">&nbsp;&nbsp;$25 </label>&nbsp;&nbsp;</td>
+</tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="16" name="Answer_2"  value="30"><label for="16"> &nbsp;&nbsp;$30 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="17" name="Answer_2" value="35"><label for="17"> &nbsp;&nbsp;$35 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="18" name="Answer_2" value="40"><label for="18"> &nbsp;&nbsp;$40 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="19" name="Answer_2" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="20" name="Answer_2" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
+</table>
+&nbsp;
+</h3>
+<style type="text/css">
+    ul {
+        list-style-type:circle;
+        padding-left:20px;
+    }
+    h3.panel-sub-heading {
+        padding-bottom:10px;
+        padding-left:4px;
+    }
+</style>
+
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position B</button></p>
+</div>
+  <!-- Modal -->
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Earnings information for <font color="#dc143c">position B</font></h4>
+        </div>
+        <div class="modal-body">
+        <h4 style="line-height: 150%;">
+        <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+    <div style="padding-left:10px"><p>- You will receive $55 <b>minus</b> the amount of money you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+    <div style="padding-left:10px"><p>- You will receive extra money amount as follows <font color="#8b008b"><b>(the second part).</b></font></p></div>
+    <div style="padding-left:25px"><p> 1.	If your position is A, there is <b>NO</b> extra money you could receive.</p></div>
+    <div style="padding-left:25px"><p> 2.	If your position is <b>NOT</b> A :</p></div>
+<div style="padding-left:40px"><p>a.	You receive <b><font color="#dc143c">extra $50</font></b> if you request the money amount that is <b><font color="crimson">exactly $5 more</font></b> than the money amount that your opponent requested.</p></div>
+<div style="padding-left:40px"><p>b.	You receive <b><font color="#dc143c">extra $25</font></b> if you request the same money amount as your opponent.</p></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+        <table class="table" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionB.png" %}"/>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+{%  endif %}
+
+
+
+
+
+{%  if current == 3 %}
+<h4><p>You are in position  <span style="color: crimson">C</span>.</p></h4>
+<h4><p> Request the money amount between $5 and $50 in multiples of $5. </p></h4>
+&nbsp;
+<h3>
+<table align="center" style="text-align: center">
+<tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer_2"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer_2"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer_2"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer_2"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="15" name="Answer_2" value="25"><label for="15">&nbsp;&nbsp;$25 </label>&nbsp;&nbsp;</td>
+</tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="16" name="Answer_2"  value="30"><label for="16"> &nbsp;&nbsp;$30 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="17" name="Answer_2" value="35"><label for="17"> &nbsp;&nbsp;$35 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="18" name="Answer_2" value="40"><label for="18"> &nbsp;&nbsp;$40 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="19" name="Answer_2" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="20" name="Answer_2" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
+</table>
+&nbsp;
+</h3>
+<style type="text/css">
+    ul {
+        list-style-type:circle;
+        padding-left:20px;
+    }
+    h3.panel-sub-heading {
+        padding-bottom:10px;
+        padding-left:4px;
+    }
+</style>
+
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position C</button></p>
+</div>
+  <!-- Modal -->
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Earnings information for <font color="#dc143c">position C</font></h4>
+        </div>
+        <div class="modal-body">
+         <h4 style="line-height: 150%">
+      <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+    <div style="padding-left:10px"><p>- You will receive $55 <b>minus</b> the amount of money you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+    <div style="padding-left:10px"><p>- You will receive extra money amount as follows <font color="#8b008b"><b>(the second part).</b></font></p></div>
+    <div style="padding-left:25px"><p> 1.	If your position is A, there is <b>NO</b> extra money you could receive.</p></div>
+    <div style="padding-left:25px"><p> 2.	If your position is <b>NOT</b> A :</p></div>
+<div style="padding-left:40px"><p>a.	You receive <b><font color="#dc143c">extra $50</font></b> if you request the money amount that is <b><font color="crimson">exactly $5 more</font></b> than the money amount that your opponent requested.</p></div>
+<div style="padding-left:40px"><p>b.	You receive <b><font color="#dc143c">extra $25</font></b> if you request the same money amount as your opponent.</p></div></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+        <table class="table" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img width ="300px" height="auto" src = "{% static "Rubinstein/PositionC.png" %}"/>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+{%  endif %}
+
+
+{%  if current == 4 %}
+<h4><p>You are in position  <span style="color: crimson">D</span>.</p></h4>
+<h4><p> Request the money amount between $5 and $50 in multiples of $5. </p></h4>
+&nbsp;
+<h3>
+<table align="center" style="text-align: center">
+<tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer_2"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer_2" value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer_2" value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer_2" value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="15" name="Answer_2" value="25"><label for="15">&nbsp;&nbsp;$25 </label>&nbsp;&nbsp;</td>
+</tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="16" name="Answer_2" value="30"><label for="16"> &nbsp;&nbsp;$30 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="17" name="Answer_2" value="35"><label for="17"> &nbsp;&nbsp;$35 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="18" name="Answer_2" value="40"><label for="18"> &nbsp;&nbsp;$40 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="19" name="Answer_2" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="20" name="Answer_2" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
+</table>
+&nbsp;
+</h3>
+
+<style type="text/css">
+    ul {
+        list-style-type:circle;
+        padding-left:20px;
+    }
+    h3.panel-sub-heading {
+        padding-bottom:10px;
+        padding-left:4px;
+    }
+</style>
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position D</button></p>
+</div>
+  <!-- Modal -->
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position D</font></h4>
+        </div>
+        <div class="modal-body">
+        <h4 style="line-height: 150%">
+      <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+    <div style="padding-left:10px"><p>- You will receive $55 <b>minus</b> the amount of money you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+    <div style="padding-left:10px"><p>- You will receive extra money amount as follows <font color="#8b008b"><b>(the second part).</b></font></p></div>
+    <div style="padding-left:25px"><p> 1.	If your position is A, there is <b>NO</b> extra money you could receive.</p></div>
+    <div style="padding-left:25px"><p> 2.	If your position is <b>NOT</b> A :</p></div>
+<div style="padding-left:40px"><p>a.	You receive <b><font color="#dc143c">extra $50</font></b> if you request the money amount that is <b><font color="crimson">exactly $5 more</font></b> than the money amount that your opponent requested.</p></div>
+<div style="padding-left:40px"><p>b.	You receive <b><font color="#dc143c">extra $25</font></b> if you request the same money amount as your opponent.</p></div>
+        </h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+        <table class="table" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionD.png" %}"/>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+{%  endif %}
+
+
+
+{%  if current == 5 %}
+<h4><p>You are in position  <span style="color: crimson">E</span>.</p></h4>
+<h4><p> Request the money amount between $5 and $50 in multiples of $5. </p></h4>
+&nbsp;
+<h3>
+<table align="center" style="text-align: center">
+<tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer_2"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer_2"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer_2"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="14" name="Answer_2"  value="20"><label for="14">&nbsp;&nbsp;$20 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="15" name="Answer_2" value="25"><label for="15">&nbsp;&nbsp;$25 </label>&nbsp;&nbsp;</td>
+</tr>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="16" name="Answer_2"  value="30"><label for="16"> &nbsp;&nbsp;$30 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="17" name="Answer_2" value="35"><label for="17"> &nbsp;&nbsp;$35 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="18" name="Answer_2" value="40"><label for="18"> &nbsp;&nbsp;$40 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="19" name="Answer_2" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
+<td style="width:90px"><input type="radio" class="largerCheckbox" id="20" name="Answer_2" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
+</table>
+&nbsp;
+</h3>
+<style type="text/css">
+    ul {
+        list-style-type:circle;
+        padding-left:20px;
+    }
+    h3.panel-sub-heading {
+        padding-bottom:10px;
+        padding-left:4px;
+    }
+</style>
+
+<div id="test">
+  <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tallModal">Earnings Information for Position E</button></p>
+</div>
+  <!-- Modal -->
+  <div id="tallModal" class="modal modal-wide fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Payoff information for <font color="#dc143c">Position E</font></h4>
+        </div>
+        <div class="modal-body">
+        <h4 style="line-height: 150%;;">
+      <p>Your earnings consist of <b>two parts.</b></p>
+        <p>&nbsp;</p>
+    <div style="padding-left:10px"><p>- You will receive $55 <b>minus</b> the amount of money you request <font color="#00008b"><b>(the first part).</b></font></p></div>
+    <div style="padding-left:10px"><p>- You will receive extra money amount as follows <font color="#8b008b"><b>(the second part).</b></font></p></div>
+    <div style="padding-left:25px"><p> 1.	If your position is A, there is <b>NO</b> extra money you could receive.</p></div>
+    <div style="padding-left:25px"><p> 2.	If your position is <b>NOT</b> A :</p></div>
+<div style="padding-left:40px"><p>a.	You receive <b><font color="#dc143c">extra $50</font></b> if you request the money amount that is <b><font color="crimson">exactly $5 more</font></b> than the money amount that your opponent requested.</p></div>
+<div style="padding-left:40px"><p>b.	You receive <b><font color="#dc143c">extra $25</font></b> if you request the same money amount as your opponent.</p></div></h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+        <table class="table" align="center">
+            <tbody>
+
+            <tr class="text-center">
+                <td>
+                <img width="300px" height="auto" src = "{% static "Rubinstein/PositionE.png" %}"/>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+{%  endif %}
+
+<script type="text/javascript">
+
+$(".modal-wide").on("show.bs.modal", function() {
+  var height = $(window).height() - 200;
+  $(this).find(".modal-body").css("max-height", height);
+});
+
+</script>
+
+
+    {% next_button %}
+
+{% endblock %}

@@ -10,7 +10,6 @@ class IRB(Page):
 
 
 
-
 page_sequence = [
     IRB
 ]
