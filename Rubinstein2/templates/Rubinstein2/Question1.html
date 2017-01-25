@@ -438,6 +438,7 @@ margin-end: 0; }
 <h3>
 <table align="center" style="text-align: center">
 <tr>
+<form id="inputform">
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="11" name="Answer_2"  value="5"><label for="11">&nbsp;&nbsp;$5<font color="#fffff" class="noselect">0</font> </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="12" name="Answer_2"  value="10"><label for="12">&nbsp;&nbsp;$10 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="13" name="Answer_2"  value="15"><label for="13">&nbsp;&nbsp;$15 </label>&nbsp;&nbsp;</td>
@@ -449,6 +450,7 @@ margin-end: 0; }
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="18" name="Answer_2" value="40"><label for="18"> &nbsp;&nbsp;$40 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="19" name="Answer_2" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
 <td style="width:90px"><input type="radio" class="largerCheckbox" id="20" name="Answer_2" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
+</form>
 </table>
 &nbsp;
 </h3>
@@ -518,9 +520,8 @@ $(".modal-wide").on("show.bs.modal", function() {
   $(this).find(".modal-body").css("max-height", height);
 });
 
+
 </script>
-
-
     {% next_button %}
 
 {% endblock %}

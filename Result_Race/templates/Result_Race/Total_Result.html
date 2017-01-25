@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<h4><p><b>Thank you for your participation. The experiment is now completed.</b></p>
+<h4><p><b>Thank you for your participation. The survey is now completed.</b></p>
 <p>&nbsp;</p>
  {% if rand_num_task1 == 10 %}
 <p>1.	Task I:  We will inform you how much you are going to receive from Task I <font color="#dc143c"><b>within one week by emails and SMS.</b></font>  <font color="#00008b"></font>. </p>
@@ -17,7 +17,7 @@
 {% endif %}
 <p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Round {{ player.rand_num }}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>${{ player.Final_payoff }}</b></font>.</p>
 <p>&nbsp;</p>
-<p>3.	Because you completed the experiments, we will pay you the participation fee of $5.</p>
+<p>3.	Since you completed the survey, we will pay you the participation fee of $5.</p>
 <p>&nbsp;</p>
 
 {% if rand_num_task1 == 10 %}
