@@ -391,17 +391,14 @@ class RMET_Result(Page):
         else:
             self.player.correct28=0
 
+
         self.player.correct_total= self.player.correct1 + self.player.correct2 + self.player.correct3 + self.player.correct4 + self.player.correct5 + self.player.correct6 + self.player.correct7 + self.player.correct8 + self.player.correct9 + self.player.correct10 + self.player.correct11 + self.player.correct12 + self.player.correct13 + self.player.correct14 + self.player.correct15 + self.player.correct16 + self.player.correct17 + self.player.correct18 + self.player.correct19 + self.player.correct20 + self.player.correct21 + self.player.correct22 + self.player.correct23 + self.player.correct24 + self.player.correct25 + self.player.correct26 + self.player.correct27 + self.player.correct28
 
-
-
-class RMET_Result2(Page):
-
-    def vars_for_template(self):
         return{
-            'Total' : round((self.player.correct_total / 28) * 100,2),
-            'Left' : 100 - round((self.player.correct_total / 28) * 100,2)
+            'Total' : self.player.correct_total + 1,
         }
+
+
 
 
 page_sequence = [
@@ -435,7 +432,5 @@ page_sequence = [
     Question27,
     Question28,
     RMET_Result,
-    RMET_Result2
-
 
 ]
