@@ -406,7 +406,6 @@ class RMET_Result2(Page):
 
 page_sequence = [
     Introduction,
-    Introduction_Result,
     Question1,
     Question2,
     Question3,
