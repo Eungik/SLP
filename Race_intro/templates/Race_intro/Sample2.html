@@ -6,20 +6,28 @@
 {% endblock %}
 
 {% block content %}
-<h4 style="line-height: 150%"><p>You chose {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>1</b></font> step {% else %} <font color="#ff8c00" size="5pt"><b>2</b></font> steps{% endif %} in the first turn.</p></h4>
-<h4 style="line-height: 150%"><p>In the second turn, the computer player adds 1 step or 2 steps</p></h4>
-<h4 style="line-height: 150%"><p>It means that the computer player will choose the number between {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> and <font color="#ff8c00" size="5pt"><b>③</b></font>.
+<h4 style="line-height: 150%"><p>You chose {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>1</b></font> step {% elif practice == 2 %} <font color="#ff8c00" size="5pt"><b>2</b></font> {% else %} <font color="#ff8c00" size="5pt"><b>3</b></font> steps{% endif %} in the first turn.</p></h4>
+<h4 style="line-height: 150%"><p>In the second turn, the computer player adds 1, 2, or 3 steps</p></h4>
+<h4 style="line-height: 150%"><p>It means that the computer player will choose the number between {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.
+{% elif practice == 2 %}
+<font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>⑤</b></font>.
 {% else %}
-<font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.
+<font color="#ff8c00" size="5pt"><b>④</b></font> and <font color="#ff8c00" size="5pt"><b>⑥</b></font>.
 {% endif %}
 </p>
 <p>&nbsp;</p>
 {% if practice == 1 %}
 <p> Choosing <font color="#ff8c00" size="5pt"><b>②</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
 <p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
-{% else %}
+<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 3 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
+{% elif practice == 2 %}
 <p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
 <p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>⑤</b></font> means that the computer player adds 3 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+{% else %}
+<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>③</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>⑤</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>③</b></font>.</p>
+<p> Choosing <font color="#ff8c00" size="5pt"><b>⑥</b></font> means that the computer player adds 3 steps from <font color="#ff8c00" size="5pt"><b>③</b></font>.</p>
 {% endif %}
 </h4>
 <p>&nbsp;</p>
@@ -43,12 +51,12 @@
     <tr>
    <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
    <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
-   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_c.png" %}"/></td>
     </tr>
 
 </table>
 </div>
-{% else %}
+{% elif practice == 2 %}
 <div id="test"> <p>
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
@@ -60,11 +68,29 @@
     <tr>
    <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
    <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
-   <td style="width:25%;"><img src = "{% static "Race/7_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_c.png" %}"/></td>
     </tr>
 
 </table>
 </div>
+{% else %}
+<div id="test"> <p>
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+  <td style="width:25%;"><img src = "{% static "Race/1_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/2_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/3_a.png" %}"/></td>
+  <td style="width:25%;"><img src = "{% static "Race/4_b.png" %}"/></td>
+    </tr>
+    <tr>
+   <td style="width:25%;"><img src = "{% static "Race/5_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/6_b.png" %}"/></td>
+   <td style="width:25%;"><img src = "{% static "Race/7_c.png" %}"/></td>
+    </tr>
+
+</table>
+</div>
+
 {% endif %}
 
     {% next_button %}

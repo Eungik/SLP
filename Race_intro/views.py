@@ -3,7 +3,10 @@ from . import models
 from ._builtin import Page, WaitPage
 from .models import Constants
 
-
+def vars_for_all_templates(self):
+    return {
+        'Pseudo_Round': self.player.participant.vars['Race_intro']['Pseudo_Round']
+    }
 
 
 class Introduction(Page):
@@ -40,6 +43,10 @@ class Sample2(Page):
 class Sample3(Page):
     def is_displayed(self):
         return self.round_number == 1
+
+    def before_next_page(self):
+        self.player.participant.vars['Race_intro']['Pseudo_Round'] += 1
+
 
 
 

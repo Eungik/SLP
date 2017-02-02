@@ -113,32 +113,40 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
 
     {
-        'name': 'SLP2017',
-        'display_name': 'SLP_2017',
+        'name': 'SLP2017_v1',
+        'display_name': 'SLP2017_v1',
         'num_demo_participants': 3,
-        'app_sequence': ['IRB','SLPintro','Rubinstein', 'Rubinstein2', 'Race_intro', 'Race4_2' , 'Race6_3' , 'Race8_2' , 'Race11_3' , 'Race10_2', 'Race' , 'Readingtheeyes', 'Result_Race' ],
-    },
-
-
-    {
-        'name': 'Rubinstein_Second_5',
-        'display_name': 'Rubinstein Second 5',
-        'num_demo_participants': 3,
-        'app_sequence': ['Rubinstein2'],
-
+        'app_sequence': ['IRB','SLPintro','Rubinstein','Race_intro','Race5_3' ,'Race10_3','Race','Readingtheeyes','Result_Race'],
     },
     {
-        'name': 'BRET',
-        'display_name': 'BRET',
+        'name': 'SLP2017_v2',
+        'display_name': 'SLP2017_v2',
         'num_demo_participants': 3,
-        'app_sequence': ['bret'],
-
+        'app_sequence': ['IRB2', 'SLPintro', 'Rubinstein', 'Race_intro', 'Race5_3', 'Race', 'Race10_3','Readingtheeyes', 'Result_Race'],
     },
     {
-        'name': 'SLPintrokorean',
-        'display_name': '한글화샘플',
+        'name': 'SLP2017_v3',
+        'display_name': 'SLP2017_v3',
         'num_demo_participants': 3,
-        'app_sequence': ['Rubinsteinkorean','Racekorean', 'Readingtheeyeskorean'],
+        'app_sequence': ['IRB3', 'SLPintro', 'Rubinstein', 'Race_intro', 'Race10_3', 'Race5_3', 'Race','Readingtheeyes', 'Result_Race'],
+    },
+    {
+        'name': 'SLP2017_v4',
+        'display_name': 'SLP2017_v4',
+        'num_demo_participants': 3,
+        'app_sequence': ['IRB4', 'SLPintro', 'Rubinstein', 'Race_intro', 'Race10_3', 'Race', 'Race5_3', 'Readingtheeyes', 'Result_Race'],
+    },
+    {
+        'name': 'SLP2017_v5',
+        'display_name': 'SLP2017_v5',
+        'num_demo_participants': 3,
+        'app_sequence': ['IRB5', 'SLPintro', 'Rubinstein', 'Race_intro',  'Race', 'Race5_3','Race10_3', 'Readingtheeyes','Result_Race'],
+    },
+    {
+        'name': 'SLP2017_v6',
+        'display_name': 'SLP2017_v6',
+        'num_demo_participants': 3,
+        'app_sequence': ['IRB6', 'SLPintro', 'Rubinstein', 'Race_intro', 'Race', 'Race10_3','Race5_3', 'Readingtheeyes', 'Result_Race'],
     },
 
 ]

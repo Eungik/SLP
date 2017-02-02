@@ -18,7 +18,10 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+    def before_session_starts(self):
+        if self.round_number == 1:
+            for player in self.get_players():
+                player.participant.vars['v'] = 1
 
 
 class Group(BaseGroup):
@@ -27,3 +30,4 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     IRB=models.PositiveIntegerField(initial=None)
+    v=models.PositiveIntegerField(initial=None)

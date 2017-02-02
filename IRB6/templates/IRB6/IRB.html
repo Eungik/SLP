@@ -1,0 +1,94 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Welcome to the SLP Special Module
+{% endblock %}
+
+{% block content %}
+<h4><ul>
+<li><p style="line-height: 150%"> All information you provide is kept confidential. The data will be used for research purposes only.</p></li>
+<li><p style="line-height: 150%"> Research findings will summarize the information provided by thousands of respondents so it will be impossible to identify the answers of any single participant.</p></li>
+<li><p style="line-height: 150%"> We do not anticipate any risks to you participating in this study other than those encountered in day-to-day life.</p></li>
+<li><p style="line-height: 150%"> Your participation is voluntary and there is a participation fee of $5 if you complete this module.</p></li>
+<li><p style="line-height: 150%">  You can earn up to $100 as a cash bonus depending on choices of you and other respondents.</p></li>
+</ul>
+    <p>&nbsp;</p>
+<p style="line-height: 150%"><i>If you have any questions please contact the Lead Researcher Yu Jun at email address: slp@smu.edu.sg, or +65 6808 7910.</i></p>
+<p style="line-height: 150%"><i>For questions on your rights as a participant, please contact <i>IRB Secretariat at irb@smu.edu.sg, or +65 6828 1925.</i></p>
+    <p>&nbsp;</p>
+
+<p><label for="cb2"><input type="checkbox" id="cb2"  class="largerCheckbox"> I am willing to participate and agree to all of the above.</label></p>
+    <p>&nbsp;</p>
+
+
+    <button type="submit" id="button" value="1" class="btn btn-info btn-lg" name="IRB"> Next </button>
+
+</h4>
+
+
+
+<style type="text/css">
+
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+
+
+h4 {
+  font-size: 4vmin;
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+  /* 480px 이상 */
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+}
+
+input.largerCheckbox
+{
+width: 17px;
+height: 17px;
+}
+
+</style>
+
+
+
+<script type="text/javascript">
+var cb1 = document.getElementById("cb1"),
+    cb2 = document.getElementById("cb2"),
+    button = document.getElementById("button");
+button.disabled = true;
+cb1.onclick = cb2.onclick = function(){
+    if(cb2.checked){
+        button.disabled = false;
+    }
+    else{
+        button.disabled = true;
+    }
+};
+</script>
+
+
+
+
+
+
+{% endblock %}

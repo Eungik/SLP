@@ -6,7 +6,7 @@ import random
 
 def vars_for_all_templates(self):
     return {
-        'Pseudo_round': Constants.Pseudo_round,
+        'Pseudo_round': self.player.participant.vars['Race_intro']['Pseudo_Round']
     }
 
 
@@ -77,6 +77,7 @@ class Win(BasePage):
          self.player.end =1
          self.participant.vars['is_winner_15_3'] = 1
          self.player.is_winner_15_3 =1
+         self.player.participant.vars['Race_intro']['Pseudo_Round'] += 1
 
 
 
@@ -88,6 +89,7 @@ class Lose(BasePage):
         self.player.end = 1
         self.participant.vars['is_winner_15_3'] = 0
         self.player.is_winner_15_3 = 0
+        self.player.participant.vars['Race_intro']['Pseudo_Round'] += 1
 
 
 page_sequence = [
