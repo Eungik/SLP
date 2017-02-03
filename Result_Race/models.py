@@ -15,7 +15,7 @@ class Constants(BaseConstants):
     name_in_url = 'Result_Race'
     players_per_group = None
     num_rounds = 1
-    num_questions=3
+    num_questions=4
 
 class Subsession(BaseSubsession):
     def before_session_starts(self):

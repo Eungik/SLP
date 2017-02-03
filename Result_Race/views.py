@@ -8,7 +8,6 @@ def vars_for_all_templates(self):
         'rand_num_task1' : self.player.participant.vars[Constants.name_in_url]['rand_num_task1'],
         'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num_task2'],
         'high_light' : self.player.participant.vars[Constants.name_in_url]['rand_num_task2']+1,
-        'v': self.player.participant.vars['v']
 
     }
 
@@ -25,83 +24,30 @@ class Task2_Result(Page):
             'payoff5_3' : self.participant.vars['is_winner_5_3'],
             'payoff10_3' : self.participant.vars['is_winner_10_3'],
             'payoff15_3' : self.participant.vars['is_winner_15_3'],
+            'payoff19_3' : self.participant.vars['is_winner_19_3']
 
         }
 
     def before_next_page(self):
         self.player.rand_num_task2=self.player.participant.vars[Constants.name_in_url]['rand_num_task2']
 
-        if  self.player.participant.vars['v'] == 1 :
-
-            if self.player.rand_num_task2== 1:
+        if self.player.rand_num_task2== 1:
                   self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
                   self.player.lottery_task2 = 5
-            elif self.player.rand_num_task2 == 2:
-                  self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
-                  self.player.lottery_task2 = 10
-            elif self.player.rand_num_task2 == 3:
-                  self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
-                  self.player.lottery_task2 = 15
 
-        elif self.player.participant.vars['v'] == 2:
-
-            if self.player.rand_num_task2 == 1:
-                self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
-                self.player.lottery_task2 = 5
-            elif self.player.rand_num_task2 == 2:
-                self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
-                self.player.lottery_task2 = 15
-            elif self.player.rand_num_task2 == 3:
+        elif self.player.rand_num_task2 == 2:
                 self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
                 self.player.lottery_task2 = 10
 
-        elif self.player.participant.vars['v'] == 3:
-
-            if self.player.rand_num_task2 == 1:
-                self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
-                self.player.lottery_task2 = 10
-            elif self.player.rand_num_task2 == 2:
-                self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
-                self.player.lottery_task2 = 5
-            elif self.player.rand_num_task2 == 3:
+        elif self.player.rand_num_task2 == 3:
                 self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
                 self.player.lottery_task2 = 15
 
-        elif self.player.participant.vars['v'] == 4:
+        elif self.player.rand_num_task2 == 4:
+            self.player.Final_payoff = self.participant.vars['is_winner_19_3'] * 5
+            self.player.lottery_task2 = 19
 
-            if self.player.rand_num_task2 == 1:
-                self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
-                self.player.lottery_task2 = 10
-            elif self.player.rand_num_task2 == 2:
-                self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
-                self.player.lottery_task2 = 15
-            elif self.player.rand_num_task2 == 3:
-                self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
-                self.player.lottery_task2 = 5
 
-        elif self.player.participant.vars['v'] == 5:
-
-            if self.player.rand_num_task2 == 1:
-                self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
-                self.player.lottery_task2 = 15
-            elif self.player.rand_num_task2 == 2:
-                self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
-                self.player.lottery_task2 = 5
-            elif self.player.rand_num_task2 == 3:
-                self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
-                self.player.lottery_task2 = 10
-
-        elif self.player.participant.vars['v'] == 6:
-
-            if self.player.rand_num_task2 == 1:
-                self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
-                self.player.lottery_task2 = 15
-            elif self.player.rand_num_task2 == 2:
-                self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
-                self.player.lottery_task2 = 10
-            elif self.player.rand_num_task2 == 3:
-                self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
-                self.player.lottery_task2 = 5
 
 class Total_Result(Page):
 

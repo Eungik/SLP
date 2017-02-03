@@ -15,7 +15,7 @@
  <p>1.	Task I: $0 <font color="crimson">(You are not selected to be paid)</font>.</p>
 <p>&nbsp;</p>
 {% endif %}
-<p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Round {{rand_num}}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>${{ player.Final_payoff }}</b></font>.</p>
+<p>2.	Task II: We randomly selected <font color="#dc143c"><b>"Target number {% if rand_num == 1 %} 5{% elif rand_num == 2 %} 10{% elif rand_num == 3 %} 15{% elif rand_num == 4 %} 19{% endif %}"</b></font> and thus your earning from Task II becomes <font color="crimson"><b>${{ player.Final_payoff }}</b></font>.</p>
 <p>&nbsp;</p>
 <p>3.	Since you completed the survey, we will pay you the participation fee of $5.</p>
 <p>&nbsp;</p>

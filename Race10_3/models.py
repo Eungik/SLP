@@ -7,7 +7,7 @@ from otree.api import (
 author = 'Your name here'
 
 doc = """
-Race game 10_3
+Target 10
 """
 
 

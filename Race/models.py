@@ -8,7 +8,7 @@ import random
 author = 'Eungik Lee, Master Course Students in SNU'
 
 doc = """
-Racegame
+Target 15
 """
 
 
