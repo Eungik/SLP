@@ -20,7 +20,7 @@ class Constants(BaseConstants):
     ## Race game k in paper ##
     k=3
     ##
-    timeout_sec = 6
+    timeout_sec = 5
     Pseudo_round = 2
 
     winning_set = [p for p in range(1, Winning_number + 1) if (p % (4)) == 2]
