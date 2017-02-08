@@ -279,6 +279,7 @@ SESSION_CONFIGS = [
         'app_sequence': ['SLPintro', 'Rubinstein', 'Race_intro', 'Race19_3', 'Race', 'Race10_3', 'Race5_3',
                          'Readingtheeyes', 'Result_Race'],
     },
+
 ]
 
 ROOMS = [
