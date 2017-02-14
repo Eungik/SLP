@@ -33,6 +33,7 @@ class MyPage(BasePage):
             'previous_number' : self.player.previous_number,
             'round_number' : self.player.round_number,
             'ball_statuses': self.player.ball_statuses(),
+            #'ball_numbers': range(1, self.session.config['winning_number'] + 1),
             'ball_numbers': range(1, Constants.Winning_number + 1),
             'end' : self.player.end,
             }

@@ -117,6 +117,7 @@ SESSION_CONFIGS = [
         'display_name': 'SLP2017_v1',
         'num_demo_participants': 3,
         'app_sequence': ['SLPintro','Rubinstein','Race_intro','Race5_3' ,'Race10_3','Race', 'Race19_3','Readingtheeyes','Result_Race'],
+        'winning_number': 5
     },
     {
         'name': 'SLP2017_v2',

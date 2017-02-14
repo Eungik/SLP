@@ -135,6 +135,8 @@ margin-end: 0; }
 &nbsp;
 </h3>
 
+
+
 <style type="text/css">
     ul {
         list-style-type:circle;
@@ -215,6 +217,7 @@ margin-end: 0; }
 <td><input type="radio" class="largerCheckbox" id="19" name="Answer" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
 <td><input type="radio" class="largerCheckbox" id="20" name="Answer" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
 </table>
+
 &nbsp;
 </h3>
 <style type="text/css">
@@ -298,6 +301,8 @@ margin-end: 0; }
 <td><input type="radio" class="largerCheckbox" id="19" name="Answer" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
 <td><input type="radio" class="largerCheckbox" id="20" name="Answer" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
 </table>
+
+
 &nbsp;
 </h3>
 <style type="text/css">
@@ -376,6 +381,7 @@ margin-end: 0; }
 <td><input type="radio" class="largerCheckbox" id="19" name="Answer" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
 <td><input type="radio" class="largerCheckbox" id="20" name="Answer" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
 </table>
+
 &nbsp;
 </h3>
 
@@ -456,6 +462,7 @@ margin-end: 0; }
 <td><input type="radio" class="largerCheckbox" id="19" name="Answer" value="45"><label for="19"> &nbsp;&nbsp;$45 </label>&nbsp;&nbsp;</td>
 <td><input type="radio" class="largerCheckbox" id="20" name="Answer" value="50"><label for="20"> &nbsp;&nbsp;$50</label>&nbsp;&nbsp;</td>
 </table>
+
 &nbsp;
 </h3>
 <style type="text/css">
@@ -521,7 +528,11 @@ $(".modal-wide").on("show.bs.modal", function() {
   var height = $(window).height() - 200;
   $(this).find(".modal-body").css("max-height", height);
 });
-
+x=document.getElementsByClassName("alert alert-danger");  // Find the element
+        console.log(x)
+        for(var i = 0; i < x.length; i++){
+        x[i].innerText="Please choose between $5 and $50.";    // Change the content
+        }
 </script>
 
 
