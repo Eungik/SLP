@@ -280,12 +280,7 @@ SESSION_CONFIGS = [
         'app_sequence': ['SLPintro', 'Rubinstein', 'Race_intro', 'Race19_3', 'Race', 'Race10_3', 'Race5_3',
                          'Readingtheeyes', 'Result_Race'],
     },
-    {
-        'name': 'BRET',
-        'display_name': 'BRET',
-        'num_demo_participants': 3,
-        'app_sequence': ['bret'],
-    },
+
 
 ]
 

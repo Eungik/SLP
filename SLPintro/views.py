@@ -7,12 +7,9 @@ from .models import Constants
 class MyPage(Page):
     pass
 
-class MyPage2(Page):
-    pass
 
 
 
 page_sequence = [
     MyPage,
-    MyPage2
 ]
