@@ -12,7 +12,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'Language'
+    name_in_url = 'SLPintro_Chn'
     players_per_group = None
     num_rounds = 1
 
@@ -26,4 +26,4 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    Language_Eng=models.PositiveIntegerField()
+    pass

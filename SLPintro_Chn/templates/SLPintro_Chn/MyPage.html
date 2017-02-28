@@ -1,0 +1,65 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+欢迎来到SLP特别单元
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="instructions well well-lg">
+
+    <h4>
+      <ul>
+     <li><p style="line-height: 150%"> 感谢你参与此次的Singapore Life Panel特别单元。</p></li>
+      &nbsp;
+     <li><p style="line-height: 150%">在接下来的15-20分钟内，你将参与3个决策任务（任务I，任务II，和任务III)。</p></li>
+      &nbsp;
+     <li> <p style="line-height: 150%">当你的参与完成后，你将获得<b><font color="#00008b">$5</font></b>。同时，根据你和其他参与者作出的选择，你将有可能获得<b><font color="#00008b">更多的现金报酬。</font></b></p></li>
+     &nbsp;
+     <li><p style="line-height: 150%">所有的参与者都将看到同样的说明。</p></li>
+     &nbsp;
+     <li><p style="line-height: 150%">请点击下一页按钮前往阅读说明。</p></li>
+     </ul>
+    </h4>
+
+</div>
+
+
+
+<input class="btn btn-primary btn-large btn-primary next-button" type="submit" value="下一页">
+
+
+<style type="text/css">
+
+
+h4 {
+  font-size: 4vmin;
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+  /* 480px 이상 */
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+}
+
+</style>
+
+
+
+{% endblock %}

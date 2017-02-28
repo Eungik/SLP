@@ -1,0 +1,85 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    任务I的报酬
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+    <h4>
+    <ul>
+    <p><li style="line-height : 150%">在任务I中，参与者将被随机分组，每组包含五位参与者。</li></p>
+    <p><li style="line-height : 150%">每组参与者将进行五轮决策。</li></p>
+    <p><li style="line-height : 150%">我们将在每十组中随机抽取一组兑现其报酬。</li></p>
+    <p><li style="line-height : 150%">如果你所在的组在抽奖中被抽中了，那么五轮决策中将有一轮被随机抽取来计算你和你的组员所获得的报酬。</li></p>
+    <p><li style="line-height : 150%">因此，请将每一轮看作被抽取以兑现报酬的一轮来认真完成。</li></p>
+    </ul>
+    </h4>
+
+</div>
+
+
+<style type="text/css">
+p {
+  font-size: 1.78vmin;
+}
+
+.uline {
+    text-decoration: underline;
+}
+
+pg {
+    padding-left:20px;
+    position:relative;
+}
+pg:before {
+    content: "";
+    font-family:Arial;
+    position:absolute;
+    left:5px;
+}
+
+pg2 {
+    padding-left:40px;
+    position:relative;
+}
+pg2:before {
+    content: "-";
+    font-family:Arial;
+    position:absolute;
+    left:15px;
+}
+
+h4 {
+  font-size: 4vmin;
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+  /* 480px 이상 */
+}
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+}
+
+
+</style>
+
+
+<input class="btn btn-primary btn-large btn-primary next-button" type="submit" value="下一页">
+
+{% endblock %}

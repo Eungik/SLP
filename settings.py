@@ -111,7 +111,12 @@ SESSION_CONFIG_DEFAULTS = {
 
 
 SESSION_CONFIGS = [
-
+    {
+        'name': 'SLP_2017_Chn',
+        'display_name': 'SLP2017_Chinese',
+        'num_demo_participants': 3,
+        'app_sequence': ['SLPintro_Chn','Rubinstein_Chn' ],
+    },
     {
         'name': 'SLP2017_v1',
         'display_name': 'SLP2017_v1',
@@ -280,7 +285,6 @@ SESSION_CONFIGS = [
         'app_sequence': ['SLPintro', 'Rubinstein', 'Race_intro', 'Race19_3', 'Race', 'Race10_3', 'Race5_3',
                          'Readingtheeyes', 'Result_Race'],
     },
-
 
 ]
 
