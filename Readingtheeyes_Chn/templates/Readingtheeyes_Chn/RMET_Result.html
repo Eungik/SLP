@@ -1,0 +1,14 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Task III Result
+{% endblock %}
+
+{% block content %}
+<h3> You answered correctly <font color="#dc143c">{{ Total }} </font> out of 28 questions. </h3>
+<p>&nbsp;</p>
+    {% next_button %}
+{% endblock %}
+
+

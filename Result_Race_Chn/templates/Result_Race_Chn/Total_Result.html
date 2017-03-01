@@ -1,0 +1,51 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    报酬总结
+{% endblock %}
+
+{% block content %}
+<h4><p><b>感谢你的参与。本单元已经结束。</b></p>
+<p>&nbsp;</p>
+ {% if rand_num_task1 == 10 %}
+<p>1.	任务I：我们将在<font color="#dc143c"><b>一星期内通过邮件和短信</b></font> 的形式通知你你在任务I中的报酬。</p>
+     <p>&nbsp;</p>
+ {% else %}
+ <p>1.	任务I：$0 <font color="crimson">（你没有被抽中）</font></p>
+<p>&nbsp;</p>
+{% endif %}
+<p>2.	任务II： 我们随机抽取了<font color="#dc143c"><b>“目标数字{% if rand_num == 1 %} 5{% elif rand_num == 2 %} 10{% elif rand_num == 3 %} 15{% elif rand_num == 4 %} 19{% endif %}"</b></font>，因此你在任务II中的报酬为<font color="#dc143c">${{ player.Final_payoff }}</font>。</p>
+<p>&nbsp;</p>
+<p>3.	鉴于你完成了此次问卷，我们将付给你$5的参与费。</p>
+<p>&nbsp;</p>
+
+{% if rand_num_task1 == 10 %}
+<p style="text-align : center">
+<b>你的现金报酬= <font color="#00008b">
+任务I的报酬（待通知）</font>+ <font color="#dc143c">任务II的报酬（${{ player.Final_payoff }}）</font>+ <font color="#008b8b">参与费（$5）</font></b></p>
+<p>&nbsp;</p>
+<p style="text-align : center">总报酬：待通知</p></h4>
+
+{% else %}
+
+<h4>
+<p style="text-align : center">
+<b>你的现金报酬=<font color="#00008b">
+任务I的报酬（$0）</font>+ <font color="#dc143c">任务II的报酬（${{ player.Final_payoff }}）</font>+ <font color="#008b8b">参与费（$5）</font></b></p>
+<p>&nbsp;</p>
+<p style="text-align : center">总报酬= ${{ Showup_added }}。</p></h4>
+
+{% endif %}
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<button class="btn btn-primary"><h4><p>非常感谢您的参与。</p>
+    <p>请点击此按钮结束问卷。</p></h4> </button>
+
+
+{% endblock %}
+
+

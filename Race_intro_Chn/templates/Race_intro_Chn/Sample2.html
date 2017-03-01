@@ -2,40 +2,42 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-     Task II Practice Round
+     任务II练习轮
 {% endblock %}
 
 {% block content %}
-<h4 style="line-height: 150%"><p>You chose {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>1</b></font> step {% elif practice == 2 %} <font color="#ff8c00" size="5pt"><b>2</b></font> {% else %} <font color="#ff8c00" size="5pt"><b>3</b></font> steps{% endif %} in the first turn.</p></h4>
-<h4 style="line-height: 150%"><p>In the second turn, the computer player adds 1, 2, or 3 steps.</p></h4>
-<h4 style="line-height: 150%"><p>It means that the computer player will choose the number between {% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>②</b></font> and <font color="#ff8c00" size="5pt"><b>④</b></font>.
+<h4 style="line-height: 150%"><p>你在第一把中选择了前进{% if practice == 1 %} <font color="#ff8c00" size="5pt"><b>1</b></font>{% elif practice == 2 %} <font color="#ff8c00" size="5pt"><b>2</b></font> {% else %} <font color="#ff8c00" size="5pt"><b>3</b></font>{% endif %}步。</p></h4>
+<h4 style="line-height: 150%"><p>在第二把中，电脑玩家可以选择前进1步，2步或3步。</p></h4>
+<h4 style="line-height: 150%"><p>这表示电脑玩家将选择前进至数字
+{% if practice == 1 %}
+<font color="#ff8c00" size="5pt"><b>②</b></font>到<font color="#ff8c00" size="5pt"><b>④</b></font>。
 {% elif practice == 2 %}
-<font color="#ff8c00" size="5pt"><b>③</b></font> and <font color="#ff8c00" size="5pt"><b>⑤</b></font>.
+<font color="#ff8c00" size="5pt"><b>③</b></font>到<font color="#ff8c00" size="5pt"><b>⑤</b></font>。
 {% else %}
-<font color="#ff8c00" size="5pt"><b>④</b></font> and <font color="#ff8c00" size="5pt"><b>⑥</b></font>.
+<font color="#ff8c00" size="5pt"><b>④</b></font>到<font color="#ff8c00" size="5pt"><b>⑥</b></font>。
 {% endif %}
 </p>
 <p>&nbsp;</p>
 {% if practice == 1 %}
-<p> Choosing <font color="#ff8c00" size="5pt"><b>②</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 3 steps from <font color="#ff8c00" size="5pt"><b>①</b></font>.</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>②</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>①</b></font>开始前进1步。</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>③</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>①</b></font>开始前进2步。</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>④</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>①</b></font>开始前进3步。</p>
 {% elif practice == 2 %}
-<p> Choosing <font color="#ff8c00" size="5pt"><b>③</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>⑤</b></font> means that the computer player adds 3 steps from <font color="#ff8c00" size="5pt"><b>②</b></font>.</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>③</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>②</b></font>开始前进1步。</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>④</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>②</b></font>开始前进2步。</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>⑤</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>②</b></font>开始前进3步。</p>
 {% else %}
-<p> Choosing <font color="#ff8c00" size="5pt"><b>④</b></font> means that the computer player adds 1 step from <font color="#ff8c00" size="5pt"><b>③</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>⑤</b></font> means that the computer player adds 2 steps from <font color="#ff8c00" size="5pt"><b>③</b></font>.</p>
-<p> Choosing <font color="#ff8c00" size="5pt"><b>⑥</b></font> means that the computer player adds 3 steps from <font color="#ff8c00" size="5pt"><b>③</b></font>.</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>④</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>③</b></font>开始前进1步。</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>⑤</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>③</b></font>开始前进2步。</p>
+<p> 选择<font color="#ff8c00" size="5pt"><b>⑥</b></font>表示电脑玩家将从<font color="#ff8c00" size="5pt"><b>③</b></font>开始前进3步。</p>
 {% endif %}
 </h4>
 <p>&nbsp;</p>
-<h4 style="line-height: 150%"><p><b>Instruction 2 : please click the next button.</b></p>
+<h4 style="line-height: 150%"><p><b>说明2：请点击下一页按钮。</b></p>
 &nbsp;
 
 
-<div id="test"><p>The computer player is thinking</p></div>
+<div id="test"><p>电脑玩家正在思考</p></div>
 <div id="test"><p><img src = "{% static "Race/Person-info.png" %}"/></p>
 </div>
 
@@ -93,7 +95,7 @@
 
 {% endif %}
 
-    {% next_button %}
+<input class="btn btn-primary btn-large btn-primary next-button" type="submit" value="下一页">
 
 
 

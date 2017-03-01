@@ -1,0 +1,463 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    任务II的报酬
+{% endblock %}
+
+{% block content %}
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>jQuery Slot Machine</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="dist/jquery.slotmachine.css" type="text/css" media="screen" />
+
+		<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static "Result_Race/lib/jquery.slotmachine.js" %}"></script>
+        <script type="text/javascript" src="{% static "Result_Race/lib/jquery.slotmachine.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "Result_Race/lib/jquery-loader.js" %}"></script>
+        <script type="text/javascript" src="{% static "Result_Race/lib/qunit.js" %}"></script>
+        <script type="text/javascript" src="{% static "Result_Race/lib/SlotMachine_test.js" %}"></script>
+        <style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+
+
+
+a{
+	color: #ccd500;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	color: #a9b119;
+}
+.clear {
+    clear: both;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+}
+b{
+	font-weight: 600;
+}
+
+
+
+
+
+/*
+ * Header
+ */
+header {
+    margin-top: 10px;
+	background-color: #DCD293;
+    border-bottom: 10px solid #66D4FF;
+    border-top: 20px dotted #A48E4E;
+    padding: 25px;
+}
+
+header p {
+	color:#333;
+    font-size: 25px;
+    text-align: center;
+}
+
+header a {
+	color: #6C5726;
+    font-weight: 700;
+}
+
+
+/*
+ * SlotMachine
+ */
+#randomize {
+    height: 400px;
+    border-bottom: 10px solid rgb(72, 158, 48);
+    background-color: #EB6B56;
+    border-top: 20px dotted #B8312F;
+}
+
+#randomize .row > div.col-xs-4 {
+    padding-left: 35px;
+}
+
+#randomize .row > div.col-xs-4 > div {
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 175px;
+    height: 175px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.randomizeMachine {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-group-randomize {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: auto;
+}
+
+.btn-group-randomize div {
+    width: auto !important;
+}
+
+
+
+
+
+.btn-group-watch .btn {
+    border: none;
+    background-color: rgb(72, 158, 48);
+}
+.btn-group-watch .btn:hover, .btn-group-watch .btn:focus {
+    background-color: rgb(72, 158, 48);
+}
+
+/*
+ * Triky
+ */
+#triky {
+    text-align: center;
+    background-color: #ffffff;
+    height: 450px;
+}
+
+#triky .row > div {
+    background-color: #fff;
+    width: 225px;
+    height: 205px;
+    border-radius: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    left: -35px;
+}
+
+#triky1 {
+    width: 150px;
+    height: 150px;
+}
+
+.btn-group-triky {
+    margin-top: 60px;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 150px;
+  height: 150px;
+  padding: 30px 30px;
+  font-size: 30px;
+  border-radius: 150px;
+text-align: center;
+ margin: auto;
+display:table-cell;
+vertical-align:middle;
+
+
+}
+/*
+ * Footer
+ */
+
+
+.slotMachine .slot{
+	height:100px;
+	background-position-x: 55%;
+	background-repeat: no-repeat;
+}
+.slotMachineNoTransition {
+    -webkit-transition: none !important;
+            transition: none !important;
+}
+
+.slotMachineBlurFast {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+}
+
+.slotMachineBlurMedium {
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+}
+
+.slotMachineBlurSlow {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+}
+
+.slotMachineBlurTurtle {
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+}
+
+.slotMachineGradient {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(25%, rgba(0,0,0,1)), color-stop(75%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,0)) );
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg version="1.1" xmlns="http:// www.w3.org/2000/svg" width="0" height="0"><mask id="slotMachineFadeMask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox"><linearGradient id="slotMachineFadeGradient" gradientUnits="objectBoundingBox" x="0" y="0"><stop stop-color="white" stop-opacity="0" offset="0"></stop><stop stop-color="white" stop-opacity="1" offset="0.25"></stop><stop stop-color="white" stop-opacity="1" offset="0.75"></stop><stop stop-color="white" stop-opacity="0" offset="1"></stop></linearGradient><rect x="0" y="-1" width="1" height="1" transform="rotate(90)" fill="url(#slotMachineFadeMask)"></rect></mask></svg>#slotMachineFadeMask");
+            mask: url("data:image/svg+xml;utf8,<svg version="1.1" xmlns="http:// www.w3.org/2000/svg" width="0" height="0"><mask id="slotMachineFadeMask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox"><linearGradient id="slotMachineFadeGradient" gradientUnits="objectBoundingBox" x="0" y="0"><stop stop-color="white" stop-opacity="0" offset="0"></stop><stop stop-color="white" stop-opacity="1" offset="0.25"></stop><stop stop-color="white" stop-opacity="1" offset="0.75"></stop><stop stop-color="white" stop-opacity="0" offset="1"></stop></linearGradient><rect x="0" y="-1" width="1" height="1" transform="rotate(90)" fill="url(#slotMachineFadeMask)"></rect></mask></svg>#slotMachineFadeMask");
+}
+
+b{
+    display:none;
+}
+
+table{
+    display:none;
+}
+
+</style>
+</head>
+<div id="triky">
+<a><h4><p><font color="black">现在，我们就任务II进行抽奖。</font></p><p><font color="black">请点击 抽奖 按钮来决定哪一个<font color="#dc143c">“目标数字”</font>将用于计算你在任务II中的报酬。</font></p></h4></a>
+<div class="content" style="text-align: center">
+{% if rand_num == 1 %}
+				<div class="row">
+					<div style="margin: auto;">
+						<div id="triky1">
+							<div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑤</font></span>
+							</div>
+                            <div>
+								<span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑮</font></span>
+							</div>
+                             <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="70px"><span class="glyphicon glyphicon-question-sign"></span></font></span>
+							</div>
+                             <div>
+								<span class="btn btn-info btn-circle btn-xl"><font size="50px">⑮</font></span>
+                             </div>
+                            <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑤</font></span>
+							</div>
+                            <div>
+								<span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑲</font></span>
+							</div>
+                            <div>
+								<span class="btn btn-info btn-circle btn-xl"><font size="50px">⑮</font></span>
+                            </div>
+
+						</div>
+						<div>
+							<div class="btn-group btn-group-justified btn-group-triky" role="group">
+								<a><div id="trikyShuffle" type="button" class="btn btn-primary btn-lg">抽奖</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+ <div class="clearfix"></div>
+{% elif rand_num == 2 %}
+           <div class="row">
+					<div style="margin: auto;">
+						<div id="triky1">
+							<div>
+								<span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑩</font></span>
+							</div>
+                            <div>
+                                <span class="btn btn-info btn-circle btn-xl"><font size="50px">⑮</font></span>
+							</div>
+                             <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="70px"><span class="glyphicon glyphicon-question-sign"></span></font></span>
+							</div>
+                            <div>
+                                <span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑤</font></span>
+							</div>
+                            <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑩</font></span>
+							</div>
+                            <div>
+								<span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑤</font></span>
+							</div>
+                            <div>
+								<span class="btn btn-info btn-circle btn-xl"><font size="50px">⑲</font></span>
+                            </div>
+						</div>
+						<div>
+							<div class="btn-group btn-group-justified btn-group-triky" role="group">
+								<a><div id="trikyShuffle" type="button" class="btn btn-primary btn-lg">抽奖</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+           </div>
+ <div class="clearfix"></div>
+{% elif rand_num == 3 %}
+            <div class="row">
+					<div style="margin: auto;">
+						<div id="triky1">
+							<div>
+								<span class="btn btn-info btn-circle btn-xl"><font size="50px">⑮</font></span>
+							</div>
+
+                            <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑩</font></span>
+							 </div>
+                             <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="70px"><span class="glyphicon glyphicon-question-sign"></span></font></span>
+							</div>
+                             <div>
+                                 <span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑤</font></span>
+							</div>
+                            <div>
+                                <span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑩</font></span>
+                            </div>
+                            <div>
+								<span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑲</font></span>
+							</div>
+						</div>
+						<div>
+							<div class="btn-group btn-group-justified btn-group-triky" role="group">
+								<a><div id="trikyShuffle" type="button" class="btn btn-primary btn-lg">抽奖</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+ <div class="clearfix"></div>
+{% elif rand_num == 4 %}
+            <div class="row">
+					<div style="margin: auto;">
+						<div id="triky1">
+							<div>
+								<span class="btn btn-info btn-circle btn-xl"><font size="50px">⑲</font></span>
+							</div>
+
+                            <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑤</font></span>
+							 </div>
+                             <div>
+								<span class="btn btn-primary btn-circle btn-xl"><font size="70px"><span class="glyphicon glyphicon-question-sign"></span></font></span>
+							</div>
+                             <div>
+                                 <span class="btn btn-primary btn-circle btn-xl"><font size="50px">⑤</font></span>
+							</div>
+                            <div>
+                                <span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑩</font></span>
+                            </div>
+                            <div>
+								<span class="btn btn-warning btn-circle btn-xl"><font size="50px">⑮</font></span>
+							</div>
+						</div>
+						<div>
+							<div class="btn-group btn-group-justified btn-group-triky" role="group">
+								<a><div id="trikyShuffle" type="button" class="btn btn-primary btn-lg">抽奖</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+ <div class="clearfix"></div>
+{% endif %}
+ <div class="clearfix"></div>
+<div class="table">
+<b><font size="4pt"><p>在任务II中，<font style="color : crimson"> 目标数字{% if rand_num == 1 %} 5 {% elif rand_num == 2 %} 10 {% elif rand_num == 3 %} 15 {% elif rand_num == 4 %} 19 {% endif %} </font>被随机抽中了。</p></font></b>
+
+<table class="table table-responsive" align="center" style="text-align : center">
+    <tr>
+        <th style="text-align: center"><font size="4pt">任务II的报酬</font></th>
+        <th style="text-align: center"><font size="4pt">目标数字 Number</font></th>
+        <th style="text-align: center"><font size="4pt">结果</font></th>
+    </tr>
+    <tr>
+    <td>{%  if rand_num == 1 %} <font size="4pt">被抽中</font>{% endif %}</td>
+    <td><font size="4pt">5</font> </td>
+    {%  if payoff5_3 == 1 %}
+    <td><font size="4pt">你赢了($5)</font></td>
+    {% else %}
+    <td><font size="4pt">你输了($0)</font></td>
+    {% endif %}
+    </tr>
+    <tr>
+    <td>{%  if rand_num == 2 %} <font size="4pt">被抽中</font>{% endif %}</td>
+    <td><font size="4pt">10</font> </td>
+    {%  if payoff10_3 == 1 %}
+    <td><font size="4pt">你赢了($5)</font></td>
+    {% else %}
+    <td><font size="4pt">你输了($0)</font></td>
+    {% endif %}
+    </tr>
+    <tr>
+    <td>{%  if rand_num == 3 %} <font size="4pt">被抽中</font> {% endif %}</td>
+    <td><font size="4pt">15</font> </td>
+    {%  if payoff15_3 == 1 %}
+    <td><font size="4pt">你赢了($5)</font></td>
+    {% else %}
+    <td><font size="4pt">你输了($0)</font></td>
+    {% endif %}
+    </tr>
+     <tr>
+    <td>{%  if rand_num == 4 %} <font size="4pt">被抽中</font> {% endif %}</td>
+    <td><font size="4pt">19</font> </td>
+    {%  if payoff19_3 == 1 %}
+    <td><font size="4pt">你赢了($5)</font></td>
+    {% else %}
+    <td><font size="4pt">你输了($0)</font></td>
+    {% endif %}
+    </tr>
+</table>
+</div>
+
+<div class="text-left">
+<b>
+<button class="btn btn-primary"><h4> <p>请点击按钮</p><p>前往决定总报酬。</p> </h4> </button>
+</b>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("tr:nth-child({{ high_light}})").css("background-color", "#FFD8D8");
+});
+
+			$(document).ready(function(){
+				//Fake machine 2 - auto
+				var triky = $("#triky1").slotMachine({
+					active	: 2,
+					randomize: function(){
+						return 0;
+					}
+				});
+				$("#trikyShuffle").click(function(){
+					triky.shuffle(20);
+                    $("b").delay(4000).show(0);
+                    $("a").hide();
+                    $('table').delay(4000).show(0)
+				})
+			});
+</script>
+
+
+
+
+
+
+{% endblock %}

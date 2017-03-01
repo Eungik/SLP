@@ -1,0 +1,79 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    任务II
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+<h4 style="line-height:150%">
+ <ul>
+<p><li>在每一轮中，两个玩家（即你与电脑）将交替在每一把中选择<b><font color="#008b8b">“步数”</font></b>。</li></p>
+<p><li>你将首先进行选择。</li></p>
+<p><li>每一把开始时，你或电脑会站在写有数字的位置上，该数字为本轮中双方已选的步数之和。然后，玩家将决定这一把要前进的步数，该选择不能超过3步（即可以选择1步，2步或3步）。 </li></p>
+<p><li>最先达到<font color="#00008b"><b>“目标数字”</b></font>的玩家获得本轮胜利。</li></p>
+<p><li>如果你胜利了，你将获得<b>$5</b>。否则，你在本轮将获得<b>$0</b>。</li></p>
+
+</ul>
+</h4>
+
+</div>
+<input class="btn btn-primary btn-large btn-primary next-button" type="submit" value="下一页">
+
+
+
+ <style type="text/css">
+ h4 {
+  font-size: 4vmin;
+}
+
+
+ h3 {
+  font-size: 6vmin;
+}
+
+
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+
+h3{
+    font-size: 2.5vmin
+
+}
+
+
+h2 {
+display: block;
+font-size: 2.2em;
+margin-before: 0.83em;
+margin-after: 0.83em;
+margin-start: 0;
+margin-end: 0; }
+  /* 480px 이상 */
+}
+
+ul{
+
+    padding-left:5px;
+}
+
+
+
+
+ </style>
+
+{% endblock %}
