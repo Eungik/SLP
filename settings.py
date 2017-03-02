@@ -111,24 +111,20 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
-        'name': 'SLP_2017_Chn',
-        'display_name': 'SLP2017_Chinese',
+        'name': 'SLP2017Chn_v1',
+        'display_name': 'SLP2017Chn_v1',
         'num_demo_participants': 3,
-        'app_sequence': ['SLPintro_Chn','Rubinstein_Chn','Race_intro_Chn','Race5_3_Chn','Race10_3_Chn','Race15_3_Chn','Race19_3_Chn','Readingtheeyes_Chn','Result_Race_Chn' ],
+        'app_sequence': ['SLPintro_Chn', 'Rubinstein_Chn', 'Race_intro_Chn', 'Race5_3_Chn', 'Race10_3_Chn',
+                         'Race15_3_Chn', 'Race19_3_Chn', 'Readingtheeyes_Chn', 'Result_Race_Chn'],
     },
-    {
-        'name': 'RMET',
-        'display_name': 'RMET_Chn',
-        'num_demo_participants': 3,
-        'app_sequence': ['Readingtheeyes_Chn'],
-    },
+
     {
         'name': 'SLP2017_v1',
         'display_name': 'SLP2017_v1',
         'num_demo_participants': 3,
         'app_sequence': ['SLPintro','Rubinstein','Race_intro','Race5_3' ,'Race10_3','Race', 'Race19_3','Readingtheeyes','Result_Race'],
-        'winning_number': 5
     },
+
     {
         'name': 'SLP2017_v2',
         'display_name': 'SLP2017_v2',
