@@ -2,13 +2,13 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Task III Result
+    任务III 答题结果
 {% endblock %}
 
 {% block content %}
-<h3> You answered correctly <font color="#dc143c">{{ Total }} </font> out of 28 questions. </h3>
+<h3>28道题中，你答对了<font color="#dc143c">{{ Total }}</font> 道。</h3>
 <p>&nbsp;</p>
-    {% next_button %}
+<input class="btn btn-primary btn-large btn-primary next-button" type="submit" value="下一页">
 {% endblock %}
 
 
