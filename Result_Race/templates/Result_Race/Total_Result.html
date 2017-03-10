@@ -21,8 +21,11 @@
 <p>&nbsp;</p>
 
 {% if rand_num_task1 == 10 %}
+<p>
+<b>The FairPrice voucher you will receive = </b></p>
 <p style="text-align : center">
-<b>The cash payment you will receive = <font color="#00008b">
+<b>
+<font color="#00008b">
 Earning from Task I (To be announced) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Participation fee ($5)</font></b></p>
 <p>&nbsp;</p>
 <p style="text-align : center">Total payment : To be announced</p></h4>
@@ -30,11 +33,14 @@ Earning from Task I (To be announced) </font>+ <font color="#dc143c">Earning fro
 {% else %}
 
 <h4>
+<p>
+<b>The FairPrice voucher you will receive =</b></p>
 <p style="text-align : center">
-<b>The cash payment you will receive = <font color="#00008b">
+<b>
+<font color="#00008b">
 Earning from Task I ($0) </font>+ <font color="#dc143c">Earning from Task II (${{ player.Final_payoff }}) </font>+ <font color="#008b8b">Participation fee ($5)</font></b>.</p>
 <p>&nbsp;</p>
-<p style="text-align : center">Total payment = ${{ Showup_added }}.</p></h4>
+<p style="text-align : center">Total payment = ${{ Showup_added }} FairPrice voucher.</p></h4>
 
 {% endif %}
 
