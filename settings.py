@@ -111,6 +111,13 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'SLP2017_Kr',
+        'display_name': 'SLP2017_Kr',
+        'num_demo_participants': 3,
+        'app_sequence': ['SLPintro_Kr','Rubinstein_Kr'],
+    },
+
+    {
         'name': 'SLP2017Chn_v1',
         'display_name': 'SLP2017Chn_v1',
         'num_demo_participants': 3,

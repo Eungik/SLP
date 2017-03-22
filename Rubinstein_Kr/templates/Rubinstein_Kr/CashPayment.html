@@ -1,0 +1,85 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    조사 1 보수
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+    <h4>
+    <ul>
+    <p><li style="line-height : 150%">참여자들은 조사1에서 5명씩 무작위로 그룹을 형성하여 참여하게 됩니다.</li></p>
+    <p><li style="line-height : 150%">각 그룹들은 총 5 라운드의 의사결정을 하게 됩니다.</li></p>
+    <p><li style="line-height : 150%">10 그룹 중 1 그룹이 무작위로 선택되어 보수를 지급받게 됩니다.</li></p>
+    <p><li style="line-height : 150%">만약 당신의 그룹이 선택되었다면, 5번 중 1번의 라운드가 무작위로 선택되어 보수로 지급받게 됩니다.</li></p>
+    <p><li style="line-height : 150%">그러므로, 모든 의사결정에 신중을 기해 선택해주시기 바랍니다. </li></p>
+    </ul>
+    </h4>
+
+</div>
+
+
+<style type="text/css">
+p {
+  font-size: 1.78vmin;
+}
+
+.uline {
+    text-decoration: underline;
+}
+
+pg {
+    padding-left:20px;
+    position:relative;
+}
+pg:before {
+    content: "";
+    font-family:Arial;
+    position:absolute;
+    left:5px;
+}
+
+pg2 {
+    padding-left:40px;
+    position:relative;
+}
+pg2:before {
+    content: "-";
+    font-family:Arial;
+    position:absolute;
+    left:15px;
+}
+
+h4 {
+  font-size: 4vmin;
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+
+h4 {
+    font-size: 1.78vmin
+}
+  /* 480px 이상 */
+}
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+}
+
+
+</style>
+
+
+    {% next_button %}
+
+{% endblock %}
