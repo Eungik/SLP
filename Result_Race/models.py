@@ -25,7 +25,6 @@ class Subsession(BaseSubsession):
                 player.participant.vars[Constants.name_in_url]['rand_num_task2'] = random.randint(1, Constants.num_questions)
                 player.participant.vars[Constants.name_in_url]['rand_num_task1'] = random.randint(1, 10)
 
-
 class Group(BaseGroup):
     pass
 

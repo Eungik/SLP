@@ -112,6 +112,15 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
 
     {
+        'name': 'test',
+        'display_name': 'test',
+        'num_demo_participants': 3,
+        'app_sequence': ['Result_Race'],
+    },
+
+
+
+    {
         'name': 'SLP2017Chn_v1',
         'display_name': 'SLP2017Chn_v1',
         'num_demo_participants': 3,
