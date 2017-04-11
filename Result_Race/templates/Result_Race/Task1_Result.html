@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Task I Earnings
+    Task II Earnings
 {% endblock %}
 
 {% block content %}
@@ -295,20 +295,20 @@ margin-end: 0; }
 </style>
 </head>
 <div id="triky">
-<a><h4><p><font color="black">Now, we are going to conduct the lucky draw for your Task I. </font></p><p><font color="black">Please click <span class="btn btn-primary">Draw</span> button to decide whether you are selected or not.</font></p></h4></a>
+<a><h4><p><font color="black">Now, we are going to conduct the lucky draw for your Task II. </font></p><p><font color="black">Please click <span class="btn btn-primary">Draw</span> button to decide whether you are selected or not.</font></p></h4></a>
 
 <b>
- {%  if rand_num_task1 == 10 %}
-<h4><p>You are <font color="#00008b">selected</font> to be paid the money amount in Task I</p>
+ {%  if rand_num_Rubin == 10 %}
+<h4><p>You are <font color="#00008b">selected</font> to be paid the money amount in Task II</p>
 <p> The research team will inform you (via email or SMS) on your earnings a week after the study has been completed. </p>
 </h4>
 {% else %}
-<h4> You are <font color="crimson"> not selected </font> to be paid in Task I.</h4>
-<h4> Therefore, your earnings in Task I is $0.</h4>
+<h4> You are <font color="crimson"> not selected </font> to be paid in Task II.</h4>
+<h4> Therefore, your earnings in Task II is $0.</h4>
 {% endif %}
 </b>
 
-{% if rand_num_task1 == 10 %}
+{% if rand_num_Rubin == 10 %}
 
 			<div class="content" style="text-align: center">
 
@@ -410,5 +410,9 @@ margin-end: 0; }
 
 
 <p>&nbsp;</p>
-<b><button class="btn btn-primary"><h4><p>Please click this button</p><p> to decide the earnings of Task II.</p></h4> </button></b>
+<div class="text-left">
+<b>
+<button class="btn btn-primary"><h4> <p>Please click this button</p><p>to see the total amount of earnings.</p> </h4> </button>
+</b>
+</div>
 {% endblock %}

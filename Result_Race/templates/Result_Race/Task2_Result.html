@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Task II Earnings
+    Task I Earnings
 {% endblock %}
 
 {% block content %}
@@ -238,9 +238,9 @@ table{
 </style>
 </head>
 <div id="triky">
-<a><h4><p><font color="black">Now, we are going to conduct the lucky draw for your Task II. </font></p><p><font color="black">Please click on <span class="btn btn-primary">Draw</span> button to decide what <font color="#dc143c">"Target number"</font> you will be payed in Task II.</font></p></h4></a>
+<a><h4><p><font color="black">Now, we are going to conduct the lucky draw for your Task I. </font></p><p><font color="black">Please click on <span class="btn btn-primary">Draw</span> button to decide what <font color="#dc143c">"Target number"</font> you will be payed in Task I.</font></p></h4></a>
 <div class="content" style="text-align: center">
-{% if rand_num == 1 %}
+{% if rand_num_Race == 1 %}
 				<div class="row">
 					<div style="margin: auto;">
 						<div id="triky1">
@@ -275,7 +275,7 @@ table{
 					</div>
 				</div>
  <div class="clearfix"></div>
-{% elif rand_num == 2 %}
+{% elif rand_num_Race == 2 %}
            <div class="row">
 					<div style="margin: auto;">
 						<div id="triky1">
@@ -310,7 +310,7 @@ table{
 				</div>
            </div>
  <div class="clearfix"></div>
-{% elif rand_num == 3 %}
+{% elif rand_num_Race == 3 %}
             <div class="row">
 					<div style="margin: auto;">
 						<div id="triky1">
@@ -343,7 +343,7 @@ table{
 				</div>
             </div>
  <div class="clearfix"></div>
-{% elif rand_num == 4 %}
+{% elif rand_num_Race == 4 %}
             <div class="row">
 					<div style="margin: auto;">
 						<div id="triky1">
@@ -380,16 +380,16 @@ table{
  <div class="clearfix"></div>
 
 <div class="table">
-<b><font size="4pt"><p>In Task II, <font style="color : crimson"> Target number {% if rand_num == 1 %} 5 {% elif rand_num == 2 %} 10 {% elif rand_num == 3 %} 15 {% elif rand_num == 4 %} 19 {% endif %} </font>is randomly selected.</p></font></b>
+<b><font size="4pt"><p>In Task I, <font style="color : crimson"> Target number {% if rand_num_Race == 1 %} 5 {% elif rand_num_Race == 2 %} 10 {% elif rand_num_Race == 3 %} 15 {% elif rand_num_Race == 4 %} 19 {% endif %} </font>is randomly selected.</p></font></b>
 
 <table class="table table-responsive" align="center" style="text-align : center">
     <tr>
-        <th style="text-align: center"><font size="4pt">Task II earnings</font></th>
+        <th style="text-align: center"><font size="4pt">Task I earnings</font></th>
         <th style="text-align: center"><font size="4pt">Target Number</font></th>
         <th style="text-align: center"><font size="4pt">Results</font></th>
     </tr>
     <tr>
-    <td>{%  if rand_num == 1 %} <font size="4pt">Selected </font>{% endif %}</td>
+    <td>{%  if rand_num_Race == 1 %} <font size="4pt">Selected </font>{% endif %}</td>
     <td><font size="4pt">5</font> </td>
     {%  if payoff5_3 == 1 %}
     <td><font size="4pt">You Win ($5)</font></td>
@@ -398,7 +398,7 @@ table{
     {% endif %}
     </tr>
     <tr>
-    <td>{%  if rand_num == 2 %} <font size="4pt">Selected </font>{% endif %}</td>
+    <td>{%  if rand_num_Race == 2 %} <font size="4pt">Selected </font>{% endif %}</td>
     <td><font size="4pt">10</font> </td>
     {%  if payoff10_3 == 1 %}
     <td><font size="4pt">You Win ($5)</font></td>
@@ -407,7 +407,7 @@ table{
     {% endif %}
     </tr>
     <tr>
-    <td>{%  if rand_num == 3 %} <font size="4pt">Selected</font> {% endif %}</td>
+    <td>{%  if rand_num_Race == 3 %} <font size="4pt">Selected</font> {% endif %}</td>
     <td><font size="4pt">15</font> </td>
     {%  if payoff15_3 == 1 %}
     <td><font size="4pt">You Win ($5)</font></td>
@@ -416,7 +416,7 @@ table{
     {% endif %}
     </tr>
      <tr>
-    <td>{%  if rand_num == 4 %} <font size="4pt">Selected</font> {% endif %}</td>
+    <td>{%  if rand_num_Race == 4 %} <font size="4pt">Selected</font> {% endif %}</td>
     <td><font size="4pt">19</font> </td>
     {%  if payoff19_3 == 1 %}
     <td><font size="4pt">You Win ($5)</font></td>
@@ -428,12 +428,8 @@ table{
 </div>
 
 <div class="text-left">
-<b>
-<button class="btn btn-primary"><h4> <p>Please click this button</p><p>to see the total amount of earnings.</p> </h4> </button>
-</b>
+<b><button class="btn btn-primary"><h4><p>Please click this button</p><p> to decide the earnings of Task II.</p></h4> </button></b>
 </div>
-
-
 <script type="text/javascript">
 $(document).ready(function(){
     $("tr:nth-child({{ high_light}})").css("background-color", "#FFD8D8");

@@ -5,17 +5,12 @@ from .models import Constants
 
 def vars_for_all_templates(self):
     return {
-        'rand_num_task1' : self.player.participant.vars[Constants.name_in_url]['rand_num_task1'],
-        'rand_num': self.player.participant.vars[Constants.name_in_url]['rand_num_task2'],
-        'high_light' : self.player.participant.vars[Constants.name_in_url]['rand_num_task2']+1,
+        'rand_num_Rubin' : self.player.participant.vars[Constants.name_in_url]['rand_num_Rubin'],
+        'rand_num_Race': self.player.participant.vars[Constants.name_in_url]['rand_num_Race'],
+        'high_light' : self.player.participant.vars[Constants.name_in_url]['rand_num_Race']+1,
 
     }
 
-
-class Task1_Result(Page):
-
-    def before_next_page(self):
-        self.player.rand_num_task1 = self.player.participant.vars[Constants.name_in_url]['rand_num_task1']
 
 class Task2_Result(Page):
 
@@ -29,23 +24,31 @@ class Task2_Result(Page):
         }
 
     def before_next_page(self):
-        self.player.rand_num_task2=self.player.participant.vars[Constants.name_in_url]['rand_num_task2']
+        self.player.rand_num_Race=self.player.participant.vars[Constants.name_in_url]['rand_num_Race']
 
-        if self.player.rand_num_task2== 1:
+        if self.player.rand_num_Race== 1:
                   self.player.Final_payoff = self.participant.vars['is_winner_5_3'] * 5
-                  self.player.lottery_task2 = 5
+                  self.player.lottery_Target = 5
 
-        elif self.player.rand_num_task2 == 2:
+        elif self.player.rand_num_Race == 2:
                 self.player.Final_payoff = self.participant.vars['is_winner_10_3'] * 5
-                self.player.lottery_task2 = 10
+                self.player.lottery_Target = 10
 
-        elif self.player.rand_num_task2 == 3:
+        elif self.player.rand_num_Race == 3:
                 self.player.Final_payoff = self.participant.vars['is_winner_15_3'] * 5
-                self.player.lottery_task2 = 15
+                self.player.lottery_Target = 15
 
-        elif self.player.rand_num_task2 == 4:
+        elif self.player.rand_num_Race == 4:
             self.player.Final_payoff = self.participant.vars['is_winner_19_3'] * 5
-            self.player.lottery_task2 = 19
+            self.player.lottery_Target = 19
+
+
+class Task1_Result(Page):
+
+    def before_next_page(self):
+        self.player.rand_num_Rubin = self.player.participant.vars[Constants.name_in_url]['rand_num_Rubin']
+
+
 
 
 
@@ -62,7 +65,7 @@ class Total_Result(Page):
 
 
 page_sequence = [
-    Task1_Result,
     Task2_Result,
+    Task1_Result,
     Total_Result
 ]

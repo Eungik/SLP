@@ -2,8 +2,18 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Question 1
+<div class="col-sm-6"></div>
+<div class="col-sm-6" align="right">
+<div class="progress progress-striped active">
+  <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{player.Pseudo_Round}}%">
+    <span style="vertical-align: text-top; align: right" >{{player.Pseudo_Round}}</span>
+  </div>
+</div>
+</div>
+Question 1
 {% endblock %}
+
+
 
 {% block content %}
 <head>
@@ -214,9 +224,23 @@ img{
 
 
 }
-
+.progress-bar {
+box-shadow: none;
+border-radius: 3px;
+background-color: #0090D9;
+background-image: none;
+-webkit-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-moz-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-ms-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-o-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+-o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
 </style>
-
 
 
         <table class="table table-striped" align="center">

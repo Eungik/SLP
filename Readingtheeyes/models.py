@@ -26,6 +26,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    Pseudo_Round = models.PositiveIntegerField(initial=0)
     eye_practice = models.PositiveIntegerField(initial=None,
                                                choices=[[1, '① Jealous'],
                                                         [2, '② Scared'],
